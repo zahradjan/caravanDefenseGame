@@ -1,0 +1,188 @@
+fileFormatVersion: 2
+guid: 5e0c4667e13f1a240813b2834941fb6e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bone
+    100004: Bone.001
+    100006: Bone.002
+    100008: Bone.004
+    100010: Bone.005
+    100012: Bone.006
+    100014: Bone.007
+    100016: Bone.008
+    100018: Bone.009
+    100020: Bone.010
+    100022: Bone.011
+    100024: Bone.012
+    100026: Bone.012_end
+    100028: Bone.021
+    100030: Bone.022
+    100032: Bone.023
+    100034: Bone.023_end
+    100036: Bone.024
+    100038: Bone.025
+    100040: Bone.026
+    100042: Bone.026_end
+    100044: Bone.add
+    100046: //RootNode
+    100048: Cube
+    100050: Cube.001
+    100052: hand_hold_left
+    100054: hand_hold_left_end
+    100056: sword_1h
+    100058: sword_1h_epic
+    100060: sword_2h
+    100062: testing sword
+    100064: weapon bone
+    100066: weapon bone_end
+    400000: Armature
+    400002: Bone
+    400004: Bone.001
+    400006: Bone.002
+    400008: Bone.004
+    400010: Bone.005
+    400012: Bone.006
+    400014: Bone.007
+    400016: Bone.008
+    400018: Bone.009
+    400020: Bone.010
+    400022: Bone.011
+    400024: Bone.012
+    400026: Bone.012_end
+    400028: Bone.021
+    400030: Bone.022
+    400032: Bone.023
+    400034: Bone.023_end
+    400036: Bone.024
+    400038: Bone.025
+    400040: Bone.026
+    400042: Bone.026_end
+    400044: Bone.add
+    400046: //RootNode
+    400048: Cube
+    400050: Cube.001
+    400052: hand_hold_left
+    400054: hand_hold_left_end
+    400056: sword_1h
+    400058: sword_1h_epic
+    400060: sword_2h
+    400062: testing sword
+    400064: weapon bone
+    400066: weapon bone_end
+    2100000: Material
+    2100002: No Name
+    2300000: Cube.001
+    2300002: sword_1h
+    2300004: sword_1h_epic
+    2300006: sword_2h
+    2300008: testing sword
+    3300000: Cube.001
+    3300002: sword_1h
+    3300004: sword_1h_epic
+    3300006: sword_2h
+    3300008: testing sword
+    4300000: Cube
+    4300002: testing sword
+    4300004: sword_1h
+    4300006: sword_2h
+    4300008: sword_1h_epic
+    4300010: Cube.001
+    7400000: Armature|corpse
+    7400002: Armature|death
+    7400004: Armature|punch
+    7400006: Armature|run
+    7400008: Armature|surrender
+    7400010: Armature|sword_attack
+    7400012: Armature|walk
+    7400014: testing sword|run
+    9500000: //RootNode
+    13700000: Cube
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
