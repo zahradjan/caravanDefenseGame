@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class cubeControl : MonoBehaviour
+
 {
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,5 +36,7 @@ public class cubeControl : MonoBehaviour
             transform.Translate(0.1f, 0, 0);
         }
 
+        anim.SetFloat("vertical", Input.GetAxis("Vertical"));
+        
     }
 }

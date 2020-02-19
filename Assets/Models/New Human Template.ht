@@ -16,6 +16,7 @@ HumanTemplate:
     LeftLowerLeg: Bone.022
     LeftUpperArm: Bone.002
     LeftUpperLeg: Bone.021
+    Neck: Bone.011
     RightFoot: Bone.026
     RightHand: Bone.007
     RightLowerArm: Bone.006
