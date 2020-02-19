@@ -3,6 +3,96 @@ guid: a6d3a9d657b4d284287895968f555380
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
+    100000: Armature
+    100002: Bone
+    100004: Bone.001
+    100006: Bone.002
+    100008: Bone.003
+    100010: Bone.004
+    100012: Bone.005
+    100014: Bone.006
+    100016: Bone.007
+    100018: Bone.008
+    100020: Bone.009
+    100022: Bone.010
+    100024: Bone.011
+    100026: Bone.012
+    100028: Bone.012_end
+    100030: Bone.021
+    100032: Bone.022
+    100034: Bone.023
+    100036: Bone.023_end
+    100038: Bone.024
+    100040: Bone.025
+    100042: Bone.026
+    100044: Bone.026_end
+    100046: //RootNode
+    100048: Cube
+    100050: hand_hold_left
+    100052: hand_hold_left_end
+    100054: sword_1h
+    100056: sword_1h_epic
+    100058: sword_2h
+    100060: testing sword
+    100062: weapon bone
+    100064: weapon bone_end
+    400000: Armature
+    400002: Bone
+    400004: Bone.001
+    400006: Bone.002
+    400008: Bone.003
+    400010: Bone.004
+    400012: Bone.005
+    400014: Bone.006
+    400016: Bone.007
+    400018: Bone.008
+    400020: Bone.009
+    400022: Bone.010
+    400024: Bone.011
+    400026: Bone.012
+    400028: Bone.012_end
+    400030: Bone.021
+    400032: Bone.022
+    400034: Bone.023
+    400036: Bone.023_end
+    400038: Bone.024
+    400040: Bone.025
+    400042: Bone.026
+    400044: Bone.026_end
+    400046: //RootNode
+    400048: Cube
+    400050: hand_hold_left
+    400052: hand_hold_left_end
+    400054: sword_1h
+    400056: sword_1h_epic
+    400058: sword_2h
+    400060: testing sword
+    400062: weapon bone
+    400064: weapon bone_end
+    2100000: Material
+    2100002: No Name
+    2300000: sword_1h
+    2300002: sword_1h_epic
+    2300004: sword_2h
+    2300006: testing sword
+    3300000: sword_1h
+    3300002: sword_1h_epic
+    3300004: sword_2h
+    3300006: testing sword
+    4300000: Cube
+    4300002: testing sword
+    4300004: sword_1h
+    4300006: sword_2h
+    4300008: sword_1h_epic
+    7400000: Armature|death
+    7400002: Armature|punch
+    7400004: Armature|run
+    7400006: Armature|standing pose
+    7400008: Armature|sword_attack
+    7400010: Armature|walk
+    7400012: testing sword|run
+    9500000: //RootNode
+    13700000: Cube
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -57,7 +147,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

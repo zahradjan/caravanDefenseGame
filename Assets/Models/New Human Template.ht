@@ -10,17 +10,17 @@ HumanTemplate:
   m_BoneTemplate:
     Head: Bone.012
     Hips: Bone
-    LeftFoot: Bone.026
+    LeftFoot: Bone.023
     LeftHand: Bone.009
     LeftLowerArm: Bone.008
-    LeftLowerLeg: Bone.025
+    LeftLowerLeg: Bone.022
     LeftUpperArm: Bone.002
-    LeftUpperLeg: Bone.024
-    RightFoot: Bone.023
+    LeftUpperLeg: Bone.021
+    RightFoot: Bone.026
     RightHand: Bone.007
     RightLowerArm: Bone.006
-    RightLowerLeg: Bone.022
+    RightLowerLeg: Bone.025
     RightShoulder: Bone.004
     RightUpperArm: Bone.005
-    RightUpperLeg: Bone.021
+    RightUpperLeg: Bone.024
     Spine: Bone.001
