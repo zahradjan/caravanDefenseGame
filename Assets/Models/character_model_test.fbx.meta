@@ -102,24 +102,13 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Armature|attack_1h_a' has import animation warnings
+    animationImportWarnings: "\nClip 'Armature|death' has import animation warnings
       that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'Bone.011' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\nClip 'Armature|attack_stab'
+      to improve retargeting quality.\n\t'Bone.add' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Armature|surrender'
       has import animation warnings that might lower retargeting quality:\nNote: Activate
-      translation DOF on avatar to improve retargeting quality.\n\t'Bone.011' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'Armature|death' has import animation warnings that might lower retargeting
-      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Bone.011'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Bone.add'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'Armature|punch' has import animation warnings that might lower retargeting
-      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Bone.011'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'Armature|surrender' has import animation warnings that might lower retargeting
-      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Bone.011'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Bone.add'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+      translation DOF on avatar to improve retargeting quality.\n\t'Bone.add' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -293,6 +282,14 @@ ModelImporter:
         modified: 0
     - boneName: Bone.012
       humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone.011
+      humanName: Neck
       limit:
         min: {x: 0, y: 0, z: 0}
         max: {x: 0, y: 0, z: 0}
