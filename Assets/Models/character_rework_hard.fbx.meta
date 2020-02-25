@@ -1,104 +1,83 @@
 fileFormatVersion: 2
-guid: 5e0c4667e13f1a240813b2834941fb6e
+guid: 084c943a9b7a7ce44a29cb0a8477e458
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Armature
-    100002: Bone
-    100004: Bone.001
-    100006: Bone.002
-    100008: Bone.004
-    100010: Bone.005
-    100012: Bone.006
-    100014: Bone.007
-    100016: Bone.008
-    100018: Bone.009
-    100020: Bone.010
-    100022: Bone.011
-    100024: Bone.012
-    100026: Bone.012_end
-    100028: Bone.021
-    100030: Bone.022
-    100032: Bone.023
-    100034: Bone.023_end
-    100036: Bone.024
-    100038: Bone.025
-    100040: Bone.026
-    100042: Bone.026_end
-    100044: Bone.add
-    100046: //RootNode
-    100048: Cube
-    100050: Cube.001
-    100052: hand_hold_left
-    100054: hand_hold_left_end
-    100056: sword_1h
-    100058: sword_1h_epic
-    100060: sword_2h
-    100062: testing sword
-    100064: weapon bone
-    100066: weapon bone_end
+    100002: armor_bandana_red
+    100004: armor_shoes_cloth
+    100006: character
+    100008: //RootNode
+    100010: chest
+    100012: head
+    100014: hips
+    100016: left_arm_lower
+    100018: left_arm_upper
+    100020: left_feet
+    100022: left_hand
+    100024: left_leg_lower
+    100026: left_leg_upper
+    100028: left_shoulder
+    100030: neck
+    100032: off_hand_bone
+    100034: right_Arm_lower
+    100036: right_Arm_upper
+    100038: right_feet
+    100040: right_hand
+    100042: right_leg_lower
+    100044: right_leg_upper
+    100046: right_shoulder
+    100048: spine
+    100050: sword_1h
+    100052: weapon_bone
     400000: Armature
-    400002: Bone
-    400004: Bone.001
-    400006: Bone.002
-    400008: Bone.004
-    400010: Bone.005
-    400012: Bone.006
-    400014: Bone.007
-    400016: Bone.008
-    400018: Bone.009
-    400020: Bone.010
-    400022: Bone.011
-    400024: Bone.012
-    400026: Bone.012_end
-    400028: Bone.021
-    400030: Bone.022
-    400032: Bone.023
-    400034: Bone.023_end
-    400036: Bone.024
-    400038: Bone.025
-    400040: Bone.026
-    400042: Bone.026_end
-    400044: Bone.add
-    400046: //RootNode
-    400048: Cube
-    400050: Cube.001
-    400052: hand_hold_left
-    400054: hand_hold_left_end
-    400056: sword_1h
-    400058: sword_1h_epic
-    400060: sword_2h
-    400062: testing sword
-    400064: weapon bone
-    400066: weapon bone_end
-    2100000: Material
-    2100002: No Name
-    2300000: Cube.001
-    2300002: sword_1h
-    2300004: sword_1h_epic
-    2300006: sword_2h
-    2300008: testing sword
-    3300000: Cube.001
-    3300002: sword_1h
-    3300004: sword_1h_epic
-    3300006: sword_2h
-    3300008: testing sword
-    4300000: Cube
-    4300002: testing sword
-    4300004: sword_1h
-    4300006: sword_2h
-    4300008: sword_1h_epic
-    4300010: Cube.001
-    7400000: Armature|corpse
-    7400002: Armature|death
-    7400004: Armature|punch
-    7400006: Armature|run
-    7400008: Armature|surrender
-    7400010: Armature|sword_attack
+    400002: armor_bandana_red
+    400004: armor_shoes_cloth
+    400006: character
+    400008: //RootNode
+    400010: chest
+    400012: head
+    400014: hips
+    400016: left_arm_lower
+    400018: left_arm_upper
+    400020: left_feet
+    400022: left_hand
+    400024: left_leg_lower
+    400026: left_leg_upper
+    400028: left_shoulder
+    400030: neck
+    400032: off_hand_bone
+    400034: right_Arm_lower
+    400036: right_Arm_upper
+    400038: right_feet
+    400040: right_hand
+    400042: right_leg_lower
+    400044: right_leg_upper
+    400046: right_shoulder
+    400048: spine
+    400050: sword_1h
+    400052: weapon_bone
+    2100000: ally_color
+    2100002: metal
+    2100004: leather_gear
+    2100006: cloth
+    2300000: sword_1h
+    3300000: sword_1h
+    4300000: character
+    4300002: sword_1h
+    4300004: armor_shoes_cloth
+    4300006: armor_bandana_red
+    7400000: Armature|attack_1h
+    7400002: Armature|attack_punch
+    7400004: Armature|attack_stab
+    7400006: Armature|death
+    7400008: Armature|iddle
+    7400010: Armature|run
     7400012: Armature|walk
-    7400014: testing sword|run
     9500000: //RootNode
-    13700000: Cube
+    13700000: armor_bandana_red
+    13700002: armor_shoes_cloth
+    13700004: character
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -120,7 +99,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -152,7 +131,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
@@ -177,10 +156,10 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
