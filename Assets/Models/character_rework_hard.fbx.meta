@@ -40,6 +40,7 @@ ModelImporter:
     100068: ik_knee_right
     100070: ik_wrist_left
     100072: ik_wrist_right
+    100074: stick
     400000: Armature
     400002: armor_bandana_red
     400004: armor_shoes_cloth
@@ -77,16 +78,21 @@ ModelImporter:
     400068: ik_knee_right
     400070: ik_wrist_left
     400072: ik_wrist_right
+    400074: stick
     2100000: ally_color
     2100002: metal
     2100004: leather_gear
     2100006: cloth
+    2100008: wood
     2300000: sword_1h
+    2300002: stick
     3300000: sword_1h
+    3300002: stick
     4300000: character
     4300002: sword_1h
     4300004: armor_shoes_cloth
     4300006: armor_bandana_red
+    4300008: stick
     7400000: Armature|attack_1h
     7400002: Armature|attack_punch
     7400004: Armature|attack_stab
@@ -95,6 +101,8 @@ ModelImporter:
     7400010: Armature|run
     7400012: Armature|walk
     7400014: Armature|attack_2h
+    7400016: Armature|attack_spear
+    7400018: Armature|attack_spear_1h
     9500000: //RootNode
     13700000: armor_bandana_red
     13700002: armor_shoes_cloth
@@ -273,6 +281,90 @@ ModelImporter:
       takeName: Armature|attack_2h
       firstFrame: 0
       lastFrame: 43
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|attack_spear
+      takeName: Armature|attack_spear
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|attack_spear_1h
+      takeName: Armature|attack_spear_1h
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|attack_stab
+      takeName: Armature|attack_stab
+      firstFrame: 0
+      lastFrame: 35
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
