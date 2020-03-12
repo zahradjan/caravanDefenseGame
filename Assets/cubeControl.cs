@@ -5,7 +5,6 @@ using UnityEngine;
 public class cubeControl : MonoBehaviour
 
 {
-    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -17,26 +16,26 @@ public class cubeControl : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey("up"))
+        if (Input.GetKey("down"))
         {
             transform.Translate(0,0, 0.1f);
         }
 
-        if (Input.GetKey("down"))
+        if (Input.GetKey("up"))
         {
             transform.Translate(0, 0, -0.1f);
         }
 
-        if (Input.GetKey("left"))
+        if (Input.GetKey("right"))
         {
             transform.Translate(-0.1f, 0, 0);
         }
-        if (Input.GetKey("right"))
+        if (Input.GetKey("left"))
         {
             transform.Translate(0.1f, 0, 0);
         }
 
-        anim.SetFloat("vertical", Input.GetAxis("Vertical"));
+       
         
     }
 }
