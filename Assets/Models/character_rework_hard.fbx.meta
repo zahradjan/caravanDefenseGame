@@ -41,6 +41,10 @@ ModelImporter:
     100070: ik_wrist_left
     100072: ik_wrist_right
     100074: stick
+    100076: armor_chest_iron
+    100078: armor_helmet_iron
+    100080: armor_pants_iron
+    100082: armor_shoes_iron
     400000: Armature
     400002: armor_bandana_red
     400004: armor_shoes_cloth
@@ -79,11 +83,16 @@ ModelImporter:
     400070: ik_wrist_left
     400072: ik_wrist_right
     400074: stick
+    400076: armor_chest_iron
+    400078: armor_helmet_iron
+    400080: armor_pants_iron
+    400082: armor_shoes_iron
     2100000: ally_color
     2100002: metal
     2100004: leather_gear
     2100006: cloth
     2100008: wood
+    2100010: metal.armor
     2300000: sword_1h
     2300002: stick
     3300000: sword_1h
@@ -93,6 +102,10 @@ ModelImporter:
     4300004: armor_shoes_cloth
     4300006: armor_bandana_red
     4300008: stick
+    4300010: armor_helmet_iron
+    4300012: armor_shoes_iron
+    4300014: armor_chest_iron
+    4300016: armor_pants_iron
     7400000: Armature|attack_1h
     7400002: Armature|attack_punch
     7400004: Armature|attack_stab
@@ -107,12 +120,36 @@ ModelImporter:
     13700000: armor_bandana_red
     13700002: armor_shoes_cloth
     13700004: character
+    13700006: armor_chest_iron
+    13700008: armor_helmet_iron
+    13700010: armor_pants_iron
+    13700012: armor_shoes_iron
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ally_color
+    second: {fileID: 2100000, guid: 660a10fcc96d88a44bdccfa95657d39c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leather_gear
+    second: {fileID: 2100000, guid: e4e72379cc2b25f49b1e5f30db016e34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: e4e72379cc2b25f49b1e5f30db016e34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal.armor
+    second: {fileID: 2100000, guid: e4e72379cc2b25f49b1e5f30db016e34, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
-    materialSearch: 1
+    materialSearch: 0
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
