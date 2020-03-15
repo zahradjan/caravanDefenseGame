@@ -31,14 +31,18 @@ public class characterMovement : MonoBehaviour
         Move();
         
     }
-
     private void Move()
+    {
+        AnimateMovement(Movement());
+    }
+
+    private Vector2 Movement()
     {
         Vector2 movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxis("Vertical"));
         Vector3 forward = mainCameraTransform.forward;
         Vector3 right = mainCameraTransform.right;
         forward.y = 0;
-        right.y =0;
+        right.y = 0;
 
         forward.Normalize();
         right.Normalize();
@@ -61,12 +65,16 @@ public class characterMovement : MonoBehaviour
         controller.Move(desiredMoveDirection * currentSpeed * Time.deltaTime);
 
         controller.Move(gravityVector * Time.deltaTime);
+        return movementInput;
+    }
+    void AnimateMovement(Vector2 movementInput)
+    {
 
         animator.SetFloat("MovementSpeed", 0.5f * movementInput.magnitude, speedSmoothTime, Time.deltaTime);
-       
 
-      
     }
+      
+    
     void Attack()
     {
         animator.SetBool("isAttacking", true);
