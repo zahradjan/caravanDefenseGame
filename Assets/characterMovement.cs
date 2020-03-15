@@ -38,7 +38,7 @@ public class characterMovement : MonoBehaviour
             animator.SetBool("isAttacking", false);
             Move();
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.LeftControl))
         {
 
             HardAttack();
