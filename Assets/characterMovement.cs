@@ -27,7 +27,29 @@ public class characterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        
+       
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Attack();
+        }
+        else
+        {
+            animator.SetBool("isAttacking", false);
+            Move();
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+
+            HardAttack();
+        }
+        else
+        {
+            animator.SetBool("isHardAttacking", false);
+            Move();
+        }
+
+
     }
 
     private void Move()
@@ -61,5 +83,17 @@ public class characterMovement : MonoBehaviour
         controller.Move(gravityVector * Time.deltaTime);
 
         animator.SetFloat("MovementSpeed", 0.5f * movementInput.magnitude, speedSmoothTime, Time.deltaTime);
+       
+
+      
     }
+    void Attack()
+    {
+        animator.SetBool("isAttacking", true);
+    }
+    void HardAttack()
+    {
+        animator.SetBool("isHardAttacking", true);
+    }
+
 }
