@@ -6,13 +6,13 @@ public class enemyFollow : MonoBehaviour
 {
 
     public Transform target;
-    int MoveSpeed = 4;
-    int MaxDist = 10;
-    int MinDist = 2;
+    float moveSpeed = 1f;
+    float maxDist = 5;
+    float minDist = 2;
     private CharacterController controller;
     private float verticalVelocity;
-    private float jumpForce = 2f;
-    private float gravity = 3f;
+    private Animator animator;
+    private float gravity = 6f;
     Vector3 currentPos;
  
 
@@ -22,6 +22,7 @@ public class enemyFollow : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         controller = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,40 +30,59 @@ public class enemyFollow : MonoBehaviour
     {
         transform.LookAt(target);
 
+        Move();
 
-            if (controller.isGrounded)
-            {
-                verticalVelocity = -gravity * Time.deltaTime;
 
-                if (Vector3.Distance(transform.position, target.position) < MinDist)
-                {
-                    
-                    verticalVelocity = jumpForce;
-                transform.position = currentPos;
-                }
-            
-            
-        }
-        else
+         
+
+
+
+
+
+
+
+    }
+
+    void Move()
+    {
+        Vector3 gravityVector = Vector3.zero;
+
+        if (!controller.isGrounded)
         {
-            verticalVelocity -= gravity * Time.deltaTime;
+            gravityVector.y -= gravity;
         }
+        currentPos = transform.position;
 
-      
+        controller.Move(gravityVector * Time.deltaTime);
 
-
-        Vector3 moveVector = new Vector3(0, verticalVelocity, 0);
-        controller.Move(moveVector * Time.deltaTime);
-
-
-        if (Vector3.Distance(transform.position, target.position) > MinDist)
+        if (Vector3.Distance(transform.position, target.position) < maxDist && Vector3.Distance(transform.position, target.position) > minDist)
         {
-
-            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
-            currentPos = transform.position;
-
+            
+            transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            animator.SetFloat("MovementSpeed", 0.5f);
+        } else
+        {
+            transform.position = currentPos;
+            animator.SetFloat("MovementSpeed", 0);
         }
 
+
+            if (Vector3.Distance(transform.position, target.position) < minDist)
+        {
+        //    transform.position += transform.forward * moveSpeed * Time.deltaTime;
+
+            //animator.SetFloat("MovementSpeed", 0.5f);
+            animator.SetBool("isAttacking", true);
+
+        } else
+        {
+            animator.SetBool("isAttacking", false);
+        }
+
+        //transform.position = currentPos;
+        //animator.SetBool("isAttacking", true);
+       
+       
 
 
     }
