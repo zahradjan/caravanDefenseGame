@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class enemyFollow : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class enemyFollow : MonoBehaviour
     Vector3 currentPos;
     int attackType;
     float attackTimer;
+    public Slider healthBar;
 
 
 
@@ -34,7 +36,7 @@ public class enemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+    //    if (healthBar.value <= 0) return;
 
         Move();
        // attackType = Random.Range(0, 11);
@@ -86,12 +88,12 @@ public class enemyFollow : MonoBehaviour
             attackTimer++;
             if (attackTimer > 80)
             {
-                attackType = Random.Range(0, 5);
+             //   attackType = Random.Range(0, 5);
                 attackTimer = 0;
             } 
         
             
-            Debug.Log(attackTimer);
+           // Debug.Log(attackTimer);
          //   if (!animator.GetBool("isAttacking"))
          //   {
                 animator.SetFloat("AttackType",attackType);
