@@ -6,7 +6,7 @@ using UnityEngine;
 public class detectHit : MonoBehaviour
 {
 
-   // public Slider healthBar;
+    // public Slider healthBar;
     public HealthBar healthBar;
     Animator anim;
     private int maxHealth = 100;
@@ -14,18 +14,21 @@ public class detectHit : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        Debug.Log("Hit!");
+        if (anim.GetBool("isAttacking") == true || anim.GetBool("isDead") == false)
+        {
+            Debug.Log("Hit!");
 
-        currentHealth -= 10;
-       // healthBar.SetHealth(currentHealth);
-        if(currentHealth <= 0)
-        {
-            anim.SetBool("isDead", true);
-        }
-        else
-        {
-            anim.SetBool("isDead", false);
+            currentHealth -= 20;
+            healthBar.SetHealth(currentHealth);
+            Debug.Log("currentHealth: " + currentHealth);
+            if (currentHealth <= 0)
+            {
+                anim.SetBool("isDead", true);
+            }
+            else
+            {
+                anim.SetBool("isDead", false);
+            }
         }
     }
 
@@ -34,7 +37,6 @@ public class detectHit : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         currentHealth = maxHealth;
-       // healthBar = GetComponent<Slider>();
         healthBar.SetMaxHealth(maxHealth);
     }
 

@@ -226,9 +226,13 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.293816
+      value: 41.97
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
       propertyPath: m_LocalPosition.y
@@ -236,7 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 68.58599
+      value: 70.52
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
       propertyPath: m_LocalRotation.x
@@ -480,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f596d360fa624b468c323c0ca43912e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 2023635065}
 --- !u!114 &406092179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,7 +498,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 598309583}
-  healthBar: {fileID: 2023635063}
 --- !u!136 &406092180
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -910,7 +913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f596d360fa624b468c323c0ca43912e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 897956535}
 --- !u!114 &598309579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -924,7 +927,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 406092183}
-  healthBar: {fileID: 897956533}
 --- !u!136 &598309580
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1354,6 +1356,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.07
@@ -1711,7 +1717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9528302, g: 0.04045032, b: 0.04045032, a: 1}
+  m_Color: {r: 0.27450982, g: 0.21960784, b: 0.21960784, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2306,7 +2312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9528302, g: 0.04045032, b: 0.04045032, a: 1}
+  m_Color: {r: 0.2735849, g: 0.22067462, b: 0.22067462, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

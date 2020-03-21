@@ -9,7 +9,7 @@ public class enemyFollow : MonoBehaviour
     public Transform target;
     float moveSpeed = 1f;
     float maxDist = 5;
-    float minDist = 2;
+    float minDist = 2.5f;
     private CharacterController controller;
     private float verticalVelocity;
     private Animator animator;
@@ -17,7 +17,7 @@ public class enemyFollow : MonoBehaviour
     Vector3 currentPos;
     int attackType;
     float attackTimer;
-    public Slider healthBar;
+   
 
 
 
@@ -38,12 +38,14 @@ public class enemyFollow : MonoBehaviour
     {
     //   if (healthBar.value <= 0) return;
 
-        Move();
+       GravityForcing();
+
+        WarriorIsAlive();
        // attackType = Random.Range(0, 11);
 
     }
 
-    void Move()
+    void GravityForcing()
     {
         Vector3 gravityVector = Vector3.zero;
 
@@ -55,16 +57,13 @@ public class enemyFollow : MonoBehaviour
 
         currentPos = transform.position;
 
-       
 
-        EnemyMove();
-
-        EnemyAttack();
 
     }
     void EnemyMove()
     {
-        if (Vector3.Distance(transform.position, target.position) < maxDist && Vector3.Distance(transform.position, target.position) > minDist)
+        float distance = Vector3.Distance(transform.position, target.position);
+        if (distance < maxDist && distance > minDist)
         {
             transform.LookAt(target);
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
@@ -109,7 +108,18 @@ public class enemyFollow : MonoBehaviour
             animator.SetBool("isAttacking", false);
         }
 
+
          
         
+    }
+    void WarriorIsAlive()
+    {
+
+        if (animator.GetBool("isDead") == false)
+        {
+            EnemyMove();
+
+            EnemyAttack();
+        }
     }
 }
