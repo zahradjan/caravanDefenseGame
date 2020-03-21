@@ -25,7 +25,13 @@ public class enemyFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      //  target = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Transform>();
+        if (transform.tag == "Team1")
+        {
+            target = GameObject.FindGameObjectWithTag("Team2").GetComponent<Transform>();
+        } else
+        {
+            target = GameObject.FindGameObjectWithTag("Team1").GetComponent<Transform>();
+        }
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
        

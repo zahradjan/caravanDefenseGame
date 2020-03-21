@@ -10,11 +10,14 @@ public class detectHit : MonoBehaviour
     public HealthBar healthBar;
     Animator anim;
     private int maxHealth = 100;
-    private int currentHealth; 
+    private int currentHealth;
+    public string opponent;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (anim.GetBool("isAttacking") == true || anim.GetBool("isDead") == false)
+        if (other.gameObject.tag != opponent) return;
+
+        if (anim.GetBool("isAttacking") == true)
         {
             Debug.Log("Hit!");
 

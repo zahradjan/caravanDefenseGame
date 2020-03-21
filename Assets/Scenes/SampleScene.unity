@@ -224,7 +224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Team2
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
       propertyPath: m_RootOrder
@@ -232,7 +232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.97
+      value: 40.6
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
       propertyPath: m_LocalPosition.y
@@ -240,7 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 70.52
+      value: 68.94
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
       propertyPath: m_LocalRotation.x
@@ -485,6 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2023635065}
+  opponent: Team2
 --- !u!114 &406092179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,7 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03b897029b4fbb458a18eac255b1554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 598309583}
+  target: {fileID: 0}
 --- !u!136 &406092180
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -550,7 +551,7 @@ GameObject:
   - component: {fileID: 431897989}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Team2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -914,6 +915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 897956535}
+  opponent: Team1
 --- !u!114 &598309579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,7 +928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03b897029b4fbb458a18eac255b1554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 406092183}
+  target: {fileID: 0}
 --- !u!136 &598309580
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1068,7 +1070,7 @@ GameObject:
   - component: {fileID: 739126046}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Team1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1354,7 +1356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Team1
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
       propertyPath: m_RootOrder
