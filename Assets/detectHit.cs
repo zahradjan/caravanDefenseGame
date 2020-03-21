@@ -48,4 +48,8 @@ public class detectHit : MonoBehaviour
     {
         
     }
+    int GetCurrentHealth()
+    {
+        return currentHealth;
+    }
 }

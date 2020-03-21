@@ -17,7 +17,8 @@ public class enemyFollow : MonoBehaviour
     Vector3 currentPos;
     int attackType;
     float attackTimer;
-   
+    public HealthBar healthBar;
+
 
 
 
@@ -42,7 +43,7 @@ public class enemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    //   if (healthBar.value <= 0) return;
+     //  if (GetCurrentHealth() <= 0) return;
 
        GravityForcing();
 
