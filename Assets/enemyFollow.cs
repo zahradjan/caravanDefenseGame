@@ -36,7 +36,7 @@ public class enemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    //    if (healthBar.value <= 0) return;
+    //   if (healthBar.value <= 0) return;
 
         Move();
        // attackType = Random.Range(0, 11);
