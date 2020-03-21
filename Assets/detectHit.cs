@@ -18,7 +18,7 @@ public class detectHit : MonoBehaviour
         Debug.Log("Hit!");
 
         currentHealth -= 10;
-        healthBar.SetHealth(currentHealth);
+       // healthBar.SetHealth(currentHealth);
         if(currentHealth <= 0)
         {
             anim.SetBool("isDead", true);
@@ -34,7 +34,7 @@ public class detectHit : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         currentHealth = maxHealth;
-        healthBar = GetComponent<Slider>();
+       // healthBar = GetComponent<Slider>();
         healthBar.SetMaxHealth(maxHealth);
     }
 
