@@ -45,6 +45,10 @@ ModelImporter:
     100078: armor_helmet_iron
     100080: armor_pants_iron
     100082: armor_shoes_iron
+    100084: armor_chest_leather
+    100086: armor_hands_leather_wrist
+    100088: armor_pants_leather
+    100090: armor_shoes_leather_heavy
     400000: Armature
     400002: armor_bandana_red
     400004: armor_shoes_cloth
@@ -87,6 +91,10 @@ ModelImporter:
     400078: armor_helmet_iron
     400080: armor_pants_iron
     400082: armor_shoes_iron
+    400084: armor_chest_leather
+    400086: armor_hands_leather_wrist
+    400088: armor_pants_leather
+    400090: armor_shoes_leather_heavy
     2100000: ally_color
     2100002: metal
     2100004: leather_gear
@@ -106,6 +114,10 @@ ModelImporter:
     4300012: armor_shoes_iron
     4300014: armor_chest_iron
     4300016: armor_pants_iron
+    4300018: armor_shoes_leather_heavy
+    4300020: armor_chest_leather
+    4300022: armor_pants_leather
+    4300024: armor_hands_leather_wrist
     7400000: Armature|attack_1h
     7400002: Armature|attack_punch
     7400004: Armature|attack_stab
@@ -116,6 +128,7 @@ ModelImporter:
     7400014: Armature|attack_2h
     7400016: Armature|attack_spear
     7400018: Armature|attack_spear_1h
+    7400020: Armature|attack_shield_dash
     9500000: //RootNode
     13700000: armor_bandana_red
     13700002: armor_shoes_cloth
@@ -124,6 +137,10 @@ ModelImporter:
     13700008: armor_helmet_iron
     13700010: armor_pants_iron
     13700012: armor_shoes_iron
+    13700014: armor_chest_leather
+    13700016: armor_hands_leather_wrist
+    13700018: armor_pants_leather
+    13700020: armor_shoes_leather_heavy
     2186277476908879412: ImportLogs
   externalObjects:
   - first:
@@ -409,6 +426,34 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|attack_shield_dash
+      takeName: Armature|attack_shield_dash
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
