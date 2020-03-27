@@ -1,147 +1,428 @@
 fileFormatVersion: 2
 guid: 084c943a9b7a7ce44a29cb0a8477e458
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Armature
-    100002: armor_bandana_red
-    100004: armor_shoes_cloth
-    100006: character
-    100008: //RootNode
-    100010: chest
-    100012: head
-    100014: hips
-    100016: left_arm_lower
-    100018: left_arm_upper
-    100020: left_feet
-    100022: left_hand
-    100024: left_leg_lower
-    100026: left_leg_upper
-    100028: left_shoulder
-    100030: neck
-    100032: off_hand_bone
-    100034: right_Arm_lower
-    100036: right_Arm_upper
-    100038: right_feet
-    100040: right_hand
-    100042: right_leg_lower
-    100044: right_leg_upper
-    100046: right_shoulder
-    100048: spine
-    100050: sword_1h
-    100052: weapon_bone
-    100054: head_bone
-    100056: ik_elbow_left
-    100058: ik_elbow_right
-    100060: ik_head_target
-    100062: ik_heel_left
-    100064: ik_heel_right
-    100066: ik_knee_left
-    100068: ik_knee_right
-    100070: ik_wrist_left
-    100072: ik_wrist_right
-    100074: stick
-    100076: armor_chest_iron
-    100078: armor_helmet_iron
-    100080: armor_pants_iron
-    100082: armor_shoes_iron
-    100084: armor_chest_leather
-    100086: armor_hands_leather_wrist
-    100088: armor_pants_leather
-    100090: armor_shoes_leather_heavy
-    400000: Armature
-    400002: armor_bandana_red
-    400004: armor_shoes_cloth
-    400006: character
-    400008: //RootNode
-    400010: chest
-    400012: head
-    400014: hips
-    400016: left_arm_lower
-    400018: left_arm_upper
-    400020: left_feet
-    400022: left_hand
-    400024: left_leg_lower
-    400026: left_leg_upper
-    400028: left_shoulder
-    400030: neck
-    400032: off_hand_bone
-    400034: right_Arm_lower
-    400036: right_Arm_upper
-    400038: right_feet
-    400040: right_hand
-    400042: right_leg_lower
-    400044: right_leg_upper
-    400046: right_shoulder
-    400048: spine
-    400050: sword_1h
-    400052: weapon_bone
-    400054: head_bone
-    400056: ik_elbow_left
-    400058: ik_elbow_right
-    400060: ik_head_target
-    400062: ik_heel_left
-    400064: ik_heel_right
-    400066: ik_knee_left
-    400068: ik_knee_right
-    400070: ik_wrist_left
-    400072: ik_wrist_right
-    400074: stick
-    400076: armor_chest_iron
-    400078: armor_helmet_iron
-    400080: armor_pants_iron
-    400082: armor_shoes_iron
-    400084: armor_chest_leather
-    400086: armor_hands_leather_wrist
-    400088: armor_pants_leather
-    400090: armor_shoes_leather_heavy
-    2100000: ally_color
-    2100002: metal
-    2100004: leather_gear
-    2100006: cloth
-    2100008: wood
-    2100010: metal.armor
-    2300000: sword_1h
-    2300002: stick
-    3300000: sword_1h
-    3300002: stick
-    4300000: character
-    4300002: sword_1h
-    4300004: armor_shoes_cloth
-    4300006: armor_bandana_red
-    4300008: stick
-    4300010: armor_helmet_iron
-    4300012: armor_shoes_iron
-    4300014: armor_chest_iron
-    4300016: armor_pants_iron
-    4300018: armor_shoes_leather_heavy
-    4300020: armor_chest_leather
-    4300022: armor_pants_leather
-    4300024: armor_hands_leather_wrist
-    7400000: Armature|attack_1h
-    7400002: Armature|attack_punch
-    7400004: Armature|attack_stab
-    7400006: Armature|death
-    7400008: Armature|iddle
-    7400010: Armature|run
-    7400012: Armature|walk
-    7400014: Armature|attack_2h
-    7400016: Armature|attack_spear
-    7400018: Armature|attack_spear_1h
-    7400020: Armature|attack_shield_dash
-    9500000: //RootNode
-    13700000: armor_bandana_red
-    13700002: armor_shoes_cloth
-    13700004: character
-    13700006: armor_chest_iron
-    13700008: armor_helmet_iron
-    13700010: armor_pants_iron
-    13700012: armor_shoes_iron
-    13700014: armor_chest_leather
-    13700016: armor_hands_leather_wrist
-    13700018: armor_pants_leather
-    13700020: armor_shoes_leather_heavy
-    2186277476908879412: ImportLogs
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Armature
+  - first:
+      1: 100002
+    second: armor_bandana_red
+  - first:
+      1: 100004
+    second: armor_shoes_cloth
+  - first:
+      1: 100006
+    second: character
+  - first:
+      1: 100008
+    second: //RootNode
+  - first:
+      1: 100010
+    second: chest
+  - first:
+      1: 100012
+    second: head
+  - first:
+      1: 100014
+    second: hips
+  - first:
+      1: 100016
+    second: left_arm_lower
+  - first:
+      1: 100018
+    second: left_arm_upper
+  - first:
+      1: 100020
+    second: left_feet
+  - first:
+      1: 100022
+    second: left_hand
+  - first:
+      1: 100024
+    second: left_leg_lower
+  - first:
+      1: 100026
+    second: left_leg_upper
+  - first:
+      1: 100028
+    second: left_shoulder
+  - first:
+      1: 100030
+    second: neck
+  - first:
+      1: 100032
+    second: off_hand_bone
+  - first:
+      1: 100034
+    second: right_Arm_lower
+  - first:
+      1: 100036
+    second: right_Arm_upper
+  - first:
+      1: 100038
+    second: right_feet
+  - first:
+      1: 100040
+    second: right_hand
+  - first:
+      1: 100042
+    second: right_leg_lower
+  - first:
+      1: 100044
+    second: right_leg_upper
+  - first:
+      1: 100046
+    second: right_shoulder
+  - first:
+      1: 100048
+    second: spine
+  - first:
+      1: 100050
+    second: sword_1h
+  - first:
+      1: 100052
+    second: weapon_bone
+  - first:
+      1: 100054
+    second: head_bone
+  - first:
+      1: 100056
+    second: ik_elbow_left
+  - first:
+      1: 100058
+    second: ik_elbow_right
+  - first:
+      1: 100060
+    second: ik_head_target
+  - first:
+      1: 100062
+    second: ik_heel_left
+  - first:
+      1: 100064
+    second: ik_heel_right
+  - first:
+      1: 100066
+    second: ik_knee_left
+  - first:
+      1: 100068
+    second: ik_knee_right
+  - first:
+      1: 100070
+    second: ik_wrist_left
+  - first:
+      1: 100072
+    second: ik_wrist_right
+  - first:
+      1: 100074
+    second: stick
+  - first:
+      1: 100076
+    second: armor_chest_iron
+  - first:
+      1: 100078
+    second: armor_helmet_iron
+  - first:
+      1: 100080
+    second: armor_pants_iron
+  - first:
+      1: 100082
+    second: armor_shoes_iron
+  - first:
+      1: 100084
+    second: armor_chest_leather
+  - first:
+      1: 100086
+    second: armor_hands_leather_wrist
+  - first:
+      1: 100088
+    second: armor_pants_leather
+  - first:
+      1: 100090
+    second: armor_shoes_leather_heavy
+  - first:
+      4: 400000
+    second: Armature
+  - first:
+      4: 400002
+    second: armor_bandana_red
+  - first:
+      4: 400004
+    second: armor_shoes_cloth
+  - first:
+      4: 400006
+    second: character
+  - first:
+      4: 400008
+    second: //RootNode
+  - first:
+      4: 400010
+    second: chest
+  - first:
+      4: 400012
+    second: head
+  - first:
+      4: 400014
+    second: hips
+  - first:
+      4: 400016
+    second: left_arm_lower
+  - first:
+      4: 400018
+    second: left_arm_upper
+  - first:
+      4: 400020
+    second: left_feet
+  - first:
+      4: 400022
+    second: left_hand
+  - first:
+      4: 400024
+    second: left_leg_lower
+  - first:
+      4: 400026
+    second: left_leg_upper
+  - first:
+      4: 400028
+    second: left_shoulder
+  - first:
+      4: 400030
+    second: neck
+  - first:
+      4: 400032
+    second: off_hand_bone
+  - first:
+      4: 400034
+    second: right_Arm_lower
+  - first:
+      4: 400036
+    second: right_Arm_upper
+  - first:
+      4: 400038
+    second: right_feet
+  - first:
+      4: 400040
+    second: right_hand
+  - first:
+      4: 400042
+    second: right_leg_lower
+  - first:
+      4: 400044
+    second: right_leg_upper
+  - first:
+      4: 400046
+    second: right_shoulder
+  - first:
+      4: 400048
+    second: spine
+  - first:
+      4: 400050
+    second: sword_1h
+  - first:
+      4: 400052
+    second: weapon_bone
+  - first:
+      4: 400054
+    second: head_bone
+  - first:
+      4: 400056
+    second: ik_elbow_left
+  - first:
+      4: 400058
+    second: ik_elbow_right
+  - first:
+      4: 400060
+    second: ik_head_target
+  - first:
+      4: 400062
+    second: ik_heel_left
+  - first:
+      4: 400064
+    second: ik_heel_right
+  - first:
+      4: 400066
+    second: ik_knee_left
+  - first:
+      4: 400068
+    second: ik_knee_right
+  - first:
+      4: 400070
+    second: ik_wrist_left
+  - first:
+      4: 400072
+    second: ik_wrist_right
+  - first:
+      4: 400074
+    second: stick
+  - first:
+      4: 400076
+    second: armor_chest_iron
+  - first:
+      4: 400078
+    second: armor_helmet_iron
+  - first:
+      4: 400080
+    second: armor_pants_iron
+  - first:
+      4: 400082
+    second: armor_shoes_iron
+  - first:
+      4: 400084
+    second: armor_chest_leather
+  - first:
+      4: 400086
+    second: armor_hands_leather_wrist
+  - first:
+      4: 400088
+    second: armor_pants_leather
+  - first:
+      4: 400090
+    second: armor_shoes_leather_heavy
+  - first:
+      21: 2100000
+    second: ally_color
+  - first:
+      21: 2100002
+    second: metal
+  - first:
+      21: 2100004
+    second: leather_gear
+  - first:
+      21: 2100006
+    second: cloth
+  - first:
+      21: 2100008
+    second: wood
+  - first:
+      21: 2100010
+    second: metal.armor
+  - first:
+      23: 2300000
+    second: sword_1h
+  - first:
+      23: 2300002
+    second: stick
+  - first:
+      33: 3300000
+    second: sword_1h
+  - first:
+      33: 3300002
+    second: stick
+  - first:
+      43: 4300000
+    second: character
+  - first:
+      43: 4300002
+    second: sword_1h
+  - first:
+      43: 4300004
+    second: armor_shoes_cloth
+  - first:
+      43: 4300006
+    second: armor_bandana_red
+  - first:
+      43: 4300008
+    second: stick
+  - first:
+      43: 4300010
+    second: armor_helmet_iron
+  - first:
+      43: 4300012
+    second: armor_shoes_iron
+  - first:
+      43: 4300014
+    second: armor_chest_iron
+  - first:
+      43: 4300016
+    second: armor_pants_iron
+  - first:
+      43: 4300018
+    second: armor_shoes_leather_heavy
+  - first:
+      43: 4300020
+    second: armor_chest_leather
+  - first:
+      43: 4300022
+    second: armor_pants_leather
+  - first:
+      43: 4300024
+    second: armor_hands_leather_wrist
+  - first:
+      74: 7400000
+    second: Armature|attack_1h
+  - first:
+      74: 7400002
+    second: Armature|attack_punch
+  - first:
+      74: 7400004
+    second: Armature|attack_stab
+  - first:
+      74: 7400006
+    second: Armature|death
+  - first:
+      74: 7400008
+    second: Armature|iddle
+  - first:
+      74: 7400010
+    second: Armature|run
+  - first:
+      74: 7400012
+    second: Armature|walk
+  - first:
+      74: 7400014
+    second: Armature|attack_2h
+  - first:
+      74: 7400016
+    second: Armature|attack_spear
+  - first:
+      74: 7400018
+    second: Armature|attack_spear_1h
+  - first:
+      74: 7400020
+    second: Armature|attack_shield_dash
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: armor_bandana_red
+  - first:
+      137: 13700002
+    second: armor_shoes_cloth
+  - first:
+      137: 13700004
+    second: character
+  - first:
+      137: 13700006
+    second: armor_chest_iron
+  - first:
+      137: 13700008
+    second: armor_helmet_iron
+  - first:
+      137: 13700010
+    second: armor_pants_iron
+  - first:
+      137: 13700012
+    second: armor_shoes_iron
+  - first:
+      137: 13700014
+    second: armor_chest_leather
+  - first:
+      137: 13700016
+    second: armor_hands_leather_wrist
+  - first:
+      137: 13700018
+    second: armor_pants_leather
+  - first:
+      137: 13700020
+    second: armor_shoes_leather_heavy
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
+  - first:
+      74: 65922882618846603
+    second: Armature|attack_bow
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -164,7 +445,7 @@ ModelImporter:
       name: metal.armor
     second: {fileID: 2100000, guid: e4e72379cc2b25f49b1e5f30db016e34, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 0
     materialLocation: 1
@@ -193,6 +474,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Armature|attack_1h
       takeName: Armature|attack_1h
+      internalID: 0
       firstFrame: 0
       lastFrame: 37
       wrapMode: 0
@@ -221,6 +503,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Armature|attack_punch
       takeName: Armature|attack_punch
+      internalID: 0
       firstFrame: 0
       lastFrame: 32
       wrapMode: 0
@@ -249,6 +532,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Armature|death
       takeName: Armature|death
+      internalID: 0
       firstFrame: 0
       lastFrame: 38
       wrapMode: 0
@@ -277,6 +561,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Armature|iddle
       takeName: Armature|iddle
+      internalID: 0
       firstFrame: 0
       lastFrame: 29
       wrapMode: 0
@@ -305,6 +590,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Armature|run
       takeName: Armature|run
+      internalID: 0
       firstFrame: 0
       lastFrame: 32
       wrapMode: 0
@@ -333,6 +619,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Armature|attack_2h
       takeName: Armature|attack_2h
+      internalID: 0
       firstFrame: 0
       lastFrame: 43
       wrapMode: 0
@@ -361,6 +648,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Armature|attack_spear
       takeName: Armature|attack_spear
+      internalID: 0
       firstFrame: 0
       lastFrame: 35
       wrapMode: 0
@@ -389,6 +677,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Armature|attack_spear_1h
       takeName: Armature|attack_spear_1h
+      internalID: 0
       firstFrame: 0
       lastFrame: 35
       wrapMode: 0
@@ -417,6 +706,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Armature|attack_stab
       takeName: Armature|attack_stab
+      internalID: 0
       firstFrame: 0
       lastFrame: 35
       wrapMode: 0
@@ -445,8 +735,38 @@ ModelImporter:
     - serializedVersion: 16
       name: Armature|attack_shield_dash
       takeName: Armature|attack_shield_dash
+      internalID: 0
       firstFrame: 0
       lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|attack_bow
+      takeName: Armature|attack_bow
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 51
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -477,6 +797,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -484,18 +805,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -504,10 +826,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton:
     - name: character_rework_hard(Clone)
@@ -652,13 +974,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
