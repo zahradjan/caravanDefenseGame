@@ -428,17 +428,25 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: ally_color
-    second: {fileID: 2100000, guid: 660a10fcc96d88a44bdccfa95657d39c, type: 2}
+    second: {fileID: -2269418102462588499, guid: 7649da83964c91d4cab89e5d0c6318ac,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cloth
+    second: {fileID: 2100000, guid: 139583b3453368a49856067fbd5a9da5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: leather_gear
-    second: {fileID: 2100000, guid: e4e72379cc2b25f49b1e5f30db016e34, type: 2}
+    second: {fileID: -924255790154857520, guid: 7649da83964c91d4cab89e5d0c6318ac,
+      type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: metal
-    second: {fileID: 2100000, guid: e4e72379cc2b25f49b1e5f30db016e34, type: 2}
+    second: {fileID: -8067726398312463513, guid: 7649da83964c91d4cab89e5d0c6318ac,
+      type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
