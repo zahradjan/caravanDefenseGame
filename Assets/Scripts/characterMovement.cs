@@ -78,7 +78,8 @@ public class characterMovement : MonoBehaviour
     void Attack()
     {
         animator.SetBool("isAttacking", true);
-    }
+       
+    }    
     void HardAttack()
     {
         animator.SetBool("isHardAttacking", true);
