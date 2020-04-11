@@ -8,11 +8,12 @@ public class ShootProjectile : MonoBehaviour
     public float differenceY;
     public GameObject projectilePrefab;
     public  float startDelay;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -21,7 +22,10 @@ public class ShootProjectile : MonoBehaviour
         //launch projectile from player
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Shoot();
+            
+                Shoot();
+            
+            
             //Invoke("Shoot", startDelay);
         }
     }

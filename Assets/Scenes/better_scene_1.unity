@@ -21481,8 +21481,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697f1845b33e5b9499863c15fe50f2d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  differenceX: 1
-  differenceY: 8
+  differenceX: 0
+  differenceY: 2
   projectilePrefab: {fileID: 5223621491506510547, guid: 85698327de3ec094ab44342fb38e6424,
     type: 3}
   startDelay: 1
