@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44500995, g: 0.49459606, b: 0.57371145, a: 1}
+  m_IndirectSpecularColor: {r: 0.44501048, g: 0.4945966, b: 0.5737121, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21482,7 +21482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   differenceX: 1
-  differenceY: 1.5
+  differenceY: 8
   projectilePrefab: {fileID: 5223621491506510547, guid: 85698327de3ec094ab44342fb38e6424,
     type: 3}
   startDelay: 1

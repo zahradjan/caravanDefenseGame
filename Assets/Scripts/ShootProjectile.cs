@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ShootProjectile : MonoBehaviour
 {
-    public float differenceX = 1f;
-    public float differenceY = 1.5f;  
+    public float differenceX ;
+    public float differenceY;
     public GameObject projectilePrefab;
-    public  float startDelay = 1.3f;
+    public  float startDelay;
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +21,8 @@ public class ShootProjectile : MonoBehaviour
         //launch projectile from player
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
-            Invoke("Shoot", startDelay);
+            Shoot();
+            //Invoke("Shoot", startDelay);
         }
     }
 
