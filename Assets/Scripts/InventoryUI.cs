@@ -32,10 +32,10 @@ public class InventoryUI : MonoBehaviour
             {
                 slots[i].AddItem(inventory.items[i]);
             }
-            else
+           /* else
             {
               //slots[i].ClearSlot();  //z nějakýho důvodu způsobuje error a nefunguje - ClearSlot je v 'InventorySlot.cs'
-            }
+            }*/
         }
     }
 }
