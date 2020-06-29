@@ -8,8 +8,8 @@ public class enemyFollow : MonoBehaviour
 
     public Transform target;
     float moveSpeed = 1f;
-    float maxDist = 5;
-    float minDist = 2.5f;
+    float maxDist = 10;
+    float minDist = 2f;
     private CharacterController controller;
     private float verticalVelocity;
     private Animator animator;

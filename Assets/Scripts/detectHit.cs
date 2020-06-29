@@ -11,28 +11,29 @@ public class detectHit : MonoBehaviour
     Animator anim;
     private int maxHealth = 100;
     private int currentHealth;
-    public string opponent;
+
+  
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag != opponent) return;
+        // hit ktery dostava i kdyz ten nepritel spadne k zemi je proto ze kollidery toho nepritele se vypnou protoze je mrtvej
+        // => cili ta podminka se provede problem je ze collidery toho zivyho furt detekuji kolizi a tim padem ten hit z toho
+        // padu detekuji a proto se ty zivoty uberou :)
+        if (anim.GetBool("isDead") == true) return;
 
-        if (anim.GetBool("isAttacking") == true)
-        {
-            Debug.Log("Hit!");
 
-            currentHealth -= 20;
-            healthBar.SetHealth(currentHealth);
-            Debug.Log("currentHealth: " + currentHealth);
-            if (currentHealth <= 0)
-            {
-                anim.SetBool("isDead", true);
-            }
-            else
-            {
-                anim.SetBool("isDead", false);
-            }
-        }
+        //Debug.Log("My layer: " + gameObject.layer);
+        //Debug.Log("Opponents layer: " + other.gameObject.layer);
+        //Debug.Log("My tag: " + gameObject.tag);
+        //Debug.Log("Opponents tag: " + other.gameObject.tag);
+
+
+        
+            DealDamage();
+        
+
+       
+
     }
 
     // Start is called before the first frame update
@@ -46,10 +47,30 @@ public class detectHit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
+        
     int GetCurrentHealth()
     {
         return currentHealth;
     }
+
+    void DealDamage()
+    {
+        Debug.Log("Hit!");
+        // ubira si svoje zivoty to je spatne nemit to zavisle vubec na sobe ale pouze kdyz dostane hit
+        currentHealth -= 20;
+        healthBar.SetHealth(currentHealth);
+        Debug.Log("currentHealth: " + currentHealth);
+    }
+    void Die()
+    {
+            // tady jsem skoncil takhle neprovadet on se pri kazdem updatu bude hazet do ty vrstvy a bude se to furt provolavat
+            anim.SetBool("isDead", true);
+            gameObject.layer = 11;
+            Debug.Log("My layer: " + gameObject.layer);
+        }
 }
