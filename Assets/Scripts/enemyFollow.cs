@@ -43,7 +43,8 @@ public class enemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     //  if (GetCurrentHealth() <= 0) return;
+        //  if (GetCurrentHealth() <= 0) return;
+
 
        GravityForcing();
 
@@ -89,7 +90,7 @@ public class enemyFollow : MonoBehaviour
 
 
 
-        if (distance < minDist)
+        if (distance < minDist &&  target.gameObject.layer != 11)
         {
             attackTimer++;
             if (attackTimer > 80)
@@ -119,10 +120,12 @@ public class enemyFollow : MonoBehaviour
          
         
     }
+
+   
     void WarriorIsAlive()
     {
-
-        if (animator.GetBool("isDead") == false)
+      
+        if (animator.GetBool("isDead") == false )
         {
             EnemyMove();
 

@@ -30,11 +30,12 @@ public class detectHit : MonoBehaviour
 
         
             DealDamage();
-        
 
        
+    
 
-    }
+
+}
 
     // Start is called before the first frame update
     void Start()
@@ -70,7 +71,13 @@ public class detectHit : MonoBehaviour
     {
             // tady jsem skoncil takhle neprovadet on se pri kazdem updatu bude hazet do ty vrstvy a bude se to furt provolavat
             anim.SetBool("isDead", true);
-            gameObject.layer = 11;
+        if (gameObject.layer != 11)
+        {
+            gameObject.layer = LayerMask.NameToLayer("Hell");
+            transform.Find("Armature/ik_wrist_right/Capsule").gameObject.layer = LayerMask.NameToLayer("Hell");
             Debug.Log("My layer: " + gameObject.layer);
+        }
+       
+      
         }
 }
