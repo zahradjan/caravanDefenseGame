@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class InventoryUI : MonoBehaviour
+public class EquipedUI : MonoBehaviour
 {
     public Transform itemsParent;
 
@@ -8,7 +8,7 @@ public class InventoryUI : MonoBehaviour
 
     InventorySlot[] slots;
 
-   
+
     void Start()
     {
         inventory = Inventory.instance;
@@ -17,18 +17,18 @@ public class InventoryUI : MonoBehaviour
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
     }
 
-    void UpdateUI() 
+    void UpdateUI()
     {
         Debug.Log("Updating UI");
         for (int i = 0; i < slots.Length; i++)
         {
-            if(i < inventory.items.Count)
+            if (i < inventory.items.Count)
             {
                 slots[i].AddItem(inventory.items[i]);
             }
             else
             {
-              slots[i].ClearSlot();  
+                slots[i].ClearSlot();
             }
         }
     }

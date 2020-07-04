@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour{
 
-
-    //udělá že může existovat pouze jedna instance inventáře (pouze jeden inventář)
     #region Singleton    
     public static Inventory instance; 
 
     void Awake()    
     {
-        if (instance != null) //je jen varování
+        if (instance != null) //just warning
         {
             Debug.LogWarning("More then one instance of Inventory found!");
             return;
@@ -21,38 +19,38 @@ public class Inventory : MonoBehaviour{
     }
     #endregion
 
-    public delegate void OnItemChanged();       //nevim přesně co dělá tohle ale je to důležitý pro UI :D
+    public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallBack;
 
-    public int space = 36; //(zatím) maximální kapacita inventáře
+    public int space = 36; //capacity
 
-    public List<Item> items = new List<Item>(); //list itemů
+    public List<Item> items = new List<Item>(); 
 
     public void Add (Item item)
     {
-        if(!item.isDefaultItem) //PŘIDAT ITEM
+        if(!item.isDefaultItem) //ADD ITEM
         {
-            if (items.Count >= space)
+            if (items.Count >= space) //capacity
             {
-                Debug.Log("Not enough room."); //překročena kapacita inventáře (tutoriál pokračuje E04 11:00)
+                Debug.Log("Not enough room."); 
                 return;
             }
 
             items.Add(item);
 
             if(onItemChangedCallBack != null){
-                onItemChangedCallBack.Invoke(); //triggering event, taky důležitý
+                onItemChangedCallBack.Invoke(); 
             }
         }
 
     }
 
-    public void Remove(Item item) //ODEBRAT ITEM
+    public void Remove(Item item)
     {
         items.Remove(item);
 
         if (onItemChangedCallBack != null){
-            onItemChangedCallBack.Invoke(); //triggering event, taky důležitý
+            onItemChangedCallBack.Invoke(); 
         }
     }
 
