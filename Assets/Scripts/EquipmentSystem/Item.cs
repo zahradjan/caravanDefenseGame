@@ -4,13 +4,13 @@
 
 public class Item : ScriptableObject{
 
-    new public string name = "New Item";    //název itemu
-    public Sprite icon = null;              //ikona itemu
+    new public string name = "New Item";    
+    public Sprite icon = null;              
     public bool isDefaultItem = false;
 
     public virtual void Use ()
     {
-        //use the item
+        //use the item (also works for other items then equipment like consumables or something)
         Debug.Log("Using " + name);
     }
 

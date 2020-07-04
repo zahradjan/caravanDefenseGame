@@ -17,19 +17,18 @@ public class InventorySlot : MonoBehaviour
         
     }
 
-    public void ClearSlot(Item newItem) //nedaří se zavolat tuhle funkci v InventoryUI.cs
+    public void ClearSlot()
     {
         item = null;
         icon.sprite = null;
         icon.enabled = false;
         removeButton.interactable = false;
-        Debug.Log("Clear Slot"); 
     }
 
     public void OnRemoveButton()
     {
-        Inventory.instance.Remove(item);
         Debug.Log(item.name + " removed from Inventory!");
+        Inventory.instance.Remove(item);
     }
 
     public void UseItem ()
