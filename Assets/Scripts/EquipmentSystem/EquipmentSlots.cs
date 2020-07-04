@@ -6,6 +6,8 @@ public class EquipmentSlots : MonoBehaviour
     public Image icon;
     Item item;
     public Button removeButton;
+    //public int EquipmentSlotIntex;
+   // public EquipmentSlot LocalSlot;
 
 
     public void AddItem(Item newItem)
@@ -14,6 +16,7 @@ public class EquipmentSlots : MonoBehaviour
         icon.sprite = item.icon;
         icon.enabled = true;
         removeButton.interactable = true;
+      
 
     }
 
@@ -27,15 +30,15 @@ public class EquipmentSlots : MonoBehaviour
 
     public void OnRemoveButton()
     {
-        Debug.Log(item.name + " removed from Inventory!");
-        Inventory.instance.Remove(item);
+        //Debug.Log(item.name + " removed from Inventory!");
+       // Inventory.instance.Remove(item);
     }
 
-    public void UseItem()
+    /*public void UseItem()
     {
         if (item != null)
         {
             item.Use();
         }
-    }
+    }*/
 }

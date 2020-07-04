@@ -1,35 +1,34 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class EquipedUI : MonoBehaviour
 {
-    public Transform itemsParent;
+    /*public GameObject headSlot;
+    public GameObject chestSlot;
+    public GameObject handSlot;
+    public GameObject legsSlot;
+    public GameObject feetSlot;
+    public GameObject weaponSlot;
+    public GameObject offhandSlot;*/
 
-    Inventory inventory;
+   
 
-    InventorySlot[] slots;
-
-
-    void Start()
+    private void Start()
     {
-        inventory = Inventory.instance;
-        inventory.onItemChangedCallBack += UpdateUI;
+        EquipmentManager.instance.onEquipmentChanged += OnEquipmentChange;
 
-        slots = itemsParent.GetComponentsInChildren<InventorySlot>();
     }
 
-    void UpdateUI()
+     void OnEquipmentChange(Equipment newItem, Equipment oldItem)
     {
-        Debug.Log("Updating UI");
-        for (int i = 0; i < slots.Length; i++)
-        {
-            if (i < inventory.items.Count)
-            {
-                slots[i].AddItem(inventory.items[i]);
-            }
-            else
-            {
-                slots[i].ClearSlot();
-            }
-        }
+        UpdateUI();
+    }
+
+
+     void UpdateUI()
+    {
+        Debug.Log("Updating Equipment UI");
+        
     }
 }
