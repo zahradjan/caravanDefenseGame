@@ -23,7 +23,7 @@ public class InventoryUI : MonoBehaviour
         
     }
 
-    void UpdateUI() //tomuhle absolutě nerozumim
+    void UpdateUI() //updatuje inventář, to else má asi prázdný místa označit jako prázdný místa - "vynullovat" je (viz. InventorySlot.cs/ClearSlot) (4:50 E06)
     {
         Debug.Log("Updating UI");
         for (int i = 0; i < slots.Length; i++)
@@ -32,9 +32,9 @@ public class InventoryUI : MonoBehaviour
             {
                 slots[i].AddItem(inventory.items[i]);
             }
-           /* else
+          /*  else
             {
-              //slots[i].ClearSlot();  //z nějakýho důvodu způsobuje error a nefunguje - ClearSlot je v 'InventorySlot.cs'
+              slots[i].ClearSlot();  //z nějakýho důvodu způsobuje error a nefunguje 
             }*/
         }
     }

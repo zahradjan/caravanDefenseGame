@@ -9,7 +9,6 @@ public class ItemPickUp : MonoBehaviour {
     void Start()
     {
        clickButton.onClick.AddListener(PickUp);
-
     }
 
 
@@ -20,18 +19,13 @@ public class ItemPickUp : MonoBehaviour {
 
      private void PickUp()
      {
-
-
        // if(Input.GetMouseButtonDown(0))
       //  {
             Debug.Log("Picking up " + item.name);
             //add to inventory
             Inventory.instance.Add(item);
             Destroy(gameObject);
-
        // }
-       
-
 
      }
 }
