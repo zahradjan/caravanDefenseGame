@@ -4,31 +4,42 @@ using UnityEngine;
 
 public class EquipedUI : MonoBehaviour
 {
-    /*public GameObject headSlot;
-    public GameObject chestSlot;
-    public GameObject handSlot;
-    public GameObject legsSlot;
-    public GameObject feetSlot;
-    public GameObject weaponSlot;
-    public GameObject offhandSlot;*/
+ 
+    public Transform equipedSlotsParent;
 
-   
+    EquipmentManager equipmentManager;
+
+    EquipedSlot[] eSlots;
+
 
     private void Start()
     {
-        EquipmentManager.instance.onEquipmentChanged += OnEquipmentChange;
+        equipmentManager = EquipmentManager.instance;
+
+        equipmentManager.onEquipmentChanged += UpdateUI;
+
+        eSlots = equipedSlotsParent.GetComponentsInChildren<EquipedSlot>();
 
     }
 
-     void OnEquipmentChange(Equipment newItem, Equipment oldItem)
-    {
-        UpdateUI();
-    }
-
-
-     void UpdateUI()
+     void UpdateUI(Equipment newItem, Equipment oldItem) // odkázat se na equip() a unequip() v EquipmentManager.cs
     {
         Debug.Log("Updating Equipment UI");
-        
+
+        //Projet všechny sloty, pokud "slotIndex" itemu se rovná "LocalSlot" EquipedSlotu, použít ikonu, else - nechat slot prázdný
+        for (int i = 0; i < eSlots.Length; i++)  
+        {
+            if (true) 
+            {
+                
+            }
+            else
+            {
+               // eSlots[i].ClearSlot();
+            }
+        }
+
     }
+
+
 }

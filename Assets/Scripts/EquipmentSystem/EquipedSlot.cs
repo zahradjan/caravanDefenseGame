@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class EquipmentSlots : MonoBehaviour
+public class EquipedSlot : MonoBehaviour
 {
     public Image icon;
     Item item;
     public Button removeButton;
-    //public int EquipmentSlotIntex;
-   // public EquipmentSlot LocalSlot;
+    public int EquipmentSlotIntex;
+    public EquipmentSlot LocalSlot;
+    
 
 
     public void AddItem(Item newItem)
