@@ -12,6 +12,7 @@ public class Item : ScriptableObject{
     {
         //use the item (also works for other items then equipment like consumables or something)
         Debug.Log("Using " + name);
+        //override in Equipment.cs
     }
 
     public void RemoveFromInventory ()
