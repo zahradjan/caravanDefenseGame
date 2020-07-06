@@ -3,12 +3,14 @@ using UnityEngine.UI;
 
 public class ItemPickUp : MonoBehaviour {
 
+    public Image icon;
     public Item item;
     public Button clickButton;
 
     void Start()
     {
-       clickButton.onClick.AddListener(PickUp);
+        icon.sprite = item.icon;
+        clickButton.onClick.AddListener(PickUp);
     }
 
      private void PickUp()
@@ -18,5 +20,10 @@ public class ItemPickUp : MonoBehaviour {
             Destroy(gameObject);
 
      }
+
+    void TakeAll()
+    {
+        //on button click - Loot All
+    }
 }
 

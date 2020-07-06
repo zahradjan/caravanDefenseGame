@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37deb994da77b844b8b48e9ab61808fc, type: 3}
-  m_Name: Helmet of Testing
+  m_Name: Leather Chest
   m_EditorClassIdentifier: 
-  name: Helmet of Testing
-  icon: {fileID: 21300000, guid: 64f44abe1f6d2f142af37227bdf79bea, type: 3}
+  name: Leather Chest
+  icon: {fileID: 21300000, guid: 8794b59e6ab027b4b9c68a025f1dda6e, type: 3}
   isDefaultItem: 0
-  equipSlot: 0
-  mesh: {fileID: 820485426449136161, guid: 8fd4caaae7f3c254ab1f8a86adf1f952, type: 3}
-  armorModifier: 5
+  equipSlot: 1
+  mesh: {fileID: 3829255857092842861, guid: a9aa9a086c979f04a9dbdffee08846de, type: 3}
+  armorModifier: 8
   damageModifier: 0

@@ -8,6 +8,7 @@ using UnityEngine;
 public class Equipment : Item
 {
     public EquipmentSlot equipSlot;
+    public SkinnedMeshRenderer mesh;
     //stats
     public int armorModifier;
     public int damageModifier;
