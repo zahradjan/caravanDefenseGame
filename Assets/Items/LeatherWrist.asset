@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37deb994da77b844b8b48e9ab61808fc, type: 3}
+  m_Name: LeatherWrist
+  m_EditorClassIdentifier: 
+  name: Leather Wrist
+  icon: {fileID: 21300000, guid: 815ab288c8ab5ea438f316e0169b10ec, type: 3}
+  isDefaultItem: 0
+  equipSlot: 2
+  mesh: {fileID: 7104835995143272288, guid: 79f78ea3d65b2f2479f580e42735aa52, type: 3}
+  armorModifier: 2
+  damageModifier: 0
