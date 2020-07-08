@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LeatherWrist
   m_EditorClassIdentifier: 
   name: Leather Wrist
-  icon: {fileID: 21300000, guid: 8794b59e6ab027b4b9c68a025f1dda6e, type: 3}
+  icon: {fileID: 21300000, guid: 815ab288c8ab5ea438f316e0169b10ec, type: 3}
   isDefaultItem: 0
   equipSlot: 2
   mesh: {fileID: 7104835995143272288, guid: 79f78ea3d65b2f2479f580e42735aa52, type: 3}

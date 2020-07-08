@@ -15,12 +15,14 @@ public class EquipedUI : MonoBehaviour
     private void Start()
     {
         equipmentManager = EquipmentManager.instance;
-
         equipmentManager.onEquipmentChanged += UpdateUI;
 
         eSlots = equipedSlotsParent.GetComponentsInChildren<EquipedSlot>();
 
-       
+        
+
+
+
     }
 
      void UpdateUI(Equipment newItem, Equipment oldItem) 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LeatherBoots
   m_EditorClassIdentifier: 
   name: Heavy Leather Boots
-  icon: {fileID: 21300000, guid: 8794b59e6ab027b4b9c68a025f1dda6e, type: 3}
+  icon: {fileID: 21300000, guid: f3eb9df9b708d374a86b0e96ce1df417, type: 3}
   isDefaultItem: 0
   equipSlot: 4
   mesh: {fileID: 5235292449743766947, guid: 07afc768b3d362246bfed2c62164115a, type: 3}

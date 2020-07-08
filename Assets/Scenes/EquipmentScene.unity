@@ -128,6 +128,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 591442885}
     m_Modifications:
+    - target: {fileID: 1221317817003811409, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 88d51808b01175e4f8c6dfec8e0667e5,
+        type: 3}
+    - target: {fileID: 2094601827711267516, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: LocalSlot
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094601827711267516, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: defaultSlotIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 88d51808b01175e4f8c6dfec8e0667e5,
+        type: 3}
     - target: {fileID: 6542777562587835334, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
         type: 3}
       propertyPath: m_Name
@@ -2454,11 +2471,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 591442885}
     m_Modifications:
+    - target: {fileID: 1221317817003811409, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8bb5769e06e86684992dc67d32ed9ae6,
+        type: 3}
     - target: {fileID: 2094601827711267516, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
         type: 3}
       propertyPath: LocalSlot
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2094601827711267516, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: defaultSlotIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 8bb5769e06e86684992dc67d32ed9ae6,
+        type: 3}
     - target: {fileID: 6542777562587835334, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
         type: 3}
       propertyPath: m_Name
@@ -4565,6 +4594,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 591442885}
     m_Modifications:
+    - target: {fileID: 1221317817003811409, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8ed0b3d8294a9da43a29e2277dec1a5a,
+        type: 3}
+    - target: {fileID: 2094601827711267516, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: defaultSlotIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 8ed0b3d8294a9da43a29e2277dec1a5a,
+        type: 3}
+    - target: {fileID: 2094601827711267516, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: LocalSlot
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6542777562587835334, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
         type: 3}
       propertyPath: m_Name
@@ -6299,6 +6345,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 591442885}
     m_Modifications:
+    - target: {fileID: 1221317817003811409, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b331ee6e8126cc64fa964c4a951294c3,
+        type: 3}
+    - target: {fileID: 2094601827711267516, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: LocalSlot
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094601827711267516, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: defaultSlotIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: b331ee6e8126cc64fa964c4a951294c3,
+        type: 3}
     - target: {fileID: 6542777562587835334, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
         type: 3}
       propertyPath: m_Name
@@ -7224,6 +7287,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 591442885}
     m_Modifications:
+    - target: {fileID: 1221317817003811409, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b95668ed704e7fa4fbf610fb9dc14757,
+        type: 3}
+    - target: {fileID: 2094601827711267516, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: LocalSlot
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094601827711267516, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: defaultSlotIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: b95668ed704e7fa4fbf610fb9dc14757,
+        type: 3}
     - target: {fileID: 6542777562587835334, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
         type: 3}
       propertyPath: m_Name
@@ -8420,11 +8500,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 591442885}
     m_Modifications:
+    - target: {fileID: 1221317817003811409, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: de99edd34de0bda4080a3f2c92ab58e1,
+        type: 3}
     - target: {fileID: 2094601827711267516, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
         type: 3}
       propertyPath: LocalSlot
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2094601827711267516, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: defaultSlotIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: de99edd34de0bda4080a3f2c92ab58e1,
+        type: 3}
     - target: {fileID: 6542777562587835334, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
         type: 3}
       propertyPath: m_Name
@@ -8663,6 +8755,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 591442885}
     m_Modifications:
+    - target: {fileID: 1221317817003811409, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5b4ff799713d0c64fba2ed7e4fc025f4,
+        type: 3}
+    - target: {fileID: 2094601827711267516, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
+        type: 3}
+      propertyPath: defaultSlotIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 5b4ff799713d0c64fba2ed7e4fc025f4,
+        type: 3}
     - target: {fileID: 6542777562587835334, guid: 3a386bd301fbd2a4faefbfb8553bb8c3,
         type: 3}
       propertyPath: m_Name

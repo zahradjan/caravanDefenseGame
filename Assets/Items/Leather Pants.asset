@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Leather Pants
   m_EditorClassIdentifier: 
   name: Leather Pants
-  icon: {fileID: 21300000, guid: 8794b59e6ab027b4b9c68a025f1dda6e, type: 3}
+  icon: {fileID: 21300000, guid: 73fb81da7913d6f4bb9b4807ce6cf78f, type: 3}
   isDefaultItem: 0
   equipSlot: 3
   mesh: {fileID: 759361999481620643, guid: 73b0e02045d8ae44290cc3b39b78a89c, type: 3}

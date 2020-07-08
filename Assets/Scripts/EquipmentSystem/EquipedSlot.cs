@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class EquipedSlot : MonoBehaviour
 {
     public Image icon;
+    public Sprite defaultSlotIcon;
     Item item;
     public Button removeButton;
     public int EquipmentSlotIntex;
