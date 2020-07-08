@@ -18,7 +18,18 @@ public class enemyFollow : MonoBehaviour
     int attackType;
     float attackTimer;
     public HealthBar healthBar;
+    float distance;
 
+    public enum AnimalState
+    {
+        Iddle,
+        Searching,
+        Attacking,
+        Death
+    }
+
+
+    public AnimalState currentState;
 
 
 
@@ -26,6 +37,8 @@ public class enemyFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        currentState = AnimalState.Searching;
         if (transform.tag == "Team1")
         {
             target = GameObject.FindGameObjectWithTag("Team2").GetComponent<Transform>();
@@ -43,17 +56,36 @@ public class enemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //  if (GetCurrentHealth() <= 0) return;
+
+        GravityForce();
+
+        switch (currentState)
+        {
+            case AnimalState.Iddle:
+
+                break;
+            case AnimalState.Searching:
+                EnemyMove();
+                break;
+            case AnimalState.Attacking:
+                EnemyAttack();
+                break;
+            case AnimalState.Death:
+                Death();
+                break;
+            
+        }
 
 
-       GravityForcing();
 
-        WarriorIsAlive();
-       // attackType = Random.Range(0, 11);
+       
+
+      
+
 
     }
 
-    void GravityForcing()
+    void GravityForce()
     {
         Vector3 gravityVector = Vector3.zero;
 
@@ -68,25 +100,65 @@ public class enemyFollow : MonoBehaviour
 
 
     }
-    void EnemyMove()
+    public GameObject FindClosestEnemy()
     {
-        float distance = Vector3.Distance(transform.position, target.position);
-        if (distance < maxDist && distance > minDist)
+        GameObject[] gos;
+        if (transform.tag == "Team1")
         {
-            transform.LookAt(target);
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;
-            animator.SetFloat("MovementSpeed", 0.5f);
+
+            gos = GameObject.FindGameObjectsWithTag("Team2");
         }
         else
         {
+            gos = GameObject.FindGameObjectsWithTag("Team1");
+        }
+
+        
+        GameObject closest = null;
+        distance = Vector3.Distance(transform.position, target.position);
+        Vector3 position = transform.position;
+        foreach (GameObject go in gos)
+        {
+            Vector3 diff = go.transform.position - position;
+            float curDistance = diff.sqrMagnitude;
+            if (curDistance < distance)
+            {
+                closest = go;
+                distance = curDistance;
+            }
+        }
+        return closest;
+    }
+
+    void EnemyMove()
+    {
+
+        FindClosestEnemy();
+       
+
+        if (distance < maxDist && distance > minDist && target.gameObject.layer != 11)
+
+        {
+            
+            transform.LookAt(target);
+            transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            animator.SetFloat("MovementSpeed", 0.5f);
+            
+        }
+        else if (distance < minDist && target.gameObject.layer != 11)
+        {
+            currentState = AnimalState.Attacking;
+        } else
+        {
             transform.position = currentPos;
             animator.SetFloat("MovementSpeed", 0);
-        }
+        } 
+       
     }
     void EnemyAttack()
     {
-
-        float distance = Vector3.Distance(transform.position, target.position);
+       
+        distance = Vector3.Distance(transform.position, target.position);
 
 
 
@@ -122,7 +194,7 @@ public class enemyFollow : MonoBehaviour
     }
 
    
-    void WarriorIsAlive()
+    void Death()
     {
       
         if (animator.GetBool("isDead") == false )
