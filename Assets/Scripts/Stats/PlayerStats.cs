@@ -16,7 +16,7 @@ public class PlayerStats : CharacterStats
         if (newItem != null)
         {
             armor.AddModifier(newItem.armorModifier);
-            damage.AddModifier(newItem.damageModifier);
+            damage.AddModifier(newItem.damageModifier); 
         }
 
         if (oldItem != null)
