@@ -19,3 +19,10 @@ MonoBehaviour:
   mesh: {fileID: 5235292449743766947, guid: 07afc768b3d362246bfed2c62164115a, type: 3}
   armorModifier: 3
   damageModifier: 0
+  healthModifier: 0
+  attackSpeedModifier: 0
+  movementSpeedModifier: 3
+  spiritPowerModifier: 0
+  strengthModifier: 0
+  agilityModifier: 0
+  wisdomModifier: 0

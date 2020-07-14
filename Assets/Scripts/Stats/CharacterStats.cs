@@ -8,10 +8,16 @@ public class CharacterStats : MonoBehaviour
     public int currentHealth { get; private set; }
     public Stat damage; 
     public Stat armor;
+    public Stat attackSpeed;
+    public Stat movementSpeed;
+    public Stat spiritPower;
 
     public Stat strength;
     public Stat agility;
     public Stat wisdom;
+
+    //public delegate void OnstatsUpdated();
+   // public OnstatsUpdated onstatsUpdated;
 
     void Awake()
     {
@@ -22,6 +28,9 @@ public class CharacterStats : MonoBehaviour
         strength.SetBaseValue(1);
         agility.SetBaseValue(1);
         wisdom.SetBaseValue(1);
+        attackSpeed.SetBaseValue(10);
+        movementSpeed.SetBaseValue(10);
+        damage.SetBaseValue(10);
 
     }
 
@@ -66,11 +75,60 @@ public class CharacterStats : MonoBehaviour
         statPoints.AddModifier(1);
         Debug.Log(transform.name + " Leveled Up! " + transform.name + "'s level is now " + characterLevel);
         Debug.Log("Stat points = " + statPoints.getValue());
+
+      /*  if (onstatsUpdated != null)
+        {
+            onstatsUpdated.Invoke();
+        }*/
     }
 
-    public void IncreaseStat(Stat stat)
+    public void IncreaseStat(Stat stat) //for buttons
     {
-        statPoints.RemoveModifier(1);
-        stat.AddModifier(1);
+            statPoints.RemoveModifier(1);
+            stat.AddModifier(1);
+    }
+    
+    public void IncreaseStrength()
+    {
+        if (statPoints.getValue() > 0)
+        {
+            IncreaseStat(strength);
+            OnStrengthStatUp();
+        }
+        
+    }
+    public void IncreaseAgility()
+    {
+        if (statPoints.getValue() > 0)
+        {
+            IncreaseStat(agility);
+            OnAgilityStatUp();
+        }
+        
+    }
+    public void IncreaseWisdom()
+    {
+        if (statPoints.getValue() > 0)
+        {
+            IncreaseStat(wisdom);
+            OnWisdomStatUp();
+        }
+        
+    }
+
+    public void OnStrengthStatUp()
+    {
+        maxHealth.AddModifier(5);
+        //+increase character model size
+    }
+    public void OnAgilityStatUp()
+    {
+        attackSpeed.AddModifier(2);
+        movementSpeed.AddModifier(2);
+    }
+    public void OnWisdomStatUp()
+    {
+        spiritPower.AddModifier(2);
+        //cooldown?
     }
 }

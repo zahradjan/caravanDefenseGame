@@ -18,4 +18,8 @@ MonoBehaviour:
   equipSlot: 5
   mesh: {fileID: 7301685294625442612, guid: 4ac85a9f7ba4d374c997862ce383aceb, type: 3}
   armorModifier: 0
-  damageModifier: 12
+  damageModifier: 15
+  healthModifier: 0
+  attackSpeedModifier: -3
+  movementSpeedModifier: 0
+  spiritPowerModifier: 0

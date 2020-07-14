@@ -7,6 +7,10 @@ public class StatsUI : MonoBehaviour
 {
     EquipmentManager equipmentManager;
 
+    public Button strengthButton;
+    public Button agilityButton;
+    public Button wisdomButton;
+
     public GameObject selectedCharacter;
     Text levelUI;
     Text healthUI;
@@ -24,6 +28,8 @@ public class StatsUI : MonoBehaviour
     private void Update()
     {
         UpdateStatsUI(selectedCharacter); 
+
+
     }
 
 
@@ -41,6 +47,15 @@ public class StatsUI : MonoBehaviour
         damageUI = GameObject.Find("TextDamage").GetComponent<Text>();
         damageUI.text = "Damage: " + selectedCharacter.GetComponent<PlayerStats>().damage.getValue();
 
+        damageUI = GameObject.Find("TextAttackSpeed").GetComponent<Text>();
+        damageUI.text = "Attack Speed: " + selectedCharacter.GetComponent<PlayerStats>().attackSpeed.getValue();
+
+        damageUI = GameObject.Find("TextMovementSpeed").GetComponent<Text>();
+        damageUI.text = "Movement Speed: " + selectedCharacter.GetComponent<PlayerStats>().movementSpeed.getValue();
+
+        damageUI = GameObject.Find("TextSpiritPower").GetComponent<Text>();
+        damageUI.text = "Spirit Power: " + selectedCharacter.GetComponent<PlayerStats>().spiritPower.getValue();
+
         strengthUI = GameObject.Find("TextStatPoints").GetComponent<Text>();
         strengthUI.text = "Unused Stat Points: " + selectedCharacter.GetComponent<PlayerStats>().statPoints.getValue();
 
@@ -54,11 +69,22 @@ public class StatsUI : MonoBehaviour
         wisdomUI.text = "Wisdom: " + selectedCharacter.GetComponent<PlayerStats>().wisdom.getValue();
 
 
-        /*
-        // or you can also do this
-        string example = "Hello2";
-        armorUI.text = example;
-        */
+        //dissable buttons
+       /* if (PlayerStats.statPoints.getValue() > 0)
+        {
+            strengthButton.interactable = false;
+            agilityButton.interactable = false;
+            wisdomButton.interactable = false;
+        }
+        else
+        {
+            strengthButton.interactable = true;
+            agilityButton.interactable = true;
+            wisdomButton.interactable = true;
+        }*/
+
+
+       
     }
 
     

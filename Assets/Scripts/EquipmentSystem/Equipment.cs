@@ -12,6 +12,11 @@ public class Equipment : Item
     //stats
     public int armorModifier;
     public int damageModifier;
+    public int healthModifier;
+    public int attackSpeedModifier;
+    public int movementSpeedModifier;
+    public int spiritPowerModifier;
+
 
     public override void Use() //equip item
     {
