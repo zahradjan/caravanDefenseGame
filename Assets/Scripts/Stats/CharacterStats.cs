@@ -2,21 +2,27 @@
 
 public class CharacterStats : MonoBehaviour
 {
-    public int CharacterLevel;
-
-    public int maxHealth = 200; // později "int" předělat na "Stat" aby se s tím dalo pracovat
+    public int characterLevel;
+    public Stat statPoints;
+    public Stat maxHealth;
     public int currentHealth { get; private set; }
-
     public Stat damage; 
     public Stat armor;
 
-    public Stat Strength;
-    public Stat Agility;
-    public Stat Intelect;
+    public Stat strength;
+    public Stat agility;
+    public Stat wisdom;
 
     void Awake()
     {
-        currentHealth = maxHealth;
+        maxHealth.SetBaseValue(100);
+        currentHealth = maxHealth.getValue();
+        characterLevel = 1;
+        //set the minimum of main stats to 1 instead of 0
+        strength.SetBaseValue(1);
+        agility.SetBaseValue(1);
+        wisdom.SetBaseValue(1);
+
     }
 
     private void Update()
@@ -56,7 +62,15 @@ public class CharacterStats : MonoBehaviour
 
     public void LevelUp()
     {
-        CharacterLevel += 1;
-        Debug.Log(transform.name + " Leveled Up! " + transform.name + "'s level is now " + CharacterLevel);
+        characterLevel += 1;
+        statPoints.AddModifier(1);
+        Debug.Log(transform.name + " Leveled Up! " + transform.name + "'s level is now " + characterLevel);
+        Debug.Log("Stat points = " + statPoints.getValue());
+    }
+
+    public void IncreaseStat(Stat stat)
+    {
+        statPoints.RemoveModifier(1);
+        stat.AddModifier(1);
     }
 }
