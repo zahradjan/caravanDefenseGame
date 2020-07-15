@@ -12,6 +12,7 @@ public class StatsUI : MonoBehaviour
     public Button wisdomButton;
 
     public GameObject selectedCharacter;
+    Text characterName;
     Text levelUI;
     Text healthUI;
     Text armorUI;
@@ -19,6 +20,7 @@ public class StatsUI : MonoBehaviour
     Text strengthUI;
     Text agilityUI;
     Text wisdomUI;
+    
 
     private void Start()
     {
@@ -35,6 +37,9 @@ public class StatsUI : MonoBehaviour
 
     public void UpdateStatsUI(GameObject selectedCharacter)
     {
+        levelUI = GameObject.Find("TextName").GetComponent<Text>();
+        levelUI.text = " " + selectedCharacter.name;
+
         levelUI = GameObject.Find("TextLvl").GetComponent<Text>();
         levelUI.text = "Level: " + selectedCharacter.GetComponent<PlayerStats>().characterLevel;
 
