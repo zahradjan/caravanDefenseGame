@@ -2,15 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterRotation : MonoBehaviour
+public class CharacterOverview : MonoBehaviour
 {
+    CharacterStats characterStats;
 
     Rigidbody rb;
     int rotationSpeed = 25;
 
+    //public GameObject selectedCharacter;
+
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    public void Update()
+    {
+        //transform.localScale = characterStats.characterHeight; //error
+            
     }
 
     public void RotateLeft()

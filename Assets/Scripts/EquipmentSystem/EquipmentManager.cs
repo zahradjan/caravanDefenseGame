@@ -15,6 +15,7 @@ public class EquipmentManager : MonoBehaviour
     #endregion
 
     public SkinnedMeshRenderer targetMesh; // empty player body mesh
+    public GameObject handBone;
     Equipment[] currentEquipment;   //currently equiped items
     SkinnedMeshRenderer[] currentMeshes;
     
@@ -24,13 +25,18 @@ public class EquipmentManager : MonoBehaviour
 
     Inventory inventory;
 
-     void Start()
+    public Vector3 pickPosition;
+    public Vector3 pickRotation;
+    public Vector3 pickScale;
+
+    void Start()
     {
         inventory = Inventory.instance;
 
       int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Equipment[numSlots];
         currentMeshes = new SkinnedMeshRenderer[numSlots];
+
     }
 
     public void Equip (Equipment newItem)
@@ -53,10 +59,27 @@ public class EquipmentManager : MonoBehaviour
         currentEquipment[slotIndex] = newItem;
         SkinnedMeshRenderer newMesh = Instantiate<SkinnedMeshRenderer>(newItem.mesh);
         newMesh.transform.parent = targetMesh.transform; //parent the equipment mesh to player mesh
+        
 
         newMesh.bones = targetMesh.bones;
-        newMesh.rootBone = targetMesh.rootBone;
+        if (newItem.equipSlot != EquipmentSlot.Weapon)
+        {
+            newMesh.rootBone = targetMesh.rootBone;
+        }
+        else{
+            //GameObject handBone = targetArmature.transform.Find("weapon_bone").gameObject; // make weapon a child of handbone
+            Debug.Log("Item is Weapon!");
+            newMesh.transform.parent = handBone.transform;
+           // newMesh.transform.position = handBone.transform.position;
+           newMesh.transform.localPosition = pickPosition;
+            newMesh.transform.localEulerAngles = pickRotation;
+            newMesh.transform.localScale = pickScale;
+
+        }
+
         currentMeshes[slotIndex] = newMesh;
+
+       
     }
 
     public void Unequip (int slotIndex) 

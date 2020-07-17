@@ -7,10 +7,6 @@ public class StatsUI : MonoBehaviour
 {
     EquipmentManager equipmentManager;
 
-    public Button strengthButton;
-    public Button agilityButton;
-    public Button wisdomButton;
-
     public GameObject selectedCharacter;
     Text characterName;
     Text levelUI;

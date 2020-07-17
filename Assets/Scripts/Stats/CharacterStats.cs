@@ -2,6 +2,9 @@
 
 public class CharacterStats : MonoBehaviour
 {
+    public Vector3 characterHeight;
+    private float heightModifier = 1.05f;
+
     public int characterLevel;
     public Stat statPoints;
     public Stat maxHealth;
@@ -21,6 +24,7 @@ public class CharacterStats : MonoBehaviour
 
     void Awake()
     {
+        characterHeight = new Vector3(1f, 1f, 1f);
         maxHealth.SetBaseValue(100);
         currentHealth = maxHealth.getValue();
         characterLevel = 1;
@@ -86,8 +90,9 @@ public class CharacterStats : MonoBehaviour
     {
             statPoints.RemoveModifier(1);
             stat.AddModifier(1);
+           
     }
-    
+    #region Increase Stat
     public void IncreaseStrength()
     {
         if (statPoints.getValue() > 0)
@@ -115,10 +120,13 @@ public class CharacterStats : MonoBehaviour
         }
         
     }
+    #endregion
 
     public void OnStrengthStatUp()
     {
         maxHealth.AddModifier(5);
+        characterHeight *= heightModifier;
+        transform.localScale = characterHeight;
         //+increase character model size
     }
     public void OnAgilityStatUp()
