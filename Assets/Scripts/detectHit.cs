@@ -62,7 +62,6 @@ public class detectHit : MonoBehaviour
     void DealDamage()
     {
         Debug.Log("Hit!");
-        // ubira si svoje zivoty to je spatne nemit to zavisle vubec na sobe ale pouze kdyz dostane hit
         currentHealth -= 20;
         healthBar.SetHealth(currentHealth);
         Debug.Log("currentHealth: " + currentHealth);

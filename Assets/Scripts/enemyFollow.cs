@@ -7,7 +7,7 @@ public class enemyFollow : MonoBehaviour
 {
 
     public Transform target;
-    float moveSpeed = 1f;
+    float moveSpeed = 2f;
     float maxDist = 10;
     float minDist = 2f;
     private CharacterController controller;
@@ -27,25 +27,24 @@ public class enemyFollow : MonoBehaviour
         Attacking,
         Death
     }
-
-
     public AnimalState currentState;
-
-
-
-
     // Start is called before the first frame update
     void Start()
     {
 
+      
         currentState = AnimalState.Searching;
-        if (transform.tag == "Team1")
-        {
-            target = GameObject.FindGameObjectWithTag("Team2").GetComponent<Transform>();
-        } else
-        {
-            target = GameObject.FindGameObjectWithTag("Team1").GetComponent<Transform>();
-        }
+
+        target = FindClosestEnemy();
+
+        //if (transform.tag == "Team1")
+        //{
+        //    target = GameObject.FindGameObjectWithTag("Team2").GetComponent<Transform>();
+        //}
+        //else
+        //{
+        //    target = GameObject.FindGameObjectWithTag("Team1").GetComponent<Transform>();
+        //}
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
        
@@ -59,30 +58,38 @@ public class enemyFollow : MonoBehaviour
 
         GravityForce();
 
-        switch (currentState)
-        {
-            case AnimalState.Iddle:
-
-                break;
-            case AnimalState.Searching:
-                EnemyMove();
-                break;
-            case AnimalState.Attacking:
-                EnemyAttack();
-                break;
-            case AnimalState.Death:
-                Death();
-                break;
-            
-        }
-
-
-
        
 
-      
+        if (isAlive())
+        {
+            switch (currentState)
+            {
+                case AnimalState.Iddle:
+                    Iddle();
+                    break;
+                case AnimalState.Searching:
+                    Move();
+                    break;
+                case AnimalState.Attacking:
+                    Attack();
+                    break;
+           
 
+            }
+        }
 
+    }
+
+    private bool isAlive()
+    {
+        if (transform.gameObject.layer != 11)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     void GravityForce()
@@ -100,7 +107,23 @@ public class enemyFollow : MonoBehaviour
 
 
     }
-    public GameObject FindClosestEnemy()
+
+    void Iddle() {
+
+        transform.position = currentPos;
+        animator.SetFloat("MovementSpeed", 0);
+        animator.SetBool("isAttacking", false);
+        target = FindClosestEnemy();
+        if(target != null)
+        {
+            currentState=AnimalState.Searching;
+        }
+
+    }
+
+
+
+    public Transform FindClosestEnemy()
     {
         GameObject[] gos;
         if (transform.tag == "Team1")
@@ -112,96 +135,77 @@ public class enemyFollow : MonoBehaviour
         {
             gos = GameObject.FindGameObjectsWithTag("Team1");
         }
-
+        Debug.Log(gos.Length);
         
         GameObject closest = null;
-        distance = Vector3.Distance(transform.position, target.position);
+        float infdistance = Mathf.Infinity; /*Vector3.Distance(transform.position, target.position);*/
         Vector3 position = transform.position;
         foreach (GameObject go in gos)
         {
+           
+           
             Vector3 diff = go.transform.position - position;
             float curDistance = diff.sqrMagnitude;
-            if (curDistance < distance)
+            Debug.Log("Vzdalenost: " + infdistance);
+            Debug.Log("Current vzdalenost: " + curDistance);
+            if (curDistance < infdistance)
             {
-                closest = go;
-                distance = curDistance;
+                if (go.layer != 11)
+                {
+                    closest = go;
+
+                    infdistance = curDistance;
+                }
             }
         }
-        return closest;
+        Debug.Log(closest);
+        return closest.transform;
     }
 
-    void EnemyMove()
+    void Move()
     {
 
-        FindClosestEnemy();
-       
+        //Debug.Log("hybu se ");
+        currentState = AnimalState.Searching;
+         distance = Vector3.Distance(transform.position, target.position);
+
+      
+
 
         if (distance < maxDist && distance > minDist && target.gameObject.layer != 11)
 
         {
-            
+
             transform.LookAt(target);
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
             animator.SetFloat("MovementSpeed", 0.5f);
-            
+
         }
         else if (distance < minDist && target.gameObject.layer != 11)
         {
+
+            Debug.Log("utocim");
             currentState = AnimalState.Attacking;
-        } else
-        {
-            transform.position = currentPos;
-            animator.SetFloat("MovementSpeed", 0);
-        } 
+        }
        
     }
-    void EnemyAttack()
+    void Attack()
     {
-       
-        distance = Vector3.Distance(transform.position, target.position);
-
-
-
-        if (distance < minDist &&  target.gameObject.layer != 11)
+        if (target.gameObject.layer == 11)
         {
-            attackTimer++;
-            if (attackTimer > 80)
-            {
-             //   attackType = Random.Range(0, 5);
-                attackTimer = 0;
-            } 
-        
-            
-           // Debug.Log(attackTimer);
-         //   if (!animator.GetBool("isAttacking"))
-         //   {
-                animator.SetFloat("AttackType",attackType);
-             
-                 animator.SetBool("isAttacking", true);
-                
-          //  }
-           
-
+            target = null;
+            Debug.Log("Flakam se");
+            currentState = AnimalState.Iddle;
         }
         else
         {
-            animator.SetBool("isAttacking", false);
+            animator.SetFloat("AttackType", attackType);
+
+            animator.SetBool("isAttacking", true);
         }
-
-
-         
-        
+       
     }
 
    
-    void Death()
-    {
-      
-        if (animator.GetBool("isDead") == false )
-        {
-            EnemyMove();
-
-            EnemyAttack();
-        }
-    }
+   
 }
