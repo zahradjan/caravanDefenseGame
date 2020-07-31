@@ -286,7 +286,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
+  defaultSlotIcon: {fileID: 0}
   removeButton: {fileID: 5799247125579424790}
+  EquipmentSlotIntex: 0
+  LocalSlot: 0
 --- !u!1 &7108197604491545138
 GameObject:
   m_ObjectHideFlags: 0

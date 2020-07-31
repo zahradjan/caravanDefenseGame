@@ -23,8 +23,7 @@ public class EquipedSlot : MonoBehaviour
     public void ClearSlot()
     {
         item = null;
-        icon.sprite = null;
-        icon.enabled = false;
+        icon.sprite = defaultSlotIcon;
         removeButton.interactable = false;
     }
 
