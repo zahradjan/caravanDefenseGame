@@ -9,7 +9,7 @@ public class SkillsUI : MonoBehaviour
 
     public void EnableSkillsUI()
     {
-        //skillsUI.SetActive(!skillsUI.activeSelf);
+        //skillsUI.SetActive(!skillsUI.activeSelf); //alternativní možnost
         skillsUI.SetActive(true);
 
     }

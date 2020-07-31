@@ -26,18 +26,7 @@ public class EquipedSlot : MonoBehaviour
         icon.sprite = defaultSlotIcon;
         removeButton.interactable = false;
     }
+ 
 
-    public void OnRemoveButton()
-    {
-        //Debug.Log(item.name + " removed from Inventory!");
-       // Inventory.instance.Remove(item);
-    }
 
-    /*public void UseItem()
-    {
-        if (item != null)
-        {
-            item.Use();
-        }
-    }*/
 }
