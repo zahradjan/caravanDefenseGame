@@ -75,15 +75,18 @@ public class CharacterStats : MonoBehaviour
 
     public void LevelUp()
     {
-        characterLevel += 1;
-        statPoints.AddModifier(1);
-        Debug.Log(transform.name + " Leveled Up! " + transform.name + "'s level is now " + characterLevel);
-        Debug.Log("Stat points = " + statPoints.getValue());
+        int levelCost = (characterLevel * 250)/2; //make some cost per lvl calculation
+        int resources = Resources.instance.currentResources;
 
-      /*  if (onstatsUpdated != null)
+        if (resources > 0 && resources >= levelCost)
         {
-            onstatsUpdated.Invoke();
-        }*/
+            Resources.instance.AddResources(-levelCost);
+            characterLevel += 1;
+            statPoints.AddModifier(1);
+            Debug.Log(transform.name + " Leveled Up! " + transform.name + "'s level is now " + characterLevel);
+            Debug.Log("Cost per lvl = " + levelCost);
+        }
+
     }
 
     public void IncreaseStat(Stat stat) //for buttons

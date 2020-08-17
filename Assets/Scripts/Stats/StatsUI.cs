@@ -16,6 +16,7 @@ public class StatsUI : MonoBehaviour
     Text strengthUI;
     Text agilityUI;
     Text wisdomUI;
+    Text resourcesUI;
     
 
     private void Start()
@@ -69,23 +70,25 @@ public class StatsUI : MonoBehaviour
         wisdomUI = GameObject.Find("TextWisdom").GetComponent<Text>();
         wisdomUI.text = "Wisdom: " + selectedCharacter.GetComponent<PlayerStats>().wisdom.getValue();
 
+        resourcesUI = GameObject.Find("TextResources").GetComponent<Text>();
+        resourcesUI.text = "Resources: " + Resources.instance.currentResources;
 
         //dissable buttons
-       /* if (PlayerStats.statPoints.getValue() > 0)
-        {
-            strengthButton.interactable = false;
-            agilityButton.interactable = false;
-            wisdomButton.interactable = false;
-        }
-        else
-        {
-            strengthButton.interactable = true;
-            agilityButton.interactable = true;
-            wisdomButton.interactable = true;
-        }*/
+        /* if (PlayerStats.statPoints.getValue() > 0)
+         {
+             strengthButton.interactable = false;
+             agilityButton.interactable = false;
+             wisdomButton.interactable = false;
+         }
+         else
+         {
+             strengthButton.interactable = true;
+             agilityButton.interactable = true;
+             wisdomButton.interactable = true;
+         }*/
 
 
-       
+
     }
 
     
