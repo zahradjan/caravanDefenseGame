@@ -28,6 +28,13 @@ public class enemyFollow : MonoBehaviour
         Death
     }
     public AnimalState currentState;
+    private AnimatorClipInfo[] current;
+    private AnimatorStateInfo animatorStateInfo ;
+    private string currentName;
+    private float currentLength;
+    private float timepased;
+    float actualTimeOfAnimation;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,20 +43,17 @@ public class enemyFollow : MonoBehaviour
         currentState = AnimalState.Searching;
 
         target = FindClosestEnemy();
+        attackType =1;/* Random.Range(1, 4);*/
 
-        //if (transform.tag == "Team1")
-        //{
-        //    target = GameObject.FindGameObjectWithTag("Team2").GetComponent<Transform>();
-        //}
-        //else
-        //{
-        //    target = GameObject.FindGameObjectWithTag("Team1").GetComponent<Transform>();
-        //}
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
        
 
 
+    }
+    private void FixedUpdate()
+    {
+        
     }
 
     // Update is called once per frame
@@ -58,7 +62,9 @@ public class enemyFollow : MonoBehaviour
 
         GravityForce();
 
-       
+      
+
+        //Debug.Log("CAS U: " + animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
 
         if (isAlive())
         {
@@ -70,7 +76,7 @@ public class enemyFollow : MonoBehaviour
                 case AnimalState.Searching:
                     Move();
                     break;
-                case AnimalState.Attacking:
+                case AnimalState.Attacking:                           
                     Attack();
                     break;
            
@@ -79,6 +85,7 @@ public class enemyFollow : MonoBehaviour
         }
 
     }
+   
 
     private bool isAlive()
     {
@@ -135,7 +142,7 @@ public class enemyFollow : MonoBehaviour
         {
             gos = GameObject.FindGameObjectsWithTag("Team1");
         }
-        Debug.Log(gos.Length);
+        //Debug.Log(gos.Length);
         
         GameObject closest = null;
         float infdistance = Mathf.Infinity; /*Vector3.Distance(transform.position, target.position);*/
@@ -146,8 +153,8 @@ public class enemyFollow : MonoBehaviour
            
             Vector3 diff = go.transform.position - position;
             float curDistance = diff.sqrMagnitude;
-            Debug.Log("Vzdalenost: " + infdistance);
-            Debug.Log("Current vzdalenost: " + curDistance);
+            //Debug.Log("Vzdalenost: " + infdistance);
+            //Debug.Log("Current vzdalenost: " + curDistance);
             if (curDistance < infdistance)
             {
                 if (go.layer != 11)
@@ -158,18 +165,17 @@ public class enemyFollow : MonoBehaviour
                 }
             }
         }
-        Debug.Log(closest);
+        //Debug.Log(closest);
         return closest.transform;
     }
 
     void Move()
     {
 
-        //Debug.Log("hybu se ");
         currentState = AnimalState.Searching;
          distance = Vector3.Distance(transform.position, target.position);
 
-      
+        
 
 
         if (distance < maxDist && distance > minDist && target.gameObject.layer != 11)
@@ -184,7 +190,8 @@ public class enemyFollow : MonoBehaviour
         else if (distance < minDist && target.gameObject.layer != 11)
         {
 
-            Debug.Log("utocim");
+         
+            animator.SetFloat("MovementSpeed", 0);
             currentState = AnimalState.Attacking;
         }
        
@@ -199,13 +206,51 @@ public class enemyFollow : MonoBehaviour
         }
         else
         {
-            animator.SetFloat("AttackType", attackType);
+
+
 
             animator.SetBool("isAttacking", true);
+            animator.SetFloat("AttackType", attackType);
+            Debug.Log("Attack type: " + attackType);
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack")) {
+                animatorStateInfo = animator.GetCurrentAnimatorStateInfo(0);
+                if (!AnimatorIsPlaying())
+                {
+                    attackType = Random.Range(1, 3);
+                    Debug.Log(animator.GetCurrentAnimatorClipInfoCount(0));
+                }
+                //StartCoroutine(changeAttackType(animator.GetCurrentAnimatorStateInfo(0).length));
+            }
+           
+
+
+
         }
-       
+
+        // zjistit jestli ta aktualni animace utoku uz skoncila a na zaklade toho ji zmenit
+        // zmena probehne na zaklade 
+
+        bool AnimatorIsPlaying()
+        {
+
+            float completeLengthOfAnimation = animatorStateInfo.length;
+            actualTimeOfAnimation = animatorStateInfo.normalizedTime;
+            //Debug.Log("CL " + completeLengthOfAnimation);
+            //Debug.Log("AT " + actualTimeOfAnimation);
+            return completeLengthOfAnimation > actualTimeOfAnimation;
+        }
+
+        IEnumerator changeAttackType(float seconds)
+        {
+
+            Debug.Log("Jmeno: " + animator.GetCurrentAnimatorClipInfo(0)[0].clip.name + " delka: " + seconds);
+            yield return new WaitForSeconds(seconds + 0.5f);
+
+            attackType = Random.Range(1,3);
+            //    animator.SetFloat("AttackType", attackType);
+        }
     }
 
-   
-   
+
+
 }

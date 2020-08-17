@@ -61,10 +61,10 @@ public class detectHit : MonoBehaviour
 
     void DealDamage()
     {
-        Debug.Log("Hit!");
+      
         currentHealth -= 20;
         healthBar.SetHealth(currentHealth);
-        Debug.Log("currentHealth: " + currentHealth);
+        //Debug.Log("currentHealth: " + currentHealth);
     }
     void Die()
     {
@@ -74,7 +74,7 @@ public class detectHit : MonoBehaviour
         {
             gameObject.layer = LayerMask.NameToLayer("Hell");
             transform.Find("Armature/ik_wrist_right/Capsule").gameObject.layer = LayerMask.NameToLayer("Hell");
-            Debug.Log("My layer: " + gameObject.layer);
+          
         }
        
       
