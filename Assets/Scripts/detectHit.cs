@@ -11,8 +11,9 @@ public class detectHit : MonoBehaviour
     Animator anim;
     private int maxHealth = 100;
     private int currentHealth;
-
-  
+    private int randomDamage;
+    private int dmg_high;
+    private int dmg_low;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -61,10 +62,14 @@ public class detectHit : MonoBehaviour
 
     void DealDamage()
     {
-      
-        currentHealth -= 20;
+        randomDamage = Random.Range(0, 5);
+       
+        dmg_high  = (20 + randomDamage);
+        dmg_low =  (20 - randomDamage);
+        currentHealth -= Random.Range(dmg_low, dmg_high);
+
         healthBar.SetHealth(currentHealth);
-        //Debug.Log("currentHealth: " + currentHealth);
+        Debug.Log("currentHealth: " + currentHealth);
     }
     void Die()
     {
@@ -74,7 +79,8 @@ public class detectHit : MonoBehaviour
         {
             gameObject.layer = LayerMask.NameToLayer("Hell");
             transform.Find("Armature/ik_wrist_right/Capsule").gameObject.layer = LayerMask.NameToLayer("Hell");
-          
+            transform.Find("HealthBar").gameObject.SetActive(false);
+            //transform.gameObject.SetActive(false);
         }
        
       

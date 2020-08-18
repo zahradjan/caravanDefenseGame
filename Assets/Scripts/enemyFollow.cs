@@ -7,9 +7,9 @@ public class enemyFollow : MonoBehaviour
 {
 
     public Transform target;
-    float moveSpeed = 2f;
-    float maxDist = 10;
-    float minDist = 2f;
+     float moveSpeed = 2f;
+     float maxDist = 10;
+     float minDist = 2f;
     private CharacterController controller;
     private float verticalVelocity;
     private Animator animator;
@@ -43,7 +43,7 @@ public class enemyFollow : MonoBehaviour
         currentState = AnimalState.Searching;
 
         target = FindClosestEnemy();
-        attackType =1;/* Random.Range(1, 4);*/
+        //attackType =2;/* Random.Range(1, 4);*/
 
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
@@ -62,7 +62,7 @@ public class enemyFollow : MonoBehaviour
 
         GravityForce();
 
-      
+
 
         //Debug.Log("CAS U: " + animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
 
@@ -166,33 +166,53 @@ public class enemyFollow : MonoBehaviour
             }
         }
         //Debug.Log(closest);
-        return closest.transform;
+        if(closest != null)
+        {
+            return closest.transform;
+        }
+        else
+        {
+            return null;
+        }
+       
     }
 
     void Move()
     {
-
-        currentState = AnimalState.Searching;
-         distance = Vector3.Distance(transform.position, target.position);
-
-        
-
-
-        if (distance < maxDist && distance > minDist && target.gameObject.layer != 11)
-
+        if (target.gameObject.layer == 11)
         {
-
-            transform.LookAt(target);
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;
-            animator.SetFloat("MovementSpeed", 0.5f);
-
+            target = null;
+            Debug.Log("Flakam se");
+            currentState = AnimalState.Iddle;
         }
-        else if (distance < minDist && target.gameObject.layer != 11)
+        else
         {
 
-         
-            animator.SetFloat("MovementSpeed", 0);
-            currentState = AnimalState.Attacking;
+
+
+
+            currentState = AnimalState.Searching;
+            distance = Vector3.Distance(transform.position, target.position);
+
+
+
+
+            if (distance < maxDist && distance > minDist && target.gameObject.layer != 11)
+
+            {
+
+                transform.LookAt(target);
+                transform.position += transform.forward * moveSpeed * Time.deltaTime;
+                animator.SetFloat("MovementSpeed", 0.5f);
+
+            }
+            else if (distance < minDist && target.gameObject.layer != 11)
+            {
+
+
+                animator.SetFloat("MovementSpeed", 0);
+                currentState = AnimalState.Attacking;
+            }
         }
        
     }
@@ -210,18 +230,7 @@ public class enemyFollow : MonoBehaviour
 
 
             animator.SetBool("isAttacking", true);
-            animator.SetFloat("AttackType", attackType);
-            Debug.Log("Attack type: " + attackType);
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack")) {
-                animatorStateInfo = animator.GetCurrentAnimatorStateInfo(0);
-                if (!AnimatorIsPlaying())
-                {
-                    attackType = Random.Range(1, 3);
-                    Debug.Log(animator.GetCurrentAnimatorClipInfoCount(0));
-                }
-                //StartCoroutine(changeAttackType(animator.GetCurrentAnimatorStateInfo(0).length));
-            }
-           
+
 
 
 
@@ -235,8 +244,8 @@ public class enemyFollow : MonoBehaviour
 
             float completeLengthOfAnimation = animatorStateInfo.length;
             actualTimeOfAnimation = animatorStateInfo.normalizedTime;
-            //Debug.Log("CL " + completeLengthOfAnimation);
-            //Debug.Log("AT " + actualTimeOfAnimation);
+            Debug.Log("CL " + completeLengthOfAnimation);
+            Debug.Log("AT " + actualTimeOfAnimation);
             return completeLengthOfAnimation > actualTimeOfAnimation;
         }
 
@@ -244,7 +253,7 @@ public class enemyFollow : MonoBehaviour
         {
 
             Debug.Log("Jmeno: " + animator.GetCurrentAnimatorClipInfo(0)[0].clip.name + " delka: " + seconds);
-            yield return new WaitForSeconds(seconds + 0.5f);
+            yield return new WaitForSeconds(seconds);
 
             attackType = Random.Range(1,3);
             //    animator.SetFloat("AttackType", attackType);
