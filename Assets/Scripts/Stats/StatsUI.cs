@@ -74,22 +74,22 @@ public class StatsUI : MonoBehaviour
         resourcesUI.text = "Resources: " + Resources.instance.currentResources;
 
         //dissable buttons
-        /* if (PlayerStats.statPoints.getValue() > 0)
-         {
-             strengthButton.interactable = false;
-             agilityButton.interactable = false;
-             wisdomButton.interactable = false;
-         }
-         else
+       /*  if (PlayerStats.statPoints.getValue() > 0)
          {
              strengthButton.interactable = true;
              agilityButton.interactable = true;
              wisdomButton.interactable = true;
+         }
+         else
+         {
+             strengthButton.interactable = false;
+             agilityButton.interactable = false;
+             wisdomButton.interactable = false;
          }*/
 
 
 
     }
 
-    
+
 }

@@ -1,13 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems; 
 
-public class InventorySlot : MonoBehaviour
+public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Image icon;
     Item item;
     public Button removeButton;
+    public GameObject popupWindowObject;
 
-  
+    public void Start()
+    {
+        popupWindowObject.SetActive(false);
+    }
+
+
     public void AddItem (Item newItem)
     {
         item = newItem;
@@ -38,4 +45,23 @@ public class InventorySlot : MonoBehaviour
             item.Use();
         }
     }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (item != null)
+        {
+            popupWindowObject.SetActive(true);
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (item != null)
+        {
+            popupWindowObject.SetActive(false);
+        }
+    }
+
+
+
 }
