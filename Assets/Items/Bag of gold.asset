@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bag of gold
   m_EditorClassIdentifier: 
   name: Infinite Bag of Gold
-  icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: dded2d2607514974d8abf4dba629daf5, type: 3}
   isDefaultItem: 0
   isJustResources: 1
   resourcesValue: 10500
