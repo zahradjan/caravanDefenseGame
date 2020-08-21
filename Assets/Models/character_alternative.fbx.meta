@@ -1,8 +1,47 @@
 fileFormatVersion: 2
-guid: b292eaea31919f845bc2ddd9d58cbd21
+guid: 67dc2f9be3fff2545b17d7a13141e152
 ModelImporter:
   serializedVersion: 19300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 8045962737954373935
+    second: Armature|attack_1h_Left
+  - first:
+      74: 8722689284709813810
+    second: Armature|attack_1h_right
+  - first:
+      74: -2117034559803847892
+    second: Armature|attack_2h_sideR
+  - first:
+      74: 2845109892446514967
+    second: Armature|attack_2h_top
+  - first:
+      74: 65922882618846603
+    second: Armature|attack_bow
+  - first:
+      74: 5889403969130010519
+    second: Armature|attack_punch
+  - first:
+      74: -2183206185078487983
+    second: Armature|attack_shield_dash
+  - first:
+      74: 1798134763389245208
+    second: Armature|attack_spear
+  - first:
+      74: 8955303181477359750
+    second: Armature|attack_spear_1h
+  - first:
+      74: -4857202988001481646
+    second: Armature|attack_stab
+  - first:
+      74: 5866576275671282845
+    second: Armature|death
+  - first:
+      74: 103933099099671182
+    second: Armature|iddle
+  - first:
+      74: 1303299601406483602
+    second: Armature|run
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -22,7 +61,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 1
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -34,7 +73,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.25
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -80,7 +119,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.0025
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
