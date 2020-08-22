@@ -6,6 +6,10 @@ public class projectileMovement : MonoBehaviour
 {
     public float speed = 20f;
     private Transform target;
+    public float offsetX;
+    public float offsetY;
+    public float offsetZ;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +25,29 @@ public class projectileMovement : MonoBehaviour
         //nastaví rotaci
         Vector3 direction = target.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(direction);
-        transform.rotation = rotation;
-        transform.Rotate(Vector3.forward);
+       
+        Debug.Log("Bounds min: " + target.GetComponent<CapsuleCollider>().bounds.min);
+        Debug.Log("Position: " + transform.position);
 
+        if(transform.position.x >= target.GetComponent<CapsuleCollider>().bounds.max.x || 
+           transform.position.y >= target.GetComponent<CapsuleCollider>().bounds.max.y ||
+           transform.position.z >= target.GetComponent<CapsuleCollider>().bounds.max.z
+            )
+        {
+            transform.rotation = rotation;
+            transform.Rotate(Vector3.forward);
+            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        }
         //pohyp vpřed ve směru rotace
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        //if (transform.position != target.GetComponent<CapsuleCollider>().bounds.max)
+        //{
+           
+        //} else
+        //{
+        //    transform.rotation = transform.rotation;
+        //    transform.position = transform.position;
+        //}
+           
     }
 
     public Transform FindClosestEnemy()
