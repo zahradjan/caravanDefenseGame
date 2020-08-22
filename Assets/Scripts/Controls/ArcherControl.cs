@@ -46,7 +46,7 @@ public class ArcherControl : MonoBehaviour
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         shootp = GetComponent<ShootProjectile>();
-        ar = GetComponent<ArcherRandomAttackTypes>();
+       
 
 
 
@@ -116,10 +116,7 @@ public class ArcherControl : MonoBehaviour
 
             transform.LookAt(target);
             animator.SetBool("isAttacking", true);
-            //Debug.Log("C L: " + animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
-            
-
-
+         
 
 
         }
