@@ -34,7 +34,7 @@ public class ShootProjectile : MonoBehaviour
        
     }
 
-    void Shoot()
+    public void Shoot()
     {
         Vector3 spawnPosition = new Vector3(transform.position.x + differenceX, transform.position.y + differenceY, transform.position.z + differenceZ);
         Instantiate(projectilePrefab, spawnPosition, gameObject.transform.rotation);
