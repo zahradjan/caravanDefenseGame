@@ -401,13 +401,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 2114039396254319904}
-    m_Position: {x: 320, y: 90, z: 0}
+    m_Position: {x: 330, y: 100, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours:
-  - {fileID: 6177573318255783779}
+  - {fileID: 6881461411378156355}
   m_AnyStatePosition: {x: 530, y: 370, z: 0}
   m_EntryPosition: {x: -280, y: 130, z: 0}
   m_ExitPosition: {x: 800, y: 240, z: 0}
@@ -440,7 +440,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!114 &6177573318255783779
+--- !u!114 &6881461411378156355
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -449,11 +449,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 610fcc18ef2b29648a42137d609ee2fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 374f3c38e2a5f4e4ba080348889847b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType_param: type
-  attackTypes_param: 00000000010000000200000003000000
+  shootProjectile: {fileID: 0}
 --- !u!1109 &9148987859389240280
 AnimatorTransition:
   m_ObjectHideFlags: 1
