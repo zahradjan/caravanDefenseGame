@@ -71,7 +71,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ArcherAnimatorController
+  m_Name: ArcherAnimatorController 1
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: MovementSpeed
@@ -434,7 +434,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 65922882618846603, guid: 084c943a9b7a7ce44a29cb0a8477e458, type: 3}
+  m_Motion: {fileID: 65922882618846603, guid: 7649da83964c91d4cab89e5d0c6318ac, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
