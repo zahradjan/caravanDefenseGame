@@ -56,10 +56,7 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (item != null)
-        {
             popupWindowObject.SetActive(false);
-        }
     }
 
 
