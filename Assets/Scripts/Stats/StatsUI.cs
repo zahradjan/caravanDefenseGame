@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class StatsUI : MonoBehaviour
 {
-    EquipmentManager equipmentManager;
+   // EquipmentManager equipmentManager;
 
     public GameObject selectedCharacter;
     Text characterName;

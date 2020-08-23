@@ -16,7 +16,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 63bbe9e30d9202d4bb81e22a09d233c6, type: 3}
   isDefaultItem: 0
   isJustResources: 0
-  resourcesValue: 0
+  resourcesValue: 5
   equipSlot: 0
   mesh: {fileID: -8626950573587123379, guid: fabfe65877724c44cb13026ebe50a891, type: 3}
   armorModifier: 5

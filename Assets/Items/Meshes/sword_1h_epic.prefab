@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5611388499540279706
+--- !u!1 &4352549361600791842
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,36 +8,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1035107325994102888}
-  - component: {fileID: -4663049219657390655}
+  - component: {fileID: 2011774365737357081}
+  - component: {fileID: 5412769450540453222}
   m_Layer: 0
-  m_Name: sword_1h
+  m_Name: sword_1h_epic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1035107325994102888
+  m_IsActive: 0
+--- !u!4 &2011774365737357081
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5611388499540279706}
-  m_LocalRotation: {x: -0.010625948, y: -0.005441606, z: 0.99981046, w: 0.015379629}
-  m_LocalPosition: {x: -0.0036639809, y: 0.00053408026, z: -0.00033046835}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 4352549361600791842}
+  m_LocalRotation: {x: -0.45499513, y: -0.523891, z: -0.50861984, w: 0.5097289}
+  m_LocalPosition: {x: -0.0032963061, y: 0.00062723755, z: -0.0008867352}
+  m_LocalScale: {x: 0.20308599, y: 0.20308606, z: 0.20308591}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &-4663049219657390655
+--- !u!137 &5412769450540453222
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5611388499540279706}
+  m_GameObject: {fileID: 4352549361600791842}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -74,11 +74,11 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 1766865637323553763, guid: fabfe65877724c44cb13026ebe50a891, type: 3}
+  m_Mesh: {fileID: -8910522973956014750, guid: fabfe65877724c44cb13026ebe50a891, type: 3}
   m_Bones: []
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.00018771016, y: -0.028349202, z: 0.00015809992}
-    m_Extent: {x: 0.00609769, y: 0.05250353, z: 0.015515598}
+    m_Center: {x: 0, y: 0.009166321, z: 0.148994}
+    m_Extent: {x: 0.090468444, y: 0.013081968, z: 0.27620858}
   m_DirtyAABB: 0

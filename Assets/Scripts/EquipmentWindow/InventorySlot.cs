@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Image icon;
-    Item item;
+    public Item item;
     public Button removeButton;
     public GameObject popupWindowObject;
 

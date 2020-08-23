@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ItemInfoUI : MonoBehaviour
 {
-    public GameObject inventorySlot;
+    public InventorySlot inventorySlot;
     Text itemName;
     Text itemDamage;
     Text itemArmor;
@@ -25,10 +25,19 @@ public class ItemInfoUI : MonoBehaviour
     // Update is called once per frame
     void UpdateInfoWindow()
     {
+        
         itemName = GameObject.Find("ItemName").GetComponent<Text>();
-        //itemName.text = " " + inventorySlot.GetComponent<Item>().name;
+        itemName.text = inventorySlot.item.name;
 
-        itemDamage = GameObject.Find("ItemDamage").GetComponent<Text>();
-       // itemDamage.text = " " + inventorySlot.GetComponent<Equipment>().armorModifier;
+        itemValue = GameObject.Find("ItemValue").GetComponent<Text>();
+        itemValue.text = "O Value: " + inventorySlot.item.resourcesValue;
+
+       /* if (DamageModifier != null)
+        {
+            itemDamage = GameObject.Find("ItemDamage").GetComponent<Text>();
+            itemDamage.text = "Damage: " + inventorySlot.item.damageModifier;
+        }*/
+        
+
     }
 }
