@@ -190,8 +190,8 @@ ModelImporter:
       name: Armature|attack_bow
       takeName: Armature|attack_bow
       internalID: 0
-      firstFrame: 0
-      lastFrame: 49
+      firstFrame: 5
+      lastFrame: 51
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
