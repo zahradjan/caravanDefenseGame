@@ -93,6 +93,7 @@ public class detectHit : MonoBehaviour
             gameObject.layer = LayerMask.NameToLayer("Hell");
             
             transform.Find("HealthBar").gameObject.SetActive(false);
+        // v pripade archera neni potreba strili sipy a ty maji svuj collider 
             transform.Find("Armature/ik_wrist_right/right_hand/weapon_bone/Collider").gameObject.SetActive(false);
             gameObject.GetComponent<CapsuleCollider>().enabled = false;
        

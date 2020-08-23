@@ -106,6 +106,7 @@ public class ArcherControl : MonoBehaviour
     {
         if (TargetIsDead())
         {
+            animator.SetBool("isAttacking",false);
             target = null;
             Debug.Log("Flakam se");
             currentState = AnimalState.Iddle;
