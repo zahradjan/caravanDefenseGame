@@ -15,14 +15,13 @@ MonoBehaviour:
   name: Heavy Leather Boots
   icon: {fileID: 21300000, guid: f3eb9df9b708d374a86b0e96ce1df417, type: 3}
   isDefaultItem: 0
+  isJustResources: 0
+  resourcesValue: 0
   equipSlot: 4
-  mesh: {fileID: 5235292449743766947, guid: 07afc768b3d362246bfed2c62164115a, type: 3}
+  mesh: {fileID: -3074149881625038052, guid: fabfe65877724c44cb13026ebe50a891, type: 3}
   armorModifier: 3
   damageModifier: 0
   healthModifier: 0
   attackSpeedModifier: 0
   movementSpeedModifier: 3
   spiritPowerModifier: 0
-  strengthModifier: 0
-  agilityModifier: 0
-  wisdomModifier: 0

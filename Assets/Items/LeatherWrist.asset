@@ -15,7 +15,13 @@ MonoBehaviour:
   name: Leather Wrist
   icon: {fileID: 21300000, guid: 815ab288c8ab5ea438f316e0169b10ec, type: 3}
   isDefaultItem: 0
+  isJustResources: 0
+  resourcesValue: 0
   equipSlot: 2
-  mesh: {fileID: 7104835995143272288, guid: 79f78ea3d65b2f2479f580e42735aa52, type: 3}
+  mesh: {fileID: 7634949358119873225, guid: fabfe65877724c44cb13026ebe50a891, type: 3}
   armorModifier: 2
   damageModifier: 0
+  healthModifier: 0
+  attackSpeedModifier: 0
+  movementSpeedModifier: 0
+  spiritPowerModifier: 0
