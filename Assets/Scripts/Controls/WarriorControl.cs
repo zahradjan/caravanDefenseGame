@@ -7,9 +7,9 @@ public class WarriorControl : MonoBehaviour
 {
 
     public Transform target;
-     float moveSpeed = 2f;
-     float maxDist = 10;
-     float minDist = 2f;
+    public float moveSpeed = 2f;
+    public float maxDist = 10;
+    public float minDist = 2f;
     private CharacterController controller;
     private float verticalVelocity;
     private Animator animator;
@@ -164,7 +164,7 @@ public class WarriorControl : MonoBehaviour
     }
 
 
-    private bool TargetIsInAttackRange()
+    public bool TargetIsInAttackRange()
     {
         return distance < minDist && !TargetIsDead();
     }
@@ -246,7 +246,7 @@ public class WarriorControl : MonoBehaviour
 
 
     }
-    private bool IamAlive()
+    public bool IamAlive()
     {
         if (transform.gameObject.layer != 11)
         {
@@ -257,7 +257,7 @@ public class WarriorControl : MonoBehaviour
             return false;
         }
     }
-    private bool TargetIsDead()
+    public bool TargetIsDead()
     {
         if (target.gameObject.layer == 11)
         {

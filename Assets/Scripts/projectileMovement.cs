@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class projectileMovement : MonoBehaviour
+public class projectileMovement : ArcherControl
 {
     public float speed = 20f;
     private Transform target;
@@ -15,7 +15,7 @@ public class projectileMovement : MonoBehaviour
     void Start()
     {
         //najde cíl
-        target = FindClosestEnemy();
+        target = FindClosestEnemy(transform);
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class projectileMovement : MonoBehaviour
     {
 
 
-        if (!TargetIsDead())
+        if (!TargetIsDead(target))
         {
 
 
@@ -55,7 +55,7 @@ public class projectileMovement : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+              Destroy(gameObject);
         }
         //pohyp vpřed ve směru rotace
         //if (transform.position != target.GetComponent<CapsuleCollider>().bounds.max)
@@ -69,61 +69,5 @@ public class projectileMovement : MonoBehaviour
            
     }
 
-    public Transform FindClosestEnemy()
-    {
-        GameObject[] gos;
-        if (transform.tag == "Team1")
-        {
-
-            gos = GameObject.FindGameObjectsWithTag("Team2");
-        }
-        else
-        {
-            gos = GameObject.FindGameObjectsWithTag("Team1");
-        }
-        //Debug.Log(gos.Length);
-
-        GameObject closest = null;
-        float infdistance = Mathf.Infinity; /*Vector3.Distance(transform.position, target.position);*/
-        Vector3 position = transform.position;
-        foreach (GameObject go in gos)
-        {
-
-
-            Vector3 diff = go.transform.position - position;
-            float curDistance = diff.sqrMagnitude;
-            //Debug.Log("Vzdalenost: " + infdistance);
-            //Debug.Log("Current vzdalenost: " + curDistance);
-            if (curDistance < infdistance)
-            {
-                if (go.layer != 11)
-                {
-                    closest = go;
-
-                    infdistance = curDistance;
-                }
-            }
-        }
-        //Debug.Log(closest);
-        if (closest != null)
-        {
-            return closest.transform;
-        }
-        else
-        {
-            return null;
-        }
-
-    }
-    private bool TargetIsDead()
-    {
-        if (target.gameObject.layer == 11)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+   
 }
