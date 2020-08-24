@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8973770700990214156}
   m_Layer: 0
   m_Name: arrow
-  m_TagString: Team2
+  m_TagString: Team1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,6 +94,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496748123ae23114e94cc6ef2bfa8749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  healthBar: {fileID: 0}
+  currentState: 0
   speed: 20
   offsetX: 0
   offsetY: 0

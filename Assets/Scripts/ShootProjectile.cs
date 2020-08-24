@@ -40,6 +40,10 @@ public class ShootProjectile : ArcherControl
 
     public void Shoot()
     {
+
+  
+        projectilePrefab.tag = transform.tag;
+
         Vector3 spawnPosition = new Vector3(transform.position.x + differenceX, transform.position.y + differenceY, transform.position.z + differenceZ);
         if (!TargetIsDead(target))
         {
