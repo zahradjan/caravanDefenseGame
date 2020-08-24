@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37deb994da77b844b8b48e9ab61808fc, type: 3}
+  m_Script: {fileID: 11500000, guid: cd87b459911c79d4cbdf2aaac9dbbd1b, type: 3}
   m_Name: Leather Chest
   m_EditorClassIdentifier: 
   name: Leather Chest
   icon: {fileID: 21300000, guid: aa08b91b676ddc24c81c1dfdd39a7545, type: 3}
   isDefaultItem: 0
   isJustResources: 0
-  resourcesValue: 60
+  resourcesValue: 35
+  isEquipment: 1
   equipSlot: 1
   mesh: {fileID: -7767815437480545423, guid: fabfe65877724c44cb13026ebe50a891, type: 3}
-  armorModifier: 8
+  armorModifier: 12
   damageModifier: 0
   healthModifier: 0
   attackSpeedModifier: 0

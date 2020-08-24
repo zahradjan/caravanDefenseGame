@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37deb994da77b844b8b48e9ab61808fc, type: 3}
+  m_Script: {fileID: 11500000, guid: cd87b459911c79d4cbdf2aaac9dbbd1b, type: 3}
   m_Name: Leather Pants
   m_EditorClassIdentifier: 
   name: Leather Pants
   icon: {fileID: 21300000, guid: 73fb81da7913d6f4bb9b4807ce6cf78f, type: 3}
   isDefaultItem: 0
   isJustResources: 0
-  resourcesValue: 60
+  resourcesValue: 22
+  isEquipment: 1
   equipSlot: 3
   mesh: {fileID: 8746227784108820112, guid: fabfe65877724c44cb13026ebe50a891, type: 3}
-  armorModifier: 6
+  armorModifier: 10
   damageModifier: 0
   healthModifier: 0
   attackSpeedModifier: 0

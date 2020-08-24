@@ -21,7 +21,7 @@ public class EquipedUI : MonoBehaviour
 
     }
 
-     void UpdateUI(Equipment newItem, Equipment oldItem) 
+     void UpdateUI(Item newItem, Item oldItem) 
     {
         if (newItem != null)
         {

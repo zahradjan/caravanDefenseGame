@@ -19,7 +19,11 @@ public class ItemInfoUI : MonoBehaviour
 
     private void Update() //make it onItemChangedCallBack
     {
-        UpdateInfoWindow(); 
+        if (inventorySlot.item != null)
+        {
+            UpdateInfoWindow();
+        }
+        
     }
 
     // Update is called once per frame
@@ -32,12 +36,17 @@ public class ItemInfoUI : MonoBehaviour
         itemValue = GameObject.Find("ItemValue").GetComponent<Text>();
         itemValue.text = "O Value: " + inventorySlot.item.resourcesValue;
 
-       /* if (DamageModifier != null)
+        if (inventorySlot.item.damageModifier != 0)
         {
             itemDamage = GameObject.Find("ItemDamage").GetComponent<Text>();
             itemDamage.text = "Damage: " + inventorySlot.item.damageModifier;
-        }*/
-        
+        }
+
+        if (inventorySlot.item.armorModifier != 0)
+        {
+            itemArmor = GameObject.Find("ItemArmor").GetComponent<Text>();
+            itemArmor.text = "Armor: " + inventorySlot.item.armorModifier;
+        }
 
     }
 }

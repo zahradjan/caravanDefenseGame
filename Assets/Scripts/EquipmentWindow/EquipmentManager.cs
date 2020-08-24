@@ -16,11 +16,11 @@ public class EquipmentManager : MonoBehaviour
 
     public SkinnedMeshRenderer targetMesh; // empty player body mesh
     public GameObject handBone;
-    Equipment[] currentEquipment;   //currently equiped items
+    Item[] currentEquipment;   //currently equiped items
     SkinnedMeshRenderer[] currentMeshes;
     
 
-    public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
+    public delegate void OnEquipmentChanged(Item newItem, Item oldItem);
     public OnEquipmentChanged onEquipmentChanged;
 
     Inventory inventory;
@@ -34,16 +34,16 @@ public class EquipmentManager : MonoBehaviour
         inventory = Inventory.instance;
 
       int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
-        currentEquipment = new Equipment[numSlots];
+        currentEquipment = new Item[numSlots];
         currentMeshes = new SkinnedMeshRenderer[numSlots];
 
     }
 
-    public void Equip (Equipment newItem)
+    public void Equip (Item newItem)
     {
         int slotIndex = (int)newItem.equipSlot;
 
-        Equipment oldItem = null;
+        Item oldItem = null;
 
         if (currentEquipment[slotIndex] != null) //swap items if something's already equiped
         {
@@ -91,7 +91,7 @@ public class EquipmentManager : MonoBehaviour
                 Destroy(currentMeshes[slotIndex].gameObject);
             }
 
-            Equipment oldItem = currentEquipment[slotIndex];
+            Item oldItem = currentEquipment[slotIndex];
             inventory.Add(oldItem);
 
             currentEquipment[slotIndex] = null;
