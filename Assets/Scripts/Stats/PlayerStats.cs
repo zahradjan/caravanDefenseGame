@@ -11,7 +11,7 @@ public class PlayerStats : CharacterStats
     }
 
 
-    void OnEquipmentChanged(Equipment newItem, Equipment oldItem)
+    void OnEquipmentChanged(Item newItem, Item oldItem)
     {
         if (newItem != null)
         {

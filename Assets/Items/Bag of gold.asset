@@ -17,3 +17,12 @@ MonoBehaviour:
   isDefaultItem: 0
   isJustResources: 1
   resourcesValue: 10500
+  isEquipment: 0
+  equipSlot: 7
+  mesh: {fileID: 0}
+  armorModifier: 0
+  damageModifier: 0
+  healthModifier: 0
+  attackSpeedModifier: 0
+  movementSpeedModifier: 0
+  spiritPowerModifier: 0
