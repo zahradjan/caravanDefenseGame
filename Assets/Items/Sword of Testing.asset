@@ -15,8 +15,10 @@ MonoBehaviour:
   name: Sword of Testing
   icon: {fileID: 21300000, guid: a5c26b4ece427594a82ee7933749d09a, type: 3}
   isDefaultItem: 0
+  isJustResources: 0
+  resourcesValue: 180
   equipSlot: 5
-  mesh: {fileID: 7301685294625442612, guid: 4ac85a9f7ba4d374c997862ce383aceb, type: 3}
+  mesh: {fileID: -4663049219657390655, guid: f735a4815009c1848bdf992cf167107d, type: 3}
   armorModifier: 0
   damageModifier: 15
   healthModifier: 0

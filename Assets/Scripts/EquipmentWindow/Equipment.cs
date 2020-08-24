@@ -9,6 +9,7 @@ public class Equipment : Item
 {
     public EquipmentSlot equipSlot;
     public SkinnedMeshRenderer mesh;
+    public bool isEquipment;
     //stats
     public int armorModifier;
     public int damageModifier;
@@ -16,7 +17,7 @@ public class Equipment : Item
     public int attackSpeedModifier;
     public int movementSpeedModifier;
     public int spiritPowerModifier;
-
+    
 
     public override void Use() //equip item
     {
