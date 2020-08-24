@@ -86,7 +86,7 @@ public class ArcherControl : MonoBehaviour
         transform.position = currentPos;
         animator.SetFloat("MovementSpeed", 0);
         animator.SetBool("isAttacking", false);
-        target = FindClosestEnemy(transform);
+        target = FindClosestEnemy();
         if (target != null)
         {
             currentState = AnimalState.Attacking;
