@@ -42,7 +42,7 @@ public class ArcherRandomAttackTypes : StateMachineBehaviour
     // OnStateMachineEnter is called when entering a state machine via its Entry Node
     override public void OnStateMachineEnter(Animator animator, int stateMachinePathHash)
     {
-        Debug.Log("C L: " + stateMachinePathHash);
+
         
     }
 

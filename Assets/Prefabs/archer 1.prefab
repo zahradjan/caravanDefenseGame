@@ -1756,8 +1756,8 @@ GameObject:
   - component: {fileID: 6729138695781009833}
   - component: {fileID: 6729138695781009834}
   m_Layer: 0
-  m_Name: archer
-  m_TagString: Team2
+  m_Name: archer 1
+  m_TagString: Team1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1872,7 +1872,7 @@ MonoBehaviour:
   differenceX: 0
   differenceY: 1.5
   differenceZ: 0
-  projectilePrefab: {fileID: 1680206446523384298, guid: 1e36c0551232d4f41965755bec3d32c4,
+  projectilePrefab: {fileID: 1680206446523384298, guid: 21ec396d484e5c64ea9cc72079b37a03,
     type: 3}
   startDelay: 0
   speed: 20

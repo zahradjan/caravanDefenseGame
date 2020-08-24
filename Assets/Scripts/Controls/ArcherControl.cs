@@ -18,7 +18,7 @@ public class ArcherControl : MonoBehaviour
     public HealthBar healthBar;
     float distance;
     private ShootProjectile shootp;
-    private ArcherRandomAttackTypes ar;
+
 
     public enum AnimalState
     {
@@ -27,12 +27,8 @@ public class ArcherControl : MonoBehaviour
         Death
     }
     public AnimalState currentState;
-    private AnimatorClipInfo[] current;
-    private AnimatorStateInfo animatorStateInfo;
-    private string currentName;
-    private float currentLength;
-    private float timepased;
-    float actualTimeOfAnimation;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -107,7 +103,7 @@ public class ArcherControl : MonoBehaviour
         if (TargetIsDead(target))
         {
             target = null;
-            Debug.Log("Flakam se");
+          
             currentState = AnimalState.Iddle;
         }
         else
@@ -137,10 +133,10 @@ public class ArcherControl : MonoBehaviour
 
 
 
-    public Transform FindClosestEnemy(Transform trans)
+    public Transform FindClosestEnemy()
     {
         GameObject[] gos;
-        if (trans.tag == "Team1")
+        if (transform.tag == "Team1")
         {
 
             gos = GameObject.FindGameObjectsWithTag("Team2");
@@ -153,7 +149,7 @@ public class ArcherControl : MonoBehaviour
 
         GameObject closest = null;
         float infdistance = Mathf.Infinity; /*Vector3.Distance(transform.position, target.position);*/
-        Vector3 position = trans.position;
+        Vector3 position = transform.position;
         foreach (GameObject go in gos)
         {
 

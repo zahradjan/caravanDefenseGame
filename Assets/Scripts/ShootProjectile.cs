@@ -34,20 +34,21 @@ public class ShootProjectile : ArcherControl
         }
 
 
-        target = FindClosestEnemy(transform);
+        target = FindClosestEnemy();
 
     }
 
     public void Shoot()
     {
 
-  
-        projectilePrefab.tag = transform.tag;
 
+        //projectilePrefab.tag = transform.tag;
+        
         Vector3 spawnPosition = new Vector3(transform.position.x + differenceX, transform.position.y + differenceY, transform.position.z + differenceZ);
         if (!TargetIsDead(target))
         {
             Instantiate(projectilePrefab, spawnPosition, gameObject.transform.rotation);
+            Debug.Log("Strilim!");
         }
 
        

@@ -15,7 +15,7 @@ public class projectileMovement : ArcherControl
     void Start()
     {
         //najde cíl
-        target = FindClosestEnemy(transform);
+        target = FindClosestEnemy();
     }
 
     // Update is called once per frame
@@ -35,8 +35,7 @@ public class projectileMovement : ArcherControl
             Vector3 direction = new Vector3(offsetX, offsetY, offsetZ); /*target.transform.position + targetHeight + target.up - transform.position;*/
             Quaternion rotation = Quaternion.LookRotation(direction);
 
-            Debug.Log("Bounds min: " + target.GetComponent<CapsuleCollider>().bounds.min);
-            Debug.Log("Position: " + transform.position);
+          
 
             if (transform.position.x >= target.GetComponent<CapsuleCollider>().bounds.max.x ||
                transform.position.y >= target.GetComponent<CapsuleCollider>().bounds.max.y ||
