@@ -29,7 +29,10 @@ public class ItemInfoUI : MonoBehaviour
     // Update is called once per frame
     void UpdateInfoWindow()
     {
-        
+        itemDamage = GameObject.Find("ItemDamage").GetComponent<Text>();
+        itemArmor = GameObject.Find("ItemArmor").GetComponent<Text>();
+
+
         itemName = GameObject.Find("ItemName").GetComponent<Text>();
         itemName.text = inventorySlot.item.name;
 
@@ -38,14 +41,22 @@ public class ItemInfoUI : MonoBehaviour
 
         if (inventorySlot.item.damageModifier != 0)
         {
-            itemDamage = GameObject.Find("ItemDamage").GetComponent<Text>();
             itemDamage.text = "Damage: " + inventorySlot.item.damageModifier;
+            itemArmor.text = " "; //solution for now
+        }
+        else
+        {
+            itemDamage.text = " ";
         }
 
         if (inventorySlot.item.armorModifier != 0)
         {
-            itemArmor = GameObject.Find("ItemArmor").GetComponent<Text>();
             itemArmor.text = "Armor: " + inventorySlot.item.armorModifier;
+            itemDamage.text = " ";
+        }
+        else
+        {
+            itemArmor.text = " ";
         }
 
     }
