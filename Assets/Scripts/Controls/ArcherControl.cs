@@ -90,7 +90,7 @@ public class ArcherControl : MonoBehaviour
         transform.position = currentPos;
         animator.SetFloat("MovementSpeed", 0);
         animator.SetBool("isAttacking", false);
-        target = FindClosestEnemy();
+        target = FindClosestEnemy(transform);
         if (target != null)
         {
             currentState = AnimalState.Attacking;
@@ -104,9 +104,8 @@ public class ArcherControl : MonoBehaviour
 
     void Attack()
     {
-        if (TargetIsDead())
+        if (TargetIsDead(target))
         {
-            animator.SetBool("isAttacking",false);
             target = null;
             Debug.Log("Flakam se");
             currentState = AnimalState.Iddle;
@@ -138,10 +137,10 @@ public class ArcherControl : MonoBehaviour
 
 
 
-    public Transform FindClosestEnemy()
+    public Transform FindClosestEnemy(Transform trans)
     {
         GameObject[] gos;
-        if (transform.tag == "Team1")
+        if (trans.tag == "Team1")
         {
 
             gos = GameObject.FindGameObjectsWithTag("Team2");
@@ -154,7 +153,7 @@ public class ArcherControl : MonoBehaviour
 
         GameObject closest = null;
         float infdistance = Mathf.Infinity; /*Vector3.Distance(transform.position, target.position);*/
-        Vector3 position = transform.position;
+        Vector3 position = trans.position;
         foreach (GameObject go in gos)
         {
 
@@ -193,7 +192,7 @@ public class ArcherControl : MonoBehaviour
 
 
 
-    void GravityForce()
+   public void GravityForce()
     {
         Vector3 gravityVector = Vector3.zero;
 
@@ -208,7 +207,7 @@ public class ArcherControl : MonoBehaviour
 
 
     }
-    private bool IamAlive()
+    public bool IamAlive()
     {
         if (transform.gameObject.layer != 11)
         {
@@ -219,7 +218,7 @@ public class ArcherControl : MonoBehaviour
             return false;
         }
     }
-    private bool TargetIsDead()
+    public bool TargetIsDead(Transform target)
     {
         if (target.gameObject.layer == 11)
         {
