@@ -72,20 +72,22 @@ public class StatsUI : MonoBehaviour
 
         resourcesUI = GameObject.Find("TextResources").GetComponent<Text>();
         resourcesUI.text = "Resources: " + Resources.instance.currentResources;
+        resourcesUI = GameObject.Find("TextResources2").GetComponent<Text>();
+        resourcesUI.text = "Resources: " + Resources.instance.currentResources;
 
         //dissable buttons
-       /*  if (PlayerStats.statPoints.getValue() > 0)
-         {
-             strengthButton.interactable = true;
-             agilityButton.interactable = true;
-             wisdomButton.interactable = true;
-         }
-         else
-         {
-             strengthButton.interactable = false;
-             agilityButton.interactable = false;
-             wisdomButton.interactable = false;
-         }*/
+        /*  if (PlayerStats.statPoints.getValue() > 0)
+          {
+              strengthButton.interactable = true;
+              agilityButton.interactable = true;
+              wisdomButton.interactable = true;
+          }
+          else
+          {
+              strengthButton.interactable = false;
+              agilityButton.interactable = false;
+              wisdomButton.interactable = false;
+          }*/
 
 
 
