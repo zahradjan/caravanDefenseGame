@@ -24,7 +24,7 @@ public class EquipmentManager : MonoBehaviour
     public OnEquipmentChanged onEquipmentChanged;
 
     Inventory inventory;
-
+    //for weapons
     public Vector3 pickPosition;
     public Vector3 pickRotation;
     public Vector3 pickScale;

@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class StatsUI : MonoBehaviour
 {
-   // EquipmentManager equipmentManager;
+    // EquipmentManager equipmentManager;
+    CharacterSelector characterSelector;
+    Resources resources;
 
-    public GameObject selectedCharacter;
+    
     Text characterName;
     Text levelUI;
     Text healthUI;
@@ -21,59 +23,63 @@ public class StatsUI : MonoBehaviour
 
     private void Start()
     {
-       // EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
+        // EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
+        characterSelector = CharacterSelector.instance;
+        resources = Resources.instance;
     }
 
     private void Update()
     {
-        UpdateStatsUI(selectedCharacter); 
+        UpdateStatsUI(); 
 
 
     }
 
 
-    public void UpdateStatsUI(GameObject selectedCharacter)
+    public void UpdateStatsUI()
     {
+        Debug.Log("StatsUI Updated" + characterSelector.selectedCharacter.characterName); //nefunguje
         levelUI = GameObject.Find("TextName").GetComponent<Text>();
-        levelUI.text = " " + selectedCharacter.name;
+        levelUI.text = " " + characterSelector.selectedCharacter.characterName;
+        Debug.Log("StatsUI confirms: Selected Character's name is " + characterSelector.selectedCharacter.characterName); //nefunguje
 
         levelUI = GameObject.Find("TextLvl").GetComponent<Text>();
-        levelUI.text = "Level: " + selectedCharacter.GetComponent<PlayerStats>().characterLevel;
+        levelUI.text = "Level: " + characterSelector.selectedCharacter.characterLevel;
 
         healthUI = GameObject.Find("TextHealth").GetComponent<Text>();
-        healthUI.text = "Health: " + selectedCharacter.GetComponent<PlayerStats>().maxHealth.getValue();
+        healthUI.text = "Health: " + characterSelector.selectedCharacter.maxHealth.getValue();
 
         armorUI = GameObject.Find("TextArmor").GetComponent<Text>();
-        armorUI.text = "Armor: " + selectedCharacter.GetComponent<PlayerStats>().armor.getValue();
+        armorUI.text = "Armor: " + characterSelector.selectedCharacter.armor.getValue();
 
         damageUI = GameObject.Find("TextDamage").GetComponent<Text>();
-        damageUI.text = "Damage: " + selectedCharacter.GetComponent<PlayerStats>().damage.getValue();
+        damageUI.text = "Damage: " + characterSelector.selectedCharacter.damage.getValue();
 
         damageUI = GameObject.Find("TextAttackSpeed").GetComponent<Text>();
-        damageUI.text = "Attack Speed: " + selectedCharacter.GetComponent<PlayerStats>().attackSpeed.getValue();
+        damageUI.text = "Attack Speed: " + characterSelector.selectedCharacter.attackSpeed.getValue();
 
         damageUI = GameObject.Find("TextMovementSpeed").GetComponent<Text>();
-        damageUI.text = "Movement Speed: " + selectedCharacter.GetComponent<PlayerStats>().movementSpeed.getValue();
+        damageUI.text = "Movement Speed: " + characterSelector.selectedCharacter.movementSpeed.getValue();
 
         damageUI = GameObject.Find("TextSpiritPower").GetComponent<Text>();
-        damageUI.text = "Spirit Power: " + selectedCharacter.GetComponent<PlayerStats>().spiritPower.getValue();
+        damageUI.text = "Spirit Power: " + characterSelector.selectedCharacter.spiritPower.getValue();
 
         strengthUI = GameObject.Find("TextStatPoints").GetComponent<Text>();
-        strengthUI.text = "Unused Stat Points: " + selectedCharacter.GetComponent<PlayerStats>().statPoints.getValue();
+        strengthUI.text = "Unused Stat Points: " + characterSelector.selectedCharacter.statPoints.getValue();
 
         strengthUI = GameObject.Find("TextStrength").GetComponent<Text>();
-        strengthUI.text = "Strength: " + selectedCharacter.GetComponent<PlayerStats>().strength.getValue();
+        strengthUI.text = "Strength: " + characterSelector.selectedCharacter.strength.getValue();
 
         agilityUI = GameObject.Find("TextAgility").GetComponent<Text>();
-        agilityUI.text = "Agility: " + selectedCharacter.GetComponent<PlayerStats>().agility.getValue();
+        agilityUI.text = "Agility: " + characterSelector.selectedCharacter.agility.getValue();
 
         wisdomUI = GameObject.Find("TextWisdom").GetComponent<Text>();
-        wisdomUI.text = "Wisdom: " + selectedCharacter.GetComponent<PlayerStats>().wisdom.getValue();
+        wisdomUI.text = "Wisdom: " + characterSelector.selectedCharacter.wisdom.getValue();
 
         resourcesUI = GameObject.Find("TextResources").GetComponent<Text>();
-        resourcesUI.text = "Resources: " + Resources.instance.currentResources;
+        resourcesUI.text = "Resources: " + resources.currentResources;
         resourcesUI = GameObject.Find("TextResources2").GetComponent<Text>();
-        resourcesUI.text = "Resources: " + Resources.instance.currentResources;
+        resourcesUI.text = "Resources: " + resources.currentResources;
 
         //dissable buttons
         /*  if (PlayerStats.statPoints.getValue() > 0)
