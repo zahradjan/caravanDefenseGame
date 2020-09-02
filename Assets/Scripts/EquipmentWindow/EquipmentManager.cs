@@ -13,7 +13,8 @@ public class EquipmentManager : MonoBehaviour
     }
 
     #endregion
-
+    CharacterSelector characterSelector;
+    Character selectedCharacter;
     public SkinnedMeshRenderer targetMesh; // empty player body mesh
     public GameObject handBone;
     Item[] currentEquipment;   //currently equiped items
@@ -32,15 +33,20 @@ public class EquipmentManager : MonoBehaviour
     void Start()
     {
         inventory = Inventory.instance;
+        characterSelector = CharacterSelector.instance;
+        selectedCharacter = characterSelector.selectedCharacter;
 
-      int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
-        currentEquipment = new Item[numSlots];
-        currentMeshes = new SkinnedMeshRenderer[numSlots];
+        currentEquipment = selectedCharacter.currentEquipment;
+        currentMeshes = selectedCharacter.currentMeshes;
 
     }
 
     public void Equip (Item newItem)
     {
+        selectedCharacter = characterSelector.selectedCharacter; //makes sure the right character is selected
+        currentEquipment = selectedCharacter.currentEquipment;   //udělat OnCharacterSwich() nebo tak něco
+        currentMeshes = selectedCharacter.currentMeshes;
+
         int slotIndex = (int)newItem.equipSlot;
 
         Item oldItem = null;

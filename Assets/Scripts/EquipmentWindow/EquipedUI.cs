@@ -8,13 +8,14 @@ public class EquipedUI : MonoBehaviour
     public Transform equipedSlotsParent;
 
     EquipmentManager equipmentManager;
+    CharacterSelector characterSelector;
 
     EquipedSlot[] eSlots;
 
 
     private void Start()
     {
-        equipmentManager = EquipmentManager.instance;
+        equipmentManager = characterSelector.selectedCharacter.equipmentManager;
         equipmentManager.onEquipmentChanged += UpdateUI;
 
         eSlots = equipedSlotsParent.GetComponentsInChildren<EquipedSlot>();
@@ -23,6 +24,7 @@ public class EquipedUI : MonoBehaviour
 
      void UpdateUI(Item newItem, Item oldItem) 
     {
+        //equipmentManager = characterSelector.selectedCharacter.equipmentManager;
         if (newItem != null)
         {
             int itemPlace = (int)newItem.equipSlot;

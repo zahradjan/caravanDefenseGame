@@ -7,7 +7,7 @@ public class Character : ScriptableObject
 
     public string characterName = "New Character";
     CharacterStats characterStats;
-    EquipmentManager equipmentManager;
+    public EquipmentManager equipmentManager;
     CharacterSkills characterSkills;
 
     //characterStats
@@ -28,9 +28,15 @@ public class Character : ScriptableObject
     public Stat agility;
     public Stat wisdom;
 
+    //EquipmentManager
+    public Item[] currentEquipment;
+    public SkinnedMeshRenderer[] currentMeshes;
+
     private void Awake()
     {
+        //hold instance of CharacterSkills
         characterSkills = new CharacterSkills();
+        equipmentManager = new EquipmentManager();
 
         //CharacterStats (-nic z tohohle teď nefunguje při přepnutí characteru)
         characterHeight = new Vector3(1f, 1f, 1f);
@@ -47,6 +53,13 @@ public class Character : ScriptableObject
 
         //PlayerStats (- původně ve void start, ne ve void Awake)
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
+
+        //Equipment
+        int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
+        currentEquipment = new Item[numSlots];
+        currentMeshes = new SkinnedMeshRenderer[numSlots];
+
+
     }
 
 
@@ -107,7 +120,7 @@ public class Character : ScriptableObject
 
     public void LevelUp()
     {
-        int levelCost = (characterLevel * 250) / 2; //make some cost per lvl calculation
+        int levelCost = (characterLevel * 250) / 2; //make some better cost per lvl calculation
         int resources = Resources.instance.currentResources;
 
         if (resources > 0 && resources >= levelCost)

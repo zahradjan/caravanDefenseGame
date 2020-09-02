@@ -1620,6 +1620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipedSlotsParent: {fileID: 720859391}
+  gameManager: {fileID: 1091049970}
 --- !u!114 &178687399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4741,8 +4742,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1875120132}
-        m_MethodName: LevelUp
+      - m_Target: {fileID: 1091049975}
+        m_MethodName: LvlUpButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6131,6 +6132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Thester I.
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: fabfe65877724c44cb13026ebe50a891,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -702350615674039318, guid: fabfe65877724c44cb13026ebe50a891,
         type: 3}
@@ -8492,8 +8498,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1875120132}
-        m_MethodName: IncreaseStrength
+      - m_Target: {fileID: 1091049975}
+        m_MethodName: StrengthUpButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10594,8 +10600,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1875120132}
-        m_MethodName: IncreaseWisdom
+      - m_Target: {fileID: 1091049975}
+        m_MethodName: WisdomUpButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12532,8 +12538,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1875120132}
-        m_MethodName: IncreaseAgility
+      - m_Target: {fileID: 1091049975}
+        m_MethodName: AgilityUpButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15079,7 +15085,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875120131}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9179f5a35fd31fc4da117d09af138082, type: 3}
   m_Name: 

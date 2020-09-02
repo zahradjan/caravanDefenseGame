@@ -13,23 +13,38 @@ public class CharacterSelector : MonoBehaviour
 
     #endregion
     public Character selectedCharacter;
+
    // public Vector3 playerSpawnPosition = new Vector3(0, 1, -7);
     public Character[] characters;
 
-    //public GameObject characterSelectPanel;
-   // public GameObject abilityPanel;
-
+   
 
     public void CharacterSelect(int characterChoice)
     {
-       // characterSelectPanel.SetActive(false);
-        //abilityPanel.SetActive(true);
        // GameObject spawnedPlayer = Instantiate(player, playerSpawnPosition, Quaternion.identity) as GameObject;
        
         
         selectedCharacter = characters[characterChoice];
         Debug.Log(selectedCharacter.characterName + " selected!");
         
-    
     }
+
+
+    public void LvlUpButton()
+    {
+        selectedCharacter.LevelUp();
+    }
+    public void StrengthUpButton()
+    {
+        selectedCharacter.IncreaseStrength();
+    }
+    public void AgilityUpButton()
+    {
+        selectedCharacter.IncreaseAgility();
+    }
+    public void WisdomUpButton()
+    {
+        selectedCharacter.IncreaseWisdom();
+    }
+
 }

@@ -7,14 +7,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c948a01728704349b87ce0c33b21671, type: 3}
   m_Name: Thester II
   m_EditorClassIdentifier: 
   characterName: Thester II
-  characterHeight: {x: 1, y: 1, z: 1}
-  characterLevel: 1
+  equipmentManager: {fileID: 0}
+  characterHeight: {x: 1.2155061, y: 1.2155061, z: 1.2155061}
+  characterLevel: 5
   statPoints:
     baseValue: 0
   maxHealth:
@@ -24,9 +25,9 @@ MonoBehaviour:
   armor:
     baseValue: 0
   attackSpeed:
-    baseValue: 1
+    baseValue: 10
   movementSpeed:
-    baseValue: 1
+    baseValue: 10
   spiritPower:
     baseValue: 0
   strength:
@@ -35,3 +36,19 @@ MonoBehaviour:
     baseValue: 1
   wisdom:
     baseValue: 1
+  currentEquipment:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  currentMeshes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
