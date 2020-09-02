@@ -12,9 +12,12 @@ public class CharacterSelector : MonoBehaviour
     }
 
     #endregion
+    
+    //EquipmentManager equipmentManager;
+    public GameObject gameManager;
     public Character selectedCharacter;
 
-   // public Vector3 playerSpawnPosition = new Vector3(0, 1, -7);
+    // public Vector3 playerSpawnPosition = new Vector3(0, 1, -7);
     public Character[] characters;
 
    
@@ -26,6 +29,8 @@ public class CharacterSelector : MonoBehaviour
         
         selectedCharacter = characters[characterChoice];
         Debug.Log(selectedCharacter.characterName + " selected!");
+
+        gameManager.GetComponent<EquipmentManager>().UpdateCharacter(selectedCharacter);
         
     }
 

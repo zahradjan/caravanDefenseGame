@@ -109,6 +109,25 @@ public class EquipmentManager : MonoBehaviour
         }
     }
 
+    public void UpdateCharacter(Character newCharacter)
+    {
+        for (int i = 0; i < currentEquipment.Length; i++)
+        {
+            if(currentMeshes[i] != null)
+            {
+                Destroy(currentMeshes[i].gameObject);
+
+            }
+        }
+        selectedCharacter = newCharacter;
+        currentEquipment = newCharacter.currentEquipment;
+        currentMeshes = newCharacter.currentMeshes;
+
+        Debug.Log("Updating model!");
+       
+    }
+
+  
     public void UnequipAll()
     {
         for (int i = 0; i < currentEquipment.Length; i++)

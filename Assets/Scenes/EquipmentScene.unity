@@ -1620,7 +1620,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipedSlotsParent: {fileID: 720859391}
-  gameManager: {fileID: 1091049970}
 --- !u!114 &178687399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8911,6 +8910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf4cb6a7adbd704487ebbda986bbe3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1091049970}
   selectedCharacter: {fileID: 11400000, guid: 4ad75dab2e754aa4596275f7e65f3618, type: 2}
   characters:
   - {fileID: 11400000, guid: 4ad75dab2e754aa4596275f7e65f3618, type: 2}

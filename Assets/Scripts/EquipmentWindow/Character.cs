@@ -59,7 +59,7 @@ public class Character : ScriptableObject
         currentEquipment = new Item[numSlots];
         currentMeshes = new SkinnedMeshRenderer[numSlots];
 
-
+       
     }
 
 

@@ -38,7 +38,7 @@ public class StatsUI : MonoBehaviour
 
     public void UpdateStatsUI()
     {
-        Debug.Log("StatsUI Updated" + characterSelector.selectedCharacter.characterName); //nefunguje
+        Debug.Log("StatsUI Updated " + characterSelector.selectedCharacter.characterName);
         levelUI = GameObject.Find("TextName").GetComponent<Text>();
         levelUI.text = " " + characterSelector.selectedCharacter.characterName;
         Debug.Log("StatsUI confirms: Selected Character's name is " + characterSelector.selectedCharacter.characterName); //nefunguje
