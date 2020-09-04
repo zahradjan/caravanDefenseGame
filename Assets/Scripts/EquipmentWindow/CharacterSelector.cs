@@ -28,7 +28,7 @@ public class CharacterSelector : MonoBehaviour
        
         
         selectedCharacter = characters[characterChoice];
-        Debug.Log(selectedCharacter.characterName + " selected!");
+        //Debug.Log(selectedCharacter.characterName + " selected!");
 
         gameManager.GetComponent<EquipmentManager>().UpdateCharacter(selectedCharacter);
         

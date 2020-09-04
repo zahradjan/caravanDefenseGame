@@ -30,7 +30,7 @@ public class Character : ScriptableObject
 
     //EquipmentManager
     public Item[] currentEquipment;
-    public SkinnedMeshRenderer[] currentMeshes;
+    //public SkinnedMeshRenderer[] currentMeshes;
 
     private void Awake()
     {
@@ -57,7 +57,7 @@ public class Character : ScriptableObject
         //Equipment
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Item[numSlots];
-        currentMeshes = new SkinnedMeshRenderer[numSlots];
+        //currentMeshes = new SkinnedMeshRenderer[numSlots];
 
        
     }

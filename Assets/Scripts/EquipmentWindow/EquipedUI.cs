@@ -28,8 +28,7 @@ public class EquipedUI : MonoBehaviour
         if (newItem != null)
         {
             int itemPlace = (int)newItem.equipSlot;
-            Debug.Log("Equiping " + newItem.name + ", itemPlace = " + itemPlace);  
-
+            //Debug.Log("Equiping " + newItem.name + ", itemPlace = " + itemPlace);  
             eSlots[itemPlace].AddItemIcon(newItem);
         }
         else

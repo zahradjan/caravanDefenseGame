@@ -37,7 +37,10 @@ public class EquipmentManager : MonoBehaviour
         selectedCharacter = characterSelector.selectedCharacter;
 
         currentEquipment = selectedCharacter.currentEquipment;
-        currentMeshes = selectedCharacter.currentMeshes;
+        //currentMeshes = selectedCharacter.currentMeshes;
+
+        int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
+        currentMeshes = new SkinnedMeshRenderer[numSlots];
 
     }
 
@@ -45,7 +48,7 @@ public class EquipmentManager : MonoBehaviour
     {
         selectedCharacter = characterSelector.selectedCharacter; //makes sure the right character is selected
         currentEquipment = selectedCharacter.currentEquipment;   //udělat OnCharacterSwich() nebo tak něco
-        currentMeshes = selectedCharacter.currentMeshes;
+        //currentMeshes = selectedCharacter.currentMeshes;
 
         int slotIndex = (int)newItem.equipSlot;
 
@@ -73,8 +76,7 @@ public class EquipmentManager : MonoBehaviour
             newMesh.rootBone = targetMesh.rootBone;
         }
         else{
-            //GameObject handBone = targetArmature.transform.Find("weapon_bone").gameObject; // make weapon a child of handbone
-            Debug.Log("Item is Weapon!");
+            //GameObject handBone = targetArmature.transform.Find("weapon_bone").gameObject; // make weapon a child of handbone         
             newMesh.transform.parent = handBone.transform;
            // newMesh.transform.position = handBone.transform.position;
            newMesh.transform.localPosition = pickPosition;
@@ -115,16 +117,30 @@ public class EquipmentManager : MonoBehaviour
         {
             if(currentMeshes[i] != null)
             {
+                
                 Destroy(currentMeshes[i].gameObject);
+                Debug.Log("removed old equip mesh!");
 
             }
         }
-        selectedCharacter = newCharacter;
-        currentEquipment = newCharacter.currentEquipment;
-        currentMeshes = newCharacter.currentMeshes;
 
-        Debug.Log("Updating model!");
-       
+        for (int i = 0; i < newCharacter.currentEquipment.Length; i++) //problém je tady, instantiate nedělá co má
+        {
+            Item newItem = newCharacter.currentEquipment[i];           //itemy se zobrazují miniaturní v rohu Canvasu!??
+            if (newCharacter.currentEquipment[i] != null)
+            {
+                //int slotIndex = (int)newItem.equipSlot;
+                //currentEquipment[slotIndex] = newItem;
+                                
+                //int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length; //není potřeba?
+                //currentMeshes[i] = newItem.mesh; //tohle je nesmysl
+                SkinnedMeshRenderer newMesh = Instantiate<SkinnedMeshRenderer>(newItem.mesh);
+                newMesh.transform.parent = targetMesh.transform; //parent the equipment mesh to player mesh
+                Debug.Log("newItem = " + newItem.name); //správně vypisuje seznam itemů co má newCharacter nasobě
+
+            }
+        }
+         
     }
 
   
