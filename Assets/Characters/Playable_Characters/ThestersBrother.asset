@@ -15,7 +15,7 @@ MonoBehaviour:
   characterName: Thester's brother
   equipmentManager: {fileID: 0}
   characterHeight: {x: 1, y: 1, z: 1}
-  characterLevel: 4
+  characterLevel: 1
   statPoints:
     baseValue: 0
   maxHealth:
@@ -37,14 +37,6 @@ MonoBehaviour:
   wisdom:
     baseValue: 1
   currentEquipment:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  currentMeshes:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
