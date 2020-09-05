@@ -15,19 +15,23 @@ public class CharacterSelector : MonoBehaviour
     
     //EquipmentManager equipmentManager;
     public GameObject gameManager;
+    public GameObject UiCanvas;
     public Character selectedCharacter;
     // public Vector3 playerSpawnPosition = new Vector3(0, 1, -7);
     public Character[] characters;
 
-    public void CharacterSelect(int characterChoice)
+    public void CharacterSelect(int characterChoice) 
     {
         // GameObject spawnedPlayer = Instantiate(player, playerSpawnPosition, Quaternion.identity) as GameObject;
+        EquipmentManager equipmentManager = gameManager.GetComponent<EquipmentManager>();
+        EquipedUI equipedUI = UiCanvas.GetComponent<EquipedUI>();
 
-        gameManager.GetComponent<EquipmentManager>().RemoveOldMeshes();
-        selectedCharacter = characters[characterChoice];
+        equipmentManager.RemoveOldMesh();
+        equipedUI.RemoveOldIcons();
+        selectedCharacter = characters[characterChoice]; //order of this is important
+        equipmentManager.UpdateCurrentMesh(selectedCharacter);
+        equipedUI.InvokeCurrentIcons();
         //Debug.Log(selectedCharacter.characterName + " selected!");
-        gameManager.GetComponent<EquipmentManager>().UpdateNewMeshes(selectedCharacter);
-        
     }
 
     public void LvlUpButton()

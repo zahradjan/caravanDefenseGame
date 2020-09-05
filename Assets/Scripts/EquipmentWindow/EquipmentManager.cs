@@ -17,7 +17,8 @@ public class EquipmentManager : MonoBehaviour
     Character selectedCharacter;
     public SkinnedMeshRenderer targetMesh; // empty player body mesh
     public GameObject handBone;
-    Item[] currentEquipment;   //currently equiped items
+    [HideInInspector]
+    public Item[] currentEquipment;   //currently equiped items
     SkinnedMeshRenderer[] currentMeshes;
     
 
@@ -111,22 +112,18 @@ public class EquipmentManager : MonoBehaviour
         }
     }
 
-    public void RemoveOldMeshes()
+    public void RemoveOldMesh()
     {
-
         for (int i = 0; i < currentMeshes.Length; i++)
         {
             if (currentMeshes[i] != null)
             {
-
                 Destroy(currentMeshes[i].gameObject);
-                Debug.Log("removed old equip mesh!");
-
             }
         }
     }
 
-    public void UpdateNewMeshes(Character newCharacter)
+    public void UpdateCurrentMesh(Character newCharacter)
     {
         currentEquipment = newCharacter.currentEquipment;
 
@@ -137,7 +134,7 @@ public class EquipmentManager : MonoBehaviour
             {
                 SkinnedMeshRenderer newMesh = Instantiate<SkinnedMeshRenderer>(newItem.mesh);
                 newMesh.transform.parent = targetMesh.transform; //parent the equipment mesh to player mesh
-                Debug.Log("newItem = " + newItem.name); //správně vypisuje seznam itemů co má newCharacter nasobě
+                //Debug.Log("newItem = " + newItem.name); //správně vypisuje seznam itemů co má newCharacter nasobě
 
                 newMesh.bones = targetMesh.bones;
                 if (newItem.equipSlot != EquipmentSlot.Weapon) //if item is weapon, parrenting is different
