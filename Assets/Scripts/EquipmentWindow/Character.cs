@@ -37,19 +37,8 @@ public class Character : ScriptableObject
         //hold instance of CharacterSkills
         characterSkills = new CharacterSkills();
         equipmentManager = new EquipmentManager();
+        
 
-        //CharacterStats (-nic z tohohle teď nefunguje při přepnutí characteru)
-        characterHeight = new Vector3(1f, 1f, 1f);
-        maxHealth.SetBaseValue(100);
-        currentHealth = maxHealth.getValue();
-        characterLevel = 1;
-        //set the minimum of main stats to 1 instead of 0
-        strength.SetBaseValue(1);
-        agility.SetBaseValue(1);
-        wisdom.SetBaseValue(1);
-        attackSpeed.SetBaseValue(10);
-        movementSpeed.SetBaseValue(10);
-        damage.SetBaseValue(10);
 
         //PlayerStats (- původně ve void start, ne ve void Awake)
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
@@ -116,6 +105,21 @@ public class Character : ScriptableObject
         //Die in some way
         // This method is meant to be overwritten
         Debug.Log(characterName + " Died.");
+    }
+
+    public void SetDefaultBaseStats()
+    {
+        characterHeight = new Vector3(1f, 1f, 1f);
+        maxHealth.SetBaseValue(100);
+        currentHealth = maxHealth.getValue();
+        characterLevel = 1;
+        //set the minimum of main stats to 1 instead of 0
+        strength.SetBaseValue(1);
+        agility.SetBaseValue(1);
+        wisdom.SetBaseValue(1);
+        attackSpeed.SetBaseValue(10);
+        movementSpeed.SetBaseValue(10);
+        damage.SetBaseValue(10);
     }
 
     public void LevelUp()

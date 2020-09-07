@@ -5,7 +5,8 @@ using UnityEngine.EventSystems;
 
 public class SkillButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public GameObject selectedCharacter;
+    public GameObject gameManager;
+    Character selectedCharacter;
     public Button thisButton;
     public Button buyButton;
     public GameObject popupWindowObject;
@@ -15,7 +16,11 @@ public class SkillButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     private void Start()
     {
+        selectedCharacter = gameManager.GetComponent<CharacterSelector>().selectedCharacter;
         popupWindowObject.SetActive(false);
+
+        Button btn = buyButton.GetComponent<Button>();
+        btn.onClick.AddListener(BuyOnClick);
 
     }
 
@@ -30,7 +35,7 @@ public class SkillButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         skillName.text = "Heavy Attack";
 
         skillRequirement = GameObject.Find("SkillRequirement").GetComponent<Text>();
-        skillRequirement.text = "Requires: " + thisButton.GetComponent<StatUnlockButton>().StatRequirement + " STR";
+        skillRequirement.text = "Requires: " + thisButton.GetComponent<StatRequirementButton>().StatRequirement + " STR";
 
 
 
@@ -41,14 +46,21 @@ public class SkillButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-       
             popupWindowObject.SetActive(true);
-
     }
-
     public void OnPointerExit(PointerEventData eventData)
     {
         popupWindowObject.SetActive(false);
+    }
+
+
+  
+
+   public void BuyOnClick()
+    {
+        
+        //UnlockSkill();
+        Debug.Log("You unlocked " + "new skill");
     }
 }
 

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c948a01728704349b87ce0c33b21671, type: 3}
+  m_Name: Nameless Character
+  m_EditorClassIdentifier: 
+  characterName: Nameless Third Character
+  equipmentManager: {fileID: 0}
+  characterHeight: {x: 1, y: 1, z: 1}
+  characterLevel: 1
+  statPoints:
+    baseValue: 0
+  maxHealth:
+    baseValue: 0
+  damage:
+    baseValue: 0
+  armor:
+    baseValue: 0
+  attackSpeed:
+    baseValue: 0
+  movementSpeed:
+    baseValue: 0
+  spiritPower:
+    baseValue: 0
+  strength:
+    baseValue: 0
+  agility:
+    baseValue: 0
+  wisdom:
+    baseValue: 0
+  currentEquipment:
+  - {fileID: 11400000, guid: c31238d2a79cdce48929e8e7dbcdddf7, type: 2}
+  - {fileID: 11400000, guid: f88bd4bdb93c26849964f1b04affa6b5, type: 2}
+  - {fileID: 11400000, guid: 4ea7e5d6cd5cb2e4b885363dfe48f70e, type: 2}
+  - {fileID: 11400000, guid: a5bdfc1472d492b46abce5d11c1ea8e4, type: 2}
+  - {fileID: 11400000, guid: 9fb394e6388fe684b87b08635df2631d, type: 2}
+  - {fileID: 11400000, guid: e857d78732e10ed42ab2a336f259c086, type: 2}
+  - {fileID: 0}

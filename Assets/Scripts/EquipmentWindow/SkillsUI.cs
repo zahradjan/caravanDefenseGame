@@ -11,7 +11,7 @@ public class SkillsUI : MonoBehaviour
 
     public void Update()
     {
-        SetCharacterSkills(characterSelector.selectedCharacter.GetCharacterSkills());
+        //SetCharacterSkills(characterSelector.selectedCharacter.GetCharacterSkills()); // null reference error
     }
 
 

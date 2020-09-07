@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34549d04e9cb9324e8ed26951e166d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedCharacter: {fileID: 0}
+  gameManager: {fileID: 0}
   thisButton: {fileID: 8796013948402588275}
   StatRequirement: 1
   statType: 0

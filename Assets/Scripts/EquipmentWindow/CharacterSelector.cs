@@ -17,11 +17,21 @@ public class CharacterSelector : MonoBehaviour
     public GameObject gameManager;
     public GameObject UiCanvas;
     public Character selectedCharacter;
+    int currentCharacterChoice;
+    int CharactersInt;
     // public Vector3 playerSpawnPosition = new Vector3(0, 1, -7);
     public Character[] characters;
 
+     void Start()
+    {
+        currentCharacterChoice = 0;
+        CharactersInt = characters.Length - 1;
+        CharacterSelect(currentCharacterChoice);
+    }
+
     public void CharacterSelect(int characterChoice) 
     {
+        characterChoice = currentCharacterChoice;
         // GameObject spawnedPlayer = Instantiate(player, playerSpawnPosition, Quaternion.identity) as GameObject;
         EquipmentManager equipmentManager = gameManager.GetComponent<EquipmentManager>();
         EquipedUI equipedUI = UiCanvas.GetComponent<EquipedUI>();
@@ -32,6 +42,8 @@ public class CharacterSelector : MonoBehaviour
         equipmentManager.UpdateCurrentMesh(selectedCharacter);
         equipedUI.InvokeCurrentIcons();
         //Debug.Log(selectedCharacter.characterName + " selected!");
+
+        //selectedCharacter.SetDefaultBaseStats(); //needed when adding new character
     }
 
     public void LvlUpButton()
@@ -49,6 +61,37 @@ public class CharacterSelector : MonoBehaviour
     public void WisdomUpButton()
     {
         selectedCharacter.IncreaseWisdom();
+    }
+
+
+    public void NextCharacterButton()
+    {
+        Debug.Log("currentCharacterChoice = " + currentCharacterChoice);
+        if (currentCharacterChoice >= CharactersInt)
+        {
+            currentCharacterChoice = 0;
+            CharacterSelect(currentCharacterChoice);
+        }
+        else
+        {
+            currentCharacterChoice += 1;
+            CharacterSelect(currentCharacterChoice);
+        }
+        
+    }
+    public void previousCharacterButton()
+    {
+        Debug.Log("currentCharacterChoice = " + currentCharacterChoice);
+        if (currentCharacterChoice <= 0)
+        {
+            currentCharacterChoice = CharactersInt;
+            CharacterSelect(currentCharacterChoice);
+        }
+        else
+        {
+            currentCharacterChoice -= 1;
+            CharacterSelect(currentCharacterChoice);
+        }
     }
 
 }

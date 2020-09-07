@@ -46,7 +46,7 @@ public class EquipedUI : MonoBehaviour
             {
 
                 eSlots[i].ClearSlot();
-                Debug.Log("removed old equip icons!");
+                //Debug.Log("removed old equip icons!");
             }
         }
     }
