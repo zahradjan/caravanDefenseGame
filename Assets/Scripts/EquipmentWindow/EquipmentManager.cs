@@ -49,9 +49,12 @@ public class EquipmentManager : MonoBehaviour
     {
         selectedCharacter = characterSelector.selectedCharacter; //makes sure the right character is selected
         currentEquipment = selectedCharacter.currentEquipment;   //udělat OnCharacterSwich() nebo tak něco
-        
-
         int slotIndex = (int)newItem.equipSlot;
+
+        if (currentMeshes[slotIndex] != null)
+        {
+            Destroy(currentMeshes[slotIndex].gameObject);
+        }
 
         Item oldItem = null;
 
@@ -93,6 +96,11 @@ public class EquipmentManager : MonoBehaviour
 
     public void Unequip (int slotIndex) 
     {
+        if (inventory.items.Count >= inventory.space) //capacity
+        {
+            Debug.Log("Not enough inventory room!");
+            return;
+        }
         if (currentEquipment[slotIndex] != null)
         {
             if (currentMeshes[slotIndex] !=null)

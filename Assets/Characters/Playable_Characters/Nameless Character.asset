@@ -19,28 +19,29 @@ MonoBehaviour:
   statPoints:
     baseValue: 0
   maxHealth:
-    baseValue: 0
+    baseValue: 100
   damage:
-    baseValue: 0
+    baseValue: 10
   armor:
     baseValue: 0
   attackSpeed:
-    baseValue: 0
+    baseValue: 10
   movementSpeed:
-    baseValue: 0
+    baseValue: 10
   spiritPower:
     baseValue: 0
   strength:
-    baseValue: 0
+    baseValue: 1
   agility:
-    baseValue: 0
+    baseValue: 1
   wisdom:
-    baseValue: 0
+    baseValue: 1
   currentEquipment:
-  - {fileID: 11400000, guid: c31238d2a79cdce48929e8e7dbcdddf7, type: 2}
-  - {fileID: 11400000, guid: f88bd4bdb93c26849964f1b04affa6b5, type: 2}
-  - {fileID: 11400000, guid: 4ea7e5d6cd5cb2e4b885363dfe48f70e, type: 2}
-  - {fileID: 11400000, guid: a5bdfc1472d492b46abce5d11c1ea8e4, type: 2}
-  - {fileID: 11400000, guid: 9fb394e6388fe684b87b08635df2631d, type: 2}
-  - {fileID: 11400000, guid: e857d78732e10ed42ab2a336f259c086, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}

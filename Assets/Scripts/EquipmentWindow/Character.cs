@@ -1,36 +1,36 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor;
 
 [CreateAssetMenu(menuName = "Character")]
 public class Character : ScriptableObject
 {
-
     public string characterName = "New Character";
     CharacterStats characterStats;
-    public EquipmentManager equipmentManager;
+    EquipmentManager equipmentManager;
     CharacterSkills characterSkills;
 
     //characterStats
-    public Vector3 characterHeight;
-    private float heightModifier = 1.05f;
+    [HideInInspector] public Vector3 characterHeight;
+    [HideInInspector] private float heightModifier = 1.05f;
 
-    public int characterLevel;
-    public Stat statPoints;
-    public Stat maxHealth;
-    public int currentHealth { get; private set; }
-    public Stat damage;
-    public Stat armor;
-    public Stat attackSpeed;
-    public Stat movementSpeed;
-    public Stat spiritPower;
+    [HideInInspector] public int characterLevel;
+    [HideInInspector] public Stat statPoints;
+    [HideInInspector] public Stat maxHealth;
+    [HideInInspector] public int currentHealth { get; private set; }
+    [HideInInspector] public Stat damage;
+    [HideInInspector] public Stat armor;
+    [HideInInspector] public Stat attackSpeed;
+    [HideInInspector] public Stat movementSpeed;
+    [HideInInspector] public Stat spiritPower;
+    //main stats
+    [HideInInspector] public Stat strength;
+    [HideInInspector] public Stat agility;
+    [HideInInspector] public Stat wisdom;
 
-    public Stat strength;
-    public Stat agility;
-    public Stat wisdom;
-
-    //EquipmentManager
+    [Tooltip("0 head, 1 chest, 2 hands, 3 legs, 4 feet, 5 weapon, 6 offhand")]
     public Item[] currentEquipment;
-    //public SkinnedMeshRenderer[] currentMeshes;
+    
 
     private void Awake()
     {
@@ -46,7 +46,7 @@ public class Character : ScriptableObject
         //Equipment
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Item[numSlots];
-        //currentMeshes = new SkinnedMeshRenderer[numSlots];
+        
 
        
     }

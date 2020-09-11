@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c948a01728704349b87ce0c33b21671, type: 3}
-  m_Name: Thester II
+  m_Name: Bandit1
   m_EditorClassIdentifier: 
-  characterName: Thester II
-  equipmentManager: {fileID: 0}
-  characterHeight: {x: 1.477455, y: 1.477455, z: 1.477455}
-  characterLevel: 5
+  characterName: Bandit1
+  characterHeight: {x: 1, y: 1, z: 1}
+  characterLevel: 1
   statPoints:
     baseValue: 0
   maxHealth:
@@ -38,9 +37,9 @@ MonoBehaviour:
     baseValue: 1
   currentEquipment:
   - {fileID: 11400000, guid: c31238d2a79cdce48929e8e7dbcdddf7, type: 2}
-  - {fileID: 11400000, guid: f88bd4bdb93c26849964f1b04affa6b5, type: 2}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: 9fb394e6388fe684b87b08635df2631d, type: 2}
+  - {fileID: 11400000, guid: a5bdfc1472d492b46abce5d11c1ea8e4, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
