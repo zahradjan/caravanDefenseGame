@@ -24,7 +24,7 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         
     }
 
-    public void ClearSlot()
+    public virtual void ClearSlot()
     {
         item = null;
         icon.sprite = null;

@@ -3,10 +3,7 @@ using UnityEngine.UI;
 
 public class EquipedSlot : InventorySlot
 {
-    //public Image icon;
-
-    //Item item;
-    //public Button removeButton;
+    
     public Sprite defaultSlotIcon;
     public int EquipmentSlotIntex;
     public EquipmentSlot LocalSlot;
@@ -21,12 +18,12 @@ public class EquipedSlot : InventorySlot
 
     }
 
-    /*public void ClearSlot()
+    public override void ClearSlot()
     {
         item = null;
         icon.sprite = defaultSlotIcon;
-        removeButton.interactable = false;
-    }*/
+        removeButton.interactable = false;                 
+    }
  
 
 
