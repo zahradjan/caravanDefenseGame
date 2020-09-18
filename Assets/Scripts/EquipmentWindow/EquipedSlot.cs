@@ -3,11 +3,15 @@ using UnityEngine.UI;
 
 public class EquipedSlot : InventorySlot
 {
-    
     public Sprite defaultSlotIcon;
     public int EquipmentSlotIntex;
     public EquipmentSlot LocalSlot;
 
+    public override void Start()
+    {
+        slotType = equipedSlotIndex;
+        popupWindowObject.SetActive(false);
+    }
 
     public void AddItemIcon(Item newItem)
     {
