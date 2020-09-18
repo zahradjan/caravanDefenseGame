@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class EquipedSlot : MonoBehaviour
+public class EquipedSlot : InventorySlot
 {
-    public Image icon;
+    
     public Sprite defaultSlotIcon;
-    Item item;
-    public Button removeButton;
     public int EquipmentSlotIntex;
     public EquipmentSlot LocalSlot;
 
@@ -20,11 +18,11 @@ public class EquipedSlot : MonoBehaviour
 
     }
 
-    public void ClearSlot()
+    public override void ClearSlot()
     {
         item = null;
         icon.sprite = defaultSlotIcon;
-        removeButton.interactable = false;
+        removeButton.interactable = false;                 
     }
  
 

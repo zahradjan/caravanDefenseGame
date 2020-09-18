@@ -13,10 +13,12 @@ public class EquipmentManager : MonoBehaviour
     }
 
     #endregion
-
+    CharacterSelector characterSelector;
+    Character selectedCharacter;
     public SkinnedMeshRenderer targetMesh; // empty player body mesh
     public GameObject handBone;
-    Item[] currentEquipment;   //currently equiped items
+    [HideInInspector]
+    public Item[] currentEquipment;   //currently equiped items
     SkinnedMeshRenderer[] currentMeshes;
     
 
@@ -24,7 +26,7 @@ public class EquipmentManager : MonoBehaviour
     public OnEquipmentChanged onEquipmentChanged;
 
     Inventory inventory;
-
+    //for weapons
     public Vector3 pickPosition;
     public Vector3 pickRotation;
     public Vector3 pickScale;
@@ -32,16 +34,27 @@ public class EquipmentManager : MonoBehaviour
     void Start()
     {
         inventory = Inventory.instance;
+        characterSelector = CharacterSelector.instance;
+        selectedCharacter = characterSelector.selectedCharacter;
 
-      int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
-        currentEquipment = new Item[numSlots];
+        currentEquipment = selectedCharacter.currentEquipment;
+        
+
+        int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentMeshes = new SkinnedMeshRenderer[numSlots];
 
     }
 
     public void Equip (Item newItem)
     {
+        selectedCharacter = characterSelector.selectedCharacter; //makes sure the right character is selected
+        currentEquipment = selectedCharacter.currentEquipment;   //udělat OnCharacterSwich() nebo tak něco
         int slotIndex = (int)newItem.equipSlot;
+
+        if (currentMeshes[slotIndex] != null)
+        {
+            Destroy(currentMeshes[slotIndex].gameObject);
+        }
 
         Item oldItem = null;
 
@@ -67,8 +80,7 @@ public class EquipmentManager : MonoBehaviour
             newMesh.rootBone = targetMesh.rootBone;
         }
         else{
-            //GameObject handBone = targetArmature.transform.Find("weapon_bone").gameObject; // make weapon a child of handbone
-            Debug.Log("Item is Weapon!");
+            //GameObject handBone = targetArmature.transform.Find("weapon_bone").gameObject; // make weapon a child of handbone         
             newMesh.transform.parent = handBone.transform;
            // newMesh.transform.position = handBone.transform.position;
            newMesh.transform.localPosition = pickPosition;
@@ -84,6 +96,11 @@ public class EquipmentManager : MonoBehaviour
 
     public void Unequip (int slotIndex) 
     {
+        if (inventory.items.Count >= inventory.space) //capacity
+        {
+            Debug.Log("Not enough inventory room!");
+            return;
+        }
         if (currentEquipment[slotIndex] != null)
         {
             if (currentMeshes[slotIndex] !=null)
@@ -103,6 +120,49 @@ public class EquipmentManager : MonoBehaviour
         }
     }
 
+    public void RemoveOldMesh()
+    {
+        for (int i = 0; i < currentMeshes.Length; i++)
+        {
+            if (currentMeshes[i] != null)
+            {
+                Destroy(currentMeshes[i].gameObject);
+            }
+        }
+    }
+
+    public void UpdateCurrentMesh(Character newCharacter)
+    {
+        currentEquipment = newCharacter.currentEquipment;
+
+        for (int i = 0; i < newCharacter.currentEquipment.Length; i++) //problém je tady, instantiate nedělá co má
+        {
+            Item newItem = newCharacter.currentEquipment[i];         
+            if (newCharacter.currentEquipment[i] != null)
+            {
+                SkinnedMeshRenderer newMesh = Instantiate<SkinnedMeshRenderer>(newItem.mesh);
+                newMesh.transform.parent = targetMesh.transform; //parent the equipment mesh to player mesh
+                //Debug.Log("newItem = " + newItem.name); //správně vypisuje seznam itemů co má newCharacter nasobě
+
+                newMesh.bones = targetMesh.bones;
+                if (newItem.equipSlot != EquipmentSlot.Weapon) //if item is weapon, parrenting is different
+                {
+                    newMesh.rootBone = targetMesh.rootBone;
+                }
+                else
+                {   
+                    newMesh.transform.parent = handBone.transform;
+                    newMesh.transform.localPosition = pickPosition;
+                    newMesh.transform.localEulerAngles = pickRotation;
+                    newMesh.transform.localScale = pickScale;
+                }
+                currentMeshes[i] = newMesh;
+            }
+        }
+         
+    }
+
+  
     public void UnequipAll()
     {
         for (int i = 0; i < currentEquipment.Length; i++)
