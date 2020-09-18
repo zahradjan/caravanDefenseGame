@@ -422,6 +422,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Team1
       objectReference: {fileID: 0}
+    - target: {fileID: 3333612516140882796, guid: ff6a0b1b481af134f99f41671f4ca84f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3596552290719041699, guid: ff6a0b1b481af134f99f41671f4ca84f,
         type: 3}
       propertyPath: cam
@@ -450,12 +455,12 @@ PrefabInstance:
     - target: {fileID: 8366214920190866963, guid: ff6a0b1b481af134f99f41671f4ca84f,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8366214920190866963, guid: ff6a0b1b481af134f99f41671f4ca84f,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff6a0b1b481af134f99f41671f4ca84f, type: 3}
@@ -481,6 +486,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 534669905}
+    - target: {fileID: 240818605230537080, guid: 0322446b90d274a41ae02dd07f050f3d,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 240818605230537086, guid: 0322446b90d274a41ae02dd07f050f3d,
         type: 3}
       propertyPath: m_Enabled
@@ -863,6 +873,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 534669905}
+    - target: {fileID: 240818605230537080, guid: 0322446b90d274a41ae02dd07f050f3d,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 270447999799876981, guid: 0322446b90d274a41ae02dd07f050f3d,
         type: 3}
       propertyPath: m_IsTrigger
@@ -1086,6 +1101,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 534669905}
+    - target: {fileID: 240818605230537080, guid: 0322446b90d274a41ae02dd07f050f3d,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 240818605230537086, guid: 0322446b90d274a41ae02dd07f050f3d,
         type: 3}
       propertyPath: m_Enabled
@@ -1207,6 +1227,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 534669905}
+    - target: {fileID: 240818605230537080, guid: 0322446b90d274a41ae02dd07f050f3d,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 270447999799876981, guid: 0322446b90d274a41ae02dd07f050f3d,
         type: 3}
       propertyPath: m_IsTrigger
@@ -1366,6 +1391,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Team1
       objectReference: {fileID: 0}
+    - target: {fileID: 3333612516140882796, guid: ff6a0b1b481af134f99f41671f4ca84f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3596552290719041699, guid: ff6a0b1b481af134f99f41671f4ca84f,
         type: 3}
       propertyPath: cam
@@ -1376,6 +1406,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6729138695781009832, guid: ff6a0b1b481af134f99f41671f4ca84f,
+        type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 1680206446523384298, guid: 21ec396d484e5c64ea9cc72079b37a03,
+        type: 3}
     - target: {fileID: 6729138695781009833, guid: ff6a0b1b481af134f99f41671f4ca84f,
         type: 3}
       propertyPath: m_Enabled

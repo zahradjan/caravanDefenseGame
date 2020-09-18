@@ -24,7 +24,7 @@ public class RandomAttackTypes : StateMachineBehaviour
     // OnStateExit is called before OnStateExit is called on any state inside this state machine
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("Exiting State!");
+       
 
     }
 
@@ -38,7 +38,7 @@ public class RandomAttackTypes : StateMachineBehaviour
     // OnStateIK is called before OnStateIK is called on any state inside this state machine
     override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("state ik");
+        
     }
 
     // OnStateMachineEnter is called when entering a state machine via its Entry Node
@@ -46,11 +46,11 @@ public class RandomAttackTypes : StateMachineBehaviour
     {
 
         animator.SetBool("isAttacking", false);
-        Debug.Log("Enter StateMachine");
+
         int index = Random.Range(0, attackTypes_param.Length);
         
         animator.SetInteger(attackType_param, index);
-        Debug.Log(animator.GetInteger(attackType_param));
+    
      
 
 
@@ -60,7 +60,7 @@ public class RandomAttackTypes : StateMachineBehaviour
     // OnStateMachineExit is called when exiting a state machine via its Exit Node
     override public void OnStateMachineExit(Animator animator, int stateMachinePathHash)
     {
-        Debug.Log("Exit State Machine");
+       
     }
 
     private IEnumerator PlayRandomly(Animator animator)

@@ -11,7 +11,7 @@ public class ShootProjectile : ArcherControl
     public  float startDelay;
     private Animator anim;
     public float speed = 20f;
-    private new Transform target;
+    private Transform targt;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,7 @@ public class ShootProjectile : ArcherControl
         }
 
 
-        target = FindClosestEnemy();
+        targt = FindClosestEnemy();
 
     }
 
@@ -45,7 +45,7 @@ public class ShootProjectile : ArcherControl
         //projectilePrefab.tag = transform.tag;
         
         Vector3 spawnPosition = new Vector3(transform.position.x + differenceX, transform.position.y + differenceY, transform.position.z + differenceZ);
-        if (!TargetIsDead(target))
+        if (!TargetIsDead(targt))
         {
             Instantiate(projectilePrefab, spawnPosition, gameObject.transform.rotation);
             Debug.Log("Strilim!");

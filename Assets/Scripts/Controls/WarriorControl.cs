@@ -7,7 +7,7 @@ public class WarriorControl : MonoBehaviour
 {
 
     public Transform target;
-    public float moveSpeed = 2f;
+    public float moveSpeed = 2.5f;
     public float maxDist = 10;
     public float minDist = 2f;
     private CharacterController controller;

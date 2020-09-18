@@ -1938,8 +1938,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 995, y: -179.99994}
-  m_SizeDelta: {x: 1920, y: 368.6}
+  m_AnchoredPosition: {x: 961.5, y: -141.06}
+  m_SizeDelta: {x: 3638, y: 516.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884774770
 MonoBehaviour:
@@ -2115,6 +2115,11 @@ PrefabInstance:
       propertyPath: mainTheme
       value: 
       objectReference: {fileID: 8300000, guid: 523766fbd93ec784a843825890d94f27, type: 3}
+    - target: {fileID: 5204993979655797496, guid: 556b5da74b88dc44cbe7b70a03f1dab1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5204993979655797497, guid: 556b5da74b88dc44cbe7b70a03f1dab1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2174,6 +2179,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameLogic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204993979655797499, guid: 556b5da74b88dc44cbe7b70a03f1dab1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 556b5da74b88dc44cbe7b70a03f1dab1, type: 3}
