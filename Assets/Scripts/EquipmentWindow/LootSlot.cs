@@ -1,18 +1,19 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemPickUp : MonoBehaviour {
-    public Image icon;
-    public Item item;
+public class LootSlot: InventorySlot {
     public Button clickButton;
     Inventory inventory;
    
 
-    void Start()
+    public override void Start()
     {
+        slotType = lootSlotIndex;
         inventory = Inventory.instance;
         icon.sprite = item.icon;
         clickButton.onClick.AddListener(PickUp);
+        popupWindowObject.SetActive(false);
+        removeButton.interactable = true;
     }
 
     private void PickUp()
@@ -22,9 +23,17 @@ public class ItemPickUp : MonoBehaviour {
             Inventory.instance.Add(item);
             Destroy(gameObject);
             //Debug.Log("Picking up " + item.name);
-            Debug.Log("inventory.items.count = " + inventory.items.Count);
+            //Debug.Log("inventory.items.count = " + inventory.items.Count);
         }
     }
+    /*public override void OnRemoveButton()
+    { 
+        if (true)
+        {
+            Destroy(gameObject);
+        }
+
+    }*/
 
     void TakeAll()
     {

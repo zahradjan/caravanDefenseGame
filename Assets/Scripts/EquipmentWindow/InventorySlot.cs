@@ -1,16 +1,30 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems; 
+using UnityEngine.EventSystems;
+using System.Collections;
 
 public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    [HideInInspector]
+    public int inventorySlotIndex = 0, equipedSlotIndex = 1, lootSlotIndex = 2;
+    [HideInInspector]
+    public int slotType;
+
+    public GameObject canvas;
     public Image icon;
     public Item item;
     public Button removeButton;
     public GameObject popupWindowObject;
+    SkillsNLootUiEnable skillsNLootUiEnable;
+    private Coroutine coroutine;
+    Text question;
 
-    public void Start()
+
+
+    public virtual void Start()
     {
+        slotType = inventorySlotIndex;
+        skillsNLootUiEnable = canvas.GetComponent<SkillsNLootUiEnable>();
         popupWindowObject.SetActive(false);
     }
 
@@ -32,10 +46,57 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         removeButton.interactable = false;
     }
 
-    public void OnRemoveButton()
+    public virtual void OnRemoveButton()
     {
-        Debug.Log(item.name + " removed from Inventory!");
-        Inventory.instance.Remove(item);
+        StartCoroutine(ShowConfirmationDialog());
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) == true)
+        {
+            if (coroutine == null)
+            {
+                coroutine = StartCoroutine(ShowConfirmationDialog());
+            }
+        }
+    }
+
+    IEnumerator ShowConfirmationDialog()
+    {
+        ConfirmationDialog confirmationDialog = canvas.GetComponent<SkillsNLootUiEnable>().confirmationDialog;
+        Canvas youSureCanvas = canvas.GetComponent<SkillsNLootUiEnable>().youSureCanvas;
+        ConfirmationDialog dialog = Instantiate(confirmationDialog, youSureCanvas.transform); // instantiate the UI dialog box
+        ConfirmationUI();
+        while (dialog.result == dialog.NONE)
+        {
+            Debug.Log(" Yielding");
+
+            yield return null; // wait
+        }
+
+        if (dialog.result == dialog.YES)
+        {
+            if (slotType == inventorySlotIndex)
+            {
+                Inventory.instance.Remove(item);
+            }
+            if (slotType == lootSlotIndex)
+            {
+                Destroy(gameObject);
+            }
+
+            //ADD ITEM VALUE TO RESOURCES
+
+        }
+        else if (dialog.result == dialog.CANCEL)
+        {
+            Debug.Log(" confirm Cancel");
+        }
+
+        Destroy(dialog.gameObject);
+
+        coroutine = null;
     }
 
     public void UseItem ()
@@ -59,6 +120,11 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             popupWindowObject.SetActive(false);
     }
 
+    private void ConfirmationUI()
+    {
+        question = GameObject.Find("questionText").GetComponent<Text>();
+        question.text = "Do you realy want to dismantle " + item.name + " for " +  item.resourcesValue + " resources?";
+    }
 
 
 }

@@ -14,7 +14,7 @@ public class Character : ScriptableObject
     [HideInInspector] public Vector3 characterHeight;
     [HideInInspector] private float heightModifier = 1.05f;
 
-    [HideInInspector] public int characterLevel;
+     public int characterLevel;
     [HideInInspector] public Stat statPoints;
     [HideInInspector] public Stat maxHealth;
     [HideInInspector] public int currentHealth { get; private set; }

@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Thester II
   m_EditorClassIdentifier: 
   characterName: Thester II
-  equipmentManager: {fileID: 0}
-  characterHeight: {x: 1.477455, y: 1.477455, z: 1.477455}
-  characterLevel: 5
+  characterHeight: {x: 1.8856481, y: 1.8856481, z: 1.8856481}
+  characterLevel: 6
   statPoints:
     baseValue: 0
   maxHealth:
@@ -42,5 +41,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: 9fb394e6388fe684b87b08635df2631d, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: e857d78732e10ed42ab2a336f259c086, type: 2}
   - {fileID: 0}
