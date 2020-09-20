@@ -1,31 +1,26 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 using System.Collections;
 
-public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class InventorySlot : MonoBehaviour
 {
     [HideInInspector]
     public int inventorySlotIndex = 0, equipedSlotIndex = 1, lootSlotIndex = 2;
     [HideInInspector]
     public int slotType;
-
     public GameObject canvas;
     public Image icon;
     public Item item;
     public Button removeButton;
-    public GameObject popupWindowObject;
     SkillsNLootUiEnable skillsNLootUiEnable;
     private Coroutine coroutine;
     Text question;
-
-
 
     public virtual void Start()
     {
         slotType = inventorySlotIndex;
         skillsNLootUiEnable = canvas.GetComponent<SkillsNLootUiEnable>();
-        popupWindowObject.SetActive(false);
+        //popupWindowObject.SetActive(false);
     }
 
 
@@ -70,7 +65,7 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         ConfirmationUI();
         while (dialog.result == dialog.NONE)
         {
-            Debug.Log(" Yielding");
+            //Debug.Log(" Yielding");
 
             yield return null; // wait
         }
@@ -79,11 +74,13 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         {
             if (slotType == inventorySlotIndex)
             {
+                Resources.instance.AddResources(item.resourcesValue);
                 Inventory.instance.Remove(item);
             }
             if (slotType == lootSlotIndex)
             {
-                Destroy(gameObject);
+                Resources.instance.AddResources(item.resourcesValue);
+                Destroy(gameObject);  
             }
 
             //ADD ITEM VALUE TO RESOURCES
@@ -107,18 +104,7 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         }
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        if (item != null)
-        {
-            popupWindowObject.SetActive(true);
-        }
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-            popupWindowObject.SetActive(false);
-    }
+   
 
     private void ConfirmationUI()
     {

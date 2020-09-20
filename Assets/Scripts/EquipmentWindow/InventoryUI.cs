@@ -3,6 +3,7 @@
 public class InventoryUI : MonoBehaviour
 {
     public Transform itemsParent;
+    public GameObject ItemInfoWindow;
 
     Inventory inventory;
 
@@ -15,6 +16,7 @@ public class InventoryUI : MonoBehaviour
         inventory.onItemChangedCallBack += UpdateUI;
 
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
+        ItemInfoWindow.SetActive(false);
     }
 
     void UpdateUI() 
