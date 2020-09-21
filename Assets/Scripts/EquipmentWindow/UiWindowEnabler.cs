@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillsNLootUiEnable : MonoBehaviour
+public class UiWindowEnabler : MonoBehaviour
 {
     private CharacterSkills characterSkills;
     CharacterSelector characterSelector;
     public GameObject skillsUI;
+    public GameObject mapUI;
     public GameObject lootUI;
     public Canvas youSureCanvas;
     public ConfirmationDialog confirmationDialog;
@@ -29,6 +30,15 @@ public class SkillsNLootUiEnable : MonoBehaviour
     public void DisableSkillsUI()
     {
      skillsUI.SetActive(false);
+    }
+
+    public void EnableMapUI()
+    {
+        mapUI.SetActive(true);
+    }
+    public void DisableMapUI()
+    {
+        mapUI.SetActive(false);
     }
 
     public void EnableLootUI() //enable at the start

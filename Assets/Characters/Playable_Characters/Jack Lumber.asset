@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c948a01728704349b87ce0c33b21671, type: 3}
-  m_Name: Nameless Character
+  m_Name: Jack Lumber
   m_EditorClassIdentifier: 
-  characterName: Nameless Third Character
-  equipmentManager: {fileID: 0}
+  characterName: Jack Lumber
   characterHeight: {x: 1, y: 1, z: 1}
   characterLevel: 1
   statPoints:
@@ -42,6 +41,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: e857d78732e10ed42ab2a336f259c086, type: 2}
   - {fileID: 0}
   - {fileID: 0}

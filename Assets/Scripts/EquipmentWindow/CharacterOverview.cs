@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CharacterOverview : MonoBehaviour
 {
-    CharacterStats characterStats;
-
     Rigidbody rb;
     int rotationSpeed = 25;
 

@@ -40,4 +40,5 @@ public class Stat
             modifiers.Remove(modifier);
         }
     }
+
 }

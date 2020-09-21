@@ -9,7 +9,7 @@ public class ItemInfoUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     Text itemDamage;
     Text itemArmor;
     Text itemValue;
-    GameObject popupWindowObject;
+    public GameObject popupWindowObject;
     RectTransform thisSlotTransform;
     RectTransform popupWindowTransform;
     Vector3 difference = new Vector3(115, 110);

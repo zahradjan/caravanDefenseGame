@@ -10,32 +10,31 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c948a01728704349b87ce0c33b21671, type: 3}
-  m_Name: ThestersBrother
+  m_Name: Gerard
   m_EditorClassIdentifier: 
-  characterName: Thester's brother
-  equipmentManager: {fileID: 0}
+  characterName: Gerard
   characterHeight: {x: 1, y: 1, z: 1}
   characterLevel: 1
   statPoints:
     baseValue: 0
   maxHealth:
-    baseValue: 100
+    baseValue: 0
   damage:
-    baseValue: 10
+    baseValue: 0
   armor:
     baseValue: 0
   attackSpeed:
-    baseValue: 10
+    baseValue: 0
   movementSpeed:
-    baseValue: 10
+    baseValue: 0
   spiritPower:
     baseValue: 0
   strength:
-    baseValue: 1
+    baseValue: 0
   agility:
-    baseValue: 1
+    baseValue: 0
   wisdom:
-    baseValue: 1
+    baseValue: 0
   currentEquipment:
   - {fileID: 0}
   - {fileID: 0}

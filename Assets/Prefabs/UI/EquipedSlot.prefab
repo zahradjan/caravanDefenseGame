@@ -241,7 +241,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 6
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -305,8 +305,8 @@ MonoBehaviour:
   icon: {fileID: 1221317817003811409}
   item: {fileID: 0}
   removeButton: {fileID: 5799247125579424790}
-  defaultSlotIcon: {fileID: 21300000, guid: b331ee6e8126cc64fa964c4a951294c3, type: 3}
-  LocalSlot: 6
+  defaultSlotIcon: {fileID: 21300000, guid: 5b4ff799713d0c64fba2ed7e4fc025f4, type: 3}
+  LocalSlot: 0
 --- !u!114 &6522739768230029068
 MonoBehaviour:
   m_ObjectHideFlags: 0

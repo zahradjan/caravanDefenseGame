@@ -12,14 +12,14 @@ public class InventorySlot : MonoBehaviour
     public Image icon;
     public Item item;
     public Button removeButton;
-    SkillsNLootUiEnable skillsNLootUiEnable;
+    UiWindowEnabler skillsNLootUiEnable;
     private Coroutine coroutine;
     Text question;
 
     public virtual void Start()
     {
         slotType = inventorySlotIndex;
-        skillsNLootUiEnable = canvas.GetComponent<SkillsNLootUiEnable>();
+        skillsNLootUiEnable = canvas.GetComponent<UiWindowEnabler>();
         //popupWindowObject.SetActive(false);
     }
 
@@ -39,6 +39,10 @@ public class InventorySlot : MonoBehaviour
         icon.sprite = null;
         icon.enabled = false;
         removeButton.interactable = false;
+
+        ItemInfoUI itemInfoUI = gameObject.GetComponent<ItemInfoUI>();
+        GameObject popUpWindow = itemInfoUI.popupWindowObject;
+        itemInfoUI.popupWindowObject.SetActive(false);
     }
 
     public virtual void OnRemoveButton()
@@ -59,8 +63,8 @@ public class InventorySlot : MonoBehaviour
 
     IEnumerator ShowConfirmationDialog()
     {
-        ConfirmationDialog confirmationDialog = canvas.GetComponent<SkillsNLootUiEnable>().confirmationDialog;
-        Canvas youSureCanvas = canvas.GetComponent<SkillsNLootUiEnable>().youSureCanvas;
+        ConfirmationDialog confirmationDialog = canvas.GetComponent<UiWindowEnabler>().confirmationDialog;
+        Canvas youSureCanvas = canvas.GetComponent<UiWindowEnabler>().youSureCanvas;
         ConfirmationDialog dialog = Instantiate(confirmationDialog, youSureCanvas.transform); // instantiate the UI dialog box
         ConfirmationUI();
         while (dialog.result == dialog.NONE)

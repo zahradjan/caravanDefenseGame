@@ -16,16 +16,12 @@ public class EquipedUI : MonoBehaviour
     private void Start()
     {
         equipmentManager = gameManager.GetComponent<EquipmentManager>();
-        //equipmentManager = characterSelector.selectedCharacter.equipmentManager;
-        equipmentManager.onEquipmentChanged += UpdateUI;
-
         eSlots = equipedSlotsParent.GetComponentsInChildren<EquipedSlot>();
 
     }
 
     public  void UpdateUI(Item newItem, Item oldItem) 
     {
-        //equipmentManager = characterSelector.selectedCharacter.equipmentManager;
         if (newItem != null)
         {
             int itemPlace = (int)newItem.equipSlot;

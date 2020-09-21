@@ -13,7 +13,6 @@ public class CharacterSelector : MonoBehaviour
 
     #endregion
     
-    //EquipmentManager equipmentManager;
     public GameObject gameManager;
     public GameObject UiCanvas;
     public Character selectedCharacter;
@@ -27,6 +26,8 @@ public class CharacterSelector : MonoBehaviour
         currentCharacterChoice = 0;
         CharactersInt = characters.Length - 1;
         CharacterSelect(currentCharacterChoice);
+
+        selectedCharacter.SetDefaultBaseStats(); // for creating characters
     }
 
     public void CharacterSelect(int characterChoice) 

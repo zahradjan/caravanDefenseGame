@@ -22,6 +22,9 @@ public class LootSlot: InventorySlot {
         {
             Inventory.instance.Add(item);
             Destroy(gameObject);
+            ItemInfoUI itemInfoUI = gameObject.GetComponent<ItemInfoUI>();
+            GameObject popUpWindow = itemInfoUI.popupWindowObject;
+            itemInfoUI.popupWindowObject.SetActive(false);
             //Debug.Log("Picking up " + item.name);
             //Debug.Log("inventory.items.count = " + inventory.items.Count);
         }

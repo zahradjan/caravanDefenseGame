@@ -6,7 +6,6 @@ using UnityEditor;
 public class Character : ScriptableObject
 {
     public string characterName = "New Character";
-    CharacterStats characterStats;
     EquipmentManager equipmentManager;
     CharacterSkills characterSkills;
 
@@ -18,8 +17,8 @@ public class Character : ScriptableObject
     [HideInInspector] public Stat statPoints;
     [HideInInspector] public Stat maxHealth;
     [HideInInspector] public int currentHealth { get; private set; }
-    [HideInInspector] public Stat damage;
-    [HideInInspector] public Stat armor;
+     public Stat damage;
+     public Stat armor;
     [HideInInspector] public Stat attackSpeed;
     [HideInInspector] public Stat movementSpeed;
     [HideInInspector] public Stat spiritPower;
@@ -38,17 +37,10 @@ public class Character : ScriptableObject
         characterSkills = new CharacterSkills();
         equipmentManager = new EquipmentManager();
         
-
-
-        //PlayerStats (- původně ve void start, ne ve void Awake)
-        EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
-
         //Equipment
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Item[numSlots];
-        
-
-       
+   
     }
 
 
@@ -107,7 +99,7 @@ public class Character : ScriptableObject
         Debug.Log(characterName + " Died.");
     }
 
-    public void SetDefaultBaseStats()
+    public void SetDefaultBaseStats() //place this somewhere
     {
         characterHeight = new Vector3(1f, 1f, 1f);
         maxHealth.SetBaseValue(100);
@@ -191,30 +183,5 @@ public class Character : ScriptableObject
         spiritPower.AddModifier(2);
         //lower cooldown?
     }
-    
-   
-    void OnEquipmentChanged(Item newItem, Item oldItem)
-    {
-        if (newItem != null)
-        {
-            armor.AddModifier(newItem.armorModifier);
-            damage.AddModifier(newItem.damageModifier);
-            maxHealth.AddModifier(newItem.healthModifier);
-            attackSpeed.AddModifier(newItem.attackSpeedModifier);
-            movementSpeed.AddModifier(newItem.movementSpeedModifier);
-            spiritPower.AddModifier(newItem.spiritPowerModifier);
-        }
-
-        if (oldItem != null)
-        {
-            armor.RemoveModifier(oldItem.armorModifier);
-            damage.RemoveModifier(oldItem.damageModifier);
-            maxHealth.RemoveModifier(oldItem.healthModifier);
-            attackSpeed.RemoveModifier(oldItem.attackSpeedModifier);
-            movementSpeed.RemoveModifier(oldItem.movementSpeedModifier);
-            spiritPower.RemoveModifier(oldItem.spiritPowerModifier);
-        }
-
-    }
-
+  
 }
