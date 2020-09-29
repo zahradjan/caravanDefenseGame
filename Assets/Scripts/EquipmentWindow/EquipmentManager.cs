@@ -20,10 +20,6 @@ public class EquipmentManager : MonoBehaviour
     [HideInInspector]
     public Item[] currentEquipment;   //currently equiped items
     SkinnedMeshRenderer[] currentMeshes;
-    
-
-    public delegate void OnEquipmentChanged(Item newItem, Item oldItem);
-    public OnEquipmentChanged onEquipmentChanged;
 
     Inventory inventory;
     //for weapons
@@ -64,10 +60,7 @@ public class EquipmentManager : MonoBehaviour
             inventory.Add(oldItem);
         }
 
-        if (onEquipmentChanged != null)
-        {
-            onEquipmentChanged.Invoke(newItem, oldItem);
-        }
+            OnEquipmentChanged(newItem, oldItem);
 
         currentEquipment[slotIndex] = newItem;
         SkinnedMeshRenderer newMesh = Instantiate<SkinnedMeshRenderer>(newItem.mesh);
@@ -113,10 +106,11 @@ public class EquipmentManager : MonoBehaviour
 
             currentEquipment[slotIndex] = null;
 
-            if (onEquipmentChanged != null)
-            {
-                onEquipmentChanged.Invoke(null, oldItem);
-            }
+         
+                OnEquipmentChanged(null, oldItem);
+           
+
+
         }
     }
 
@@ -142,8 +136,7 @@ public class EquipmentManager : MonoBehaviour
             {
                 SkinnedMeshRenderer newMesh = Instantiate<SkinnedMeshRenderer>(newItem.mesh);
                 newMesh.transform.parent = targetMesh.transform; //parent the equipment mesh to player mesh
-                //Debug.Log("newItem = " + newItem.name); //správně vypisuje seznam itemů co má newCharacter nasobě
-
+              
                 newMesh.bones = targetMesh.bones;
                 if (newItem.equipSlot != EquipmentSlot.Weapon) //if item is weapon, parrenting is different
                 {
@@ -176,6 +169,35 @@ public class EquipmentManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
         {
             UnequipAll();
+        }
+    }
+
+
+    void OnEquipmentChanged(Item newItem, Item oldItem)
+    {
+        EquipedUI equipedUI = GameObject.Find("Canvas").GetComponent<EquipedUI>();
+        if (newItem != null)
+        {
+            selectedCharacter.armor.AddModifier(newItem.armorModifier);
+            selectedCharacter.damage.AddModifier(newItem.damageModifier);
+            selectedCharacter.maxHealth.AddModifier(newItem.healthModifier);
+            selectedCharacter.attackSpeed.AddModifier(newItem.attackSpeedModifier);
+            selectedCharacter.movementSpeed.AddModifier(newItem.movementSpeedModifier);
+            selectedCharacter.spiritPower.AddModifier(newItem.spiritPowerModifier);
+
+            equipedUI.UpdateUI(newItem, oldItem);
+        }
+
+        if (oldItem != null)
+        {
+            selectedCharacter.armor.RemoveModifier(oldItem.armorModifier);
+            selectedCharacter.damage.RemoveModifier(oldItem.damageModifier);
+            selectedCharacter.maxHealth.RemoveModifier(oldItem.healthModifier);
+            selectedCharacter.attackSpeed.RemoveModifier(oldItem.attackSpeedModifier);
+            selectedCharacter.movementSpeed.RemoveModifier(oldItem.movementSpeedModifier);
+            selectedCharacter.spiritPower.RemoveModifier(oldItem.spiritPowerModifier);
+
+            equipedUI.UpdateUI(null, oldItem);
         }
     }
 

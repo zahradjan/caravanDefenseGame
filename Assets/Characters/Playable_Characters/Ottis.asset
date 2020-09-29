@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c948a01728704349b87ce0c33b21671, type: 3}
-  m_Name: Thester II
+  m_Name: Ottis
   m_EditorClassIdentifier: 
-  characterName: Thester II
-  characterHeight: {x: 1.8856481, y: 1.8856481, z: 1.8856481}
-  characterLevel: 6
+  characterName: Ottis
+  characterHeight: {x: 1.1024998, y: 1.1024998, z: 1.1024998}
+  characterLevel: 3
   statPoints:
     baseValue: 0
   maxHealth:
@@ -37,9 +37,9 @@ MonoBehaviour:
     baseValue: 1
   currentEquipment:
   - {fileID: 11400000, guid: c31238d2a79cdce48929e8e7dbcdddf7, type: 2}
-  - {fileID: 11400000, guid: f88bd4bdb93c26849964f1b04affa6b5, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: 9fb394e6388fe684b87b08635df2631d, type: 2}
-  - {fileID: 11400000, guid: e857d78732e10ed42ab2a336f259c086, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
