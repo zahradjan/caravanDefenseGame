@@ -58,6 +58,7 @@ public class detectHit : MonoBehaviour
         {
             Die();
         }
+         //=>mec => Character => ScriptableObject => value
     }
 
     private bool MyTimeHasCome()
@@ -73,7 +74,7 @@ public class detectHit : MonoBehaviour
     void DealDamage()
     {
         randomDamage = Random.Range(0, 5);
-       
+        // frantaCharacter.GetBaseDamage();
         dmg_high  = (20 + randomDamage);
         dmg_low =  (20 - randomDamage);
         currentHealth -= Random.Range(dmg_low, dmg_high);
