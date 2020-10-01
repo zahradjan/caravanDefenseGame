@@ -26,6 +26,7 @@ public class SpawnBuildings : MonoBehaviour
     RaycastHit hit;
     List<ProductionTile> activeTiles;
     GameObject activeTilesParent;
+    Grid grid;
     #endregion
 
     void Start ()
@@ -35,8 +36,15 @@ public class SpawnBuildings : MonoBehaviour
             Debug.LogError("Production Tile is NULL");
         if (!uiRaycaster)
             Debug.Log("GraphicRaycaster not found! Will place objects on button click");
-	}
 
+      
+	}
+    private void Awake()
+    {
+        grid = FindObjectOfType<Grid>();
+
+        Debug.Log(grid.GetSize());
+    }
 
     void Update()
     {
@@ -47,7 +55,7 @@ public class SpawnBuildings : MonoBehaviour
                 if (!PlacementHelpers.RaycastFromMouse(out hit, terrainLayer))
                     return;
 
-                currentSpawnedBuilding.transform.position = hit.point;
+                currentSpawnedBuilding.transform.position = grid.GetNearestPointOnGrid(hit.point);
 
                 if(CanPlaceBuilding())
                     PlaceBuilding();
@@ -60,12 +68,13 @@ public class SpawnBuildings : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(currentSpawnedBuilding)
-            if(PlacementHelpers.RaycastFromMouse(out hit, terrainLayer))
-                currentSpawnedBuilding.transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+        if (currentSpawnedBuilding)
+            if (PlacementHelpers.RaycastFromMouse(out hit, terrainLayer))
+                //Vector3 gridPosition = grid.GetNearestPointOnGrid(new Vector3(hit.point.x, hit.point.y, hit.point.z));
+                currentSpawnedBuilding.transform.position = grid.GetNearestPointOnGrid(new Vector3(hit.point.x, hit.point.y, hit.point.z));
     }
 
-
+    //kontrola jestli nekoliduje 
     bool CanPlaceBuilding()
     {
         if (PlacementHelpers.IsButtonPressed(uiRaycaster))
@@ -84,7 +93,7 @@ public class SpawnBuildings : MonoBehaviour
         //StartCoroutine(BeginBuilding());
     }
 
-
+    //znici to zeleny
     void ClearGrid()
     {
         Destroy(activeTilesParent);
@@ -97,14 +106,15 @@ public class SpawnBuildings : MonoBehaviour
         Vector3 pos = currentSpawnedBuilding.transform.position;
         GameObject instance = currentSpawnedBuilding;
         currentSpawnedBuilding = null;
-
+       
         RaycastHit hitTerrain;
         if (PlacementHelpers.RaycastFromMouse(out hitTerrain, terrainLayer))
-            pos = hitTerrain.point;
+            pos =hitTerrain.point;
 
         //GameObject go = Instantiate(underConstructionGO, pos, Quaternion.identity);
         //yield return new WaitForSeconds(buildingToPlace.currentBuilding.buildTime);
         //Debug.Log("waited " + buildingToPlace.currentBuilding.buildTime + " seconds to build " + buildingToPlace.currentBuilding.name);
+     
         PlacementHelpers.ToggleRenderers(instance, true);
         //Destroy(go);
     }

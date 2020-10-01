@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 [RequireComponent(typeof(MeshRenderer))]
 [RequireComponent(typeof(MeshFilter))]
+[ExecuteAlways]
 public class meshGrid : MonoBehaviour
 {
     public int GridSize;
