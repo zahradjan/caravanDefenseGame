@@ -8,7 +8,8 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: wood
-    second: {fileID: 2100000, guid: 1d59f0a9e745097458cdbc701d36684f, type: 2}
+    second: {fileID: -8067726398312463513, guid: b292eaea31919f845bc2ddd9d58cbd21,
+      type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
