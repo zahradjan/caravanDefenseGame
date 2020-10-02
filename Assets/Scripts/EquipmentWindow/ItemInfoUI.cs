@@ -12,7 +12,7 @@ public class ItemInfoUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public GameObject popupWindowObject;
     RectTransform thisSlotTransform;
     RectTransform popupWindowTransform;
-    Vector3 difference = new Vector3(115, 110);
+    Vector3 difference = new Vector3(115, 110); // should be slotButton width and height
 
     // Start is called before the first frame update
     void Start()
