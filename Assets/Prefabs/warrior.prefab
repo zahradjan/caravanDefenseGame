@@ -59,8 +59,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209728583066382804}
-  m_LocalRotation: {x: -0, y: 0.38032836, z: -0, w: 0.9248516}
-  m_LocalPosition: {x: 37.43, y: -2, z: 65.94}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.16271245, y: 0.133305, z: 0.133305}
   m_Children:
   - {fileID: 584421725423011913}
@@ -102,7 +102,7 @@ CharacterController:
   m_GameObject: {fileID: 209728583066382804}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 18.57483
   m_Radius: 3.07
@@ -120,7 +120,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 209728583066382804}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 2.4299006
   m_Height: 18.983301
   m_Direction: 1
@@ -157,6 +157,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  moveSpeed: 2.5
+  maxDist: 10
+  minDist: 2
   healthBar: {fileID: 8199073733404441908}
   currentState: 0
 --- !u!114 &8199073734339173798

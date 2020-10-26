@@ -34,6 +34,7 @@ public static class PlacementHelpers
 
 	public static Rect MakeRectOfCollider(Collider col)
 	{
+        //mam podezreni na toto
 		Rect r = new Rect(col.bounds.center.x - col.bounds.extents.x,
 						col.bounds.center.z - col.bounds.extents.z,
 						col.bounds.size.x, col.bounds.size.z);

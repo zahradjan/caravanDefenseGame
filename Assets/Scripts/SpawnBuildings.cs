@@ -55,7 +55,7 @@ public class SpawnBuildings : MonoBehaviour
                 if (!PlacementHelpers.RaycastFromMouse(out hit, terrainLayer))
                     return;
 
-                currentSpawnedBuilding.transform.position = grid.GetNearestPointOnGrid(hit.point);
+                //currentSpawnedBuilding.transform.position = grid.GetNearestPointOnGrid(hit.point);
 
                 if(CanPlaceBuilding())
                     PlaceBuilding();
@@ -71,7 +71,7 @@ public class SpawnBuildings : MonoBehaviour
         if (currentSpawnedBuilding)
             if (PlacementHelpers.RaycastFromMouse(out hit, terrainLayer))
                 //Vector3 gridPosition = grid.GetNearestPointOnGrid(new Vector3(hit.point.x, hit.point.y, hit.point.z));
-                currentSpawnedBuilding.transform.position = grid.GetNearestPointOnGrid(new Vector3(hit.point.x, hit.point.y, hit.point.z));
+                currentSpawnedBuilding.transform.position = grid.GetNearestPointOnGrid(hit.point);
     }
 
     //kontrola jestli nekoliduje 
@@ -82,6 +82,8 @@ public class SpawnBuildings : MonoBehaviour
         for(int i = 0; i < activeTiles.Count; i++)
             if(activeTiles[i].colliding)
                 return false;
+        //když je už položen tak aby se znova nepokladal
+        
         return true;
     }
 
@@ -119,7 +121,7 @@ public class SpawnBuildings : MonoBehaviour
         //Destroy(go);
     }
 
-
+    //tohle je potreba nejak poresit co tam kde co dela
     void FillRectWithTiles(Collider col)
     {
         if (activeTilesParent)
@@ -127,17 +129,17 @@ public class SpawnBuildings : MonoBehaviour
 
         Rect rect = PlacementHelpers.MakeRectOfCollider(col);
         float fromX = rect.position.x;
-        float toX = (rect.position.x + rect.width) * col.gameObject.transform.localScale.x;
+        float toX = (rect.position.x + rect.width);//* col.gameObject.transform.localScale.x;
         float fromZ = rect.position.y;
-        float toZ = (rect.position.y + rect.height) * col.gameObject.transform.localScale.z;
-
-        GameObject parent = new GameObject("PlacementGrid");
+        float toZ = (rect.position.y + rect.height);//* col.gameObject.transform.localScale.z;
+        //tady nechapu co dela ten parent k cemu to tam je atd.
+        GameObject parent = new GameObject("Grid");
         parent.transform.SetParent(col.gameObject.transform.root);
         parent.transform.position = col.gameObject.transform.InverseTransformPoint(new Vector3(0, 0.5f, 0));
 
-        for(float i = -toX/2; i <= toX/2; i += productionTile.transform.localScale.x)
+        for (float i = -toX ; i <= toX ; i += productionTile.transform.localScale.x)
         {
-            for(float j = -toZ/2; j <= toZ/2; j += productionTile.transform.localScale.y)
+            for (float j = -toZ ; j <= toZ ; j += productionTile.transform.localScale.y)
             {
                 GameObject tile = Instantiate(productionTile);
                 tile.transform.SetParent(parent.transform);
@@ -159,7 +161,7 @@ public class SpawnBuildings : MonoBehaviour
         buildingToPlace.currentBuilding = building;
         PlacementHelpers.ToggleRenderers(currentSpawnedBuilding, false);
         Collider[] cols = currentSpawnedBuilding.GetComponentsInChildren<Collider>();
-        if(cols.Length > 0)
+        if (cols.Length > 0)
             FillRectWithTiles(cols[0]);
         else
             Debug.LogError("Building has no colliders");

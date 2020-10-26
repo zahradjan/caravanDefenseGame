@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Warior
   m_EditorClassIdentifier: Assembly-CSharp::BuildingSO
   objectName: FrantaTestujeGrid
-  buildingPrefab: {fileID: 8103772506902320395, guid: 0322446b90d274a41ae02dd07f050f3d,
+  buildingPrefab: {fileID: 209728583066382804, guid: a687f1ad4fd15fb4fa314317df6d8b04,
     type: 3}
