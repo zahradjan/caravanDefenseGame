@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
     private SceneManager sceneManager;
     private void Awake()
     {
-        
-       
 
-        checkIfIsAlreadyPlaying();
+        placementMode();
+
+        //checkIfIsAlreadyPlaying();
         
 
     }
@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        stopMusingIfGameSceneIsOn();
-        Debug.Log(SceneManager.GetActiveScene().name);
+        //stopMusingIfGameSceneIsOn();
+        //Debug.Log(SceneManager.GetActiveScene().name);
     }
 
     private static void stopMusingIfGameSceneIsOn()
@@ -43,5 +43,35 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void playMode()
+    {
+        GameObject.Find("Placement").SetActive(false);
+        GameObject[] team1 = GameObject.FindGameObjectsWithTag("Team1");
+        enableWCInTeam(team1);
+
+
+
+    }
+    public void placementMode()
+    {
+        GameObject[] team1 = GameObject.FindGameObjectsWithTag("Team1");
+        disableWCInTeam(team1);
+    }
+
+    void disableWCInTeam(GameObject[] team)
+    {
+        foreach (GameObject gameObject in team)
+        {
+            if (gameObject.name != "Collider") gameObject.GetComponent<WarriorControl>().enabled = false;
+        }
+    }
+
+    void enableWCInTeam(GameObject[] team)
+    {
+        foreach (GameObject gameObject in team)
+        {
+            if (gameObject.name != "Collider") gameObject.GetComponent<WarriorControl>().enabled = true;
+        }
+    }
 
 }

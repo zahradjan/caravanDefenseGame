@@ -97,7 +97,7 @@ public class WarriorControl : MonoBehaviour
         animator.SetFloat("MovementSpeed", 0);
         animator.SetBool("isAttacking", false);
         target = FindClosestEnemy();
-        if(target != null)
+        if (target != null)
         {
             currentState=AnimalState.Searching;
         }
@@ -109,6 +109,7 @@ public class WarriorControl : MonoBehaviour
 
     void Move()
     {
+        //target = FindClosestEnemy();
         if (TargetIsDead())
         {
             target = null;
