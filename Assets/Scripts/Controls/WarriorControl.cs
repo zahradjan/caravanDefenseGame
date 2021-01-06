@@ -60,7 +60,7 @@ public class WarriorControl : MonoBehaviour
     void Update()
     {
 
-        GravityForce();
+        //GravityForce();
 
 
 

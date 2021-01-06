@@ -42,7 +42,7 @@ public class meshGrid : MonoBehaviour
        
         MeshRenderer meshRenderer = gameObject.GetComponent<MeshRenderer>();
         meshRenderer.material = new Material(Shader.Find("Sprites/Default"));
-        meshRenderer.material.color = Color.white;
+        //meshRenderer.material.color = Color.white;
 
         Debug.Log("mesh: " + mesh.vertexCount);
     }
