@@ -5,6 +5,11 @@ public class Grid : MonoBehaviour
     [SerializeField]
     private float size = 1f;
 
+    private float xStart = 0;
+    private float zStart = 0;
+    private float xEnd = 20;
+    private float zEnd = 20;
+
     public Vector3 GetNearestPointOnGrid(Vector3 position)
     {
         position -= transform.position;
@@ -26,9 +31,9 @@ public class Grid : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
-        for (float x = 0; x < 20; x += size)
+        for (float x = xStart; x < xEnd; x += size)
         {
-            for (float z = 0; z < 20; z += size)
+            for (float z = zStart; z < zEnd; z += size)
             {
                 var point = GetNearestPointOnGrid(new Vector3(x, 0f, z));
                 Gizmos.DrawSphere(point, 0.1f);

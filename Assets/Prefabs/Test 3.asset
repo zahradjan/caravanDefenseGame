@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e31688a44d7c47247a71fdaa341d294e, type: 3}
   m_Name: Test 3
   m_EditorClassIdentifier: 
-  prefab: {fileID: 209728583066382804, guid: a687f1ad4fd15fb4fa314317df6d8b04, type: 3}
+  prefab: {fileID: -927199367670048503, guid: fabfe65877724c44cb13026ebe50a891, type: 3}
   hitboxSize: {x: 0, y: 0, z: 0}
   offset: {x: 0, y: 0, z: 0}
