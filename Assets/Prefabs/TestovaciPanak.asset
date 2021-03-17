@@ -9,12 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c948a01728704349b87ce0c33b21671, type: 3}
-  m_Name: Thester
+  m_Script: {fileID: 11500000, guid: 33d8ced61b178f646b4ee394411e4401, type: 3}
+  m_Name: TestovaciPanak
   m_EditorClassIdentifier: 
-  characterName: Thester
+  characterName: Testovaci Panak
+  basicModel: {fileID: 9009025614072158356, guid: 45d992ebe211ff34fbe7525ffeb7b631,
+    type: 3}
+  equipedModel: {fileID: 0}
+  hitboxSize: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 0, z: 0}
   characterHeight: {x: 0, y: 0, z: 0}
-  characterLevel: 1
+  characterLevel: 0
   statPoints:
     baseValue: 0
   maxHealth:
@@ -37,7 +42,7 @@ MonoBehaviour:
     baseValue: 0
   currentEquipment:
   - {fileID: 11400000, guid: 3755aeea78c4fef40808e06e4a88a9d0, type: 2}
-  - {fileID: 11400000, guid: f88bd4bdb93c26849964f1b04affa6b5, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

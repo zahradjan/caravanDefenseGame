@@ -125,6 +125,8 @@ public class EquipmentManager : MonoBehaviour
         }
     }
 
+    
+
     public void UpdateCurrentMesh(Character newCharacter)
     {
         currentEquipment = newCharacter.currentEquipment;

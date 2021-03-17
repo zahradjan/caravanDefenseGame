@@ -12,6 +12,7 @@ public class BuildingHandler : MonoBehaviour
     public Material collisionMaterial;
     public Grid grid;
     private GameObject ghost;
+    //private CharacterSelector 
 
     // Start is called before the first frame update
     void Start()

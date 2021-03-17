@@ -17,8 +17,8 @@ public class SpawnBuildings : MonoBehaviour
     [TooltipAttribute("Need GraphicRaycaster to detect click on a button")]
     [SerializeField] GraphicRaycaster uiRaycaster;
 
-    //[SerializeField] GameObject underConstructionGO;
-    [SerializeField] BuildProgressSO buildingToPlace;
+    ////[SerializeField] GameObject underConstructionGO;
+    //[SerializeField] BuildProgressSO buildingToPlace;
     #endregion
 
     #region Instance Objects
@@ -151,19 +151,19 @@ public class SpawnBuildings : MonoBehaviour
     }
 
 
-    public void SpawnBuilding(ObjectSO building)
-    {
-        // if haven't placed the spawned building, then return
-        if (currentSpawnedBuilding)
-            return;
+    //public void SpawnBuilding(ObjectSO building)
+    //{
+    //    // if haven't placed the spawned building, then return
+    //    if (currentSpawnedBuilding)
+    //        return;
 
-        currentSpawnedBuilding = Instantiate(building.buildingPrefab);
-        buildingToPlace.currentBuilding = building;
-        PlacementHelpers.ToggleRenderers(currentSpawnedBuilding, false);
-        Collider[] cols = currentSpawnedBuilding.GetComponentsInChildren<Collider>();
-        if (cols.Length > 0)
-            FillRectWithTiles(cols[0]);
-        else
-            Debug.LogError("Building has no colliders");
-    }
+    //    currentSpawnedBuilding = Instantiate(building.buildingPrefab);
+    //    buildingToPlace.currentBuilding = building;
+    //    PlacementHelpers.ToggleRenderers(currentSpawnedBuilding, false);
+    //    Collider[] cols = currentSpawnedBuilding.GetComponentsInChildren<Collider>();
+    //    if (cols.Length > 0)
+    //        FillRectWithTiles(cols[0]);
+    //    else
+    //        Debug.LogError("Building has no colliders");
+    //}
 }

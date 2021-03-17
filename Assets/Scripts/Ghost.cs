@@ -24,18 +24,21 @@ public class Ghost : MonoBehaviour
     {
         
     }
-    void SetColor(Color c)
-    {
-        GetComponent<Renderer>().material.SetColor("_TintColor", c);
-    }
+    //void SetColor(Color c)
+    //{
+    //    GetComponent<Renderer>().material.SetColor("_TintColor", c);
+    //}
 
     void OnTriggerEnter(Collider other)
     {
         if (collisionLayers == (collisionLayers | (1 << other.gameObject.layer)))
         {
+            Debug.Log("Other " + other.gameObject.transform.root.gameObject.GetInstanceID());
+            Debug.Log("this " + transform.root.gameObject.transform.root.gameObject.GetInstanceID());
+
             if (other.gameObject.transform.root.gameObject.GetInstanceID() != transform.root.gameObject.GetInstanceID())
             {
-               
+              
                 colliding = true;
             }
         }
