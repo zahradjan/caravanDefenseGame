@@ -7859,6 +7859,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126623500}
   m_CullTransparentMesh: 0
+--- !u!95 &1133747657 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 937822307587349400, guid: 72a0c3f7a1d1fd74a84b4f2d4c29c558,
+    type: 3}
+  m_PrefabInstance: {fileID: 1508307047}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1138663856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8802,7 +8808,7 @@ PrefabInstance:
     - target: {fileID: 6946391381641641137, guid: 01416eaffc4610146bee22e5b0f25bc1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6946391381641641137, guid: 01416eaffc4610146bee22e5b0f25bc1,
         type: 3}
@@ -10126,6 +10132,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6476639236077721034, guid: 72a0c3f7a1d1fd74a84b4f2d4c29c558,
+        type: 3}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 1133747657}
     - target: {fileID: 7534817725917735614, guid: 72a0c3f7a1d1fd74a84b4f2d4c29c558,
         type: 3}
       propertyPath: m_Name
@@ -10139,7 +10150,7 @@ PrefabInstance:
     - target: {fileID: 8534045147761355164, guid: 72a0c3f7a1d1fd74a84b4f2d4c29c558,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8534045147761355164, guid: 72a0c3f7a1d1fd74a84b4f2d4c29c558,
         type: 3}
